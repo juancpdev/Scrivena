@@ -1,0 +1,261 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.caja_superior {
+    margin: 4rem 4rem;
+
+    h1 {
+        color: #123c49;
+        font-size: 3.4rem;
+
+        @include m.tablet {
+            font-size: 4rem;
+        }
+
+        @include m.desktop {
+            font-size: 5rem;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+
+        @include m.tablet {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.caja_boton_consulta {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 3rem 4rem 3rem;
+    
+    @include m.tablet {
+        width: 30rem;
+    }
+
+    a {
+        font-weight: 500;
+    }
+}
+
+.boton_consulta {
+    text-decoration: none;
+    color: white;
+    background-color: #1c626e;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.boton_consulta:hover {
+    background-color: #3694a5;
+}
+
+.caja_section {
+    background-color: #F1F3F9;
+    border-radius: 1rem;
+    padding: 0 1rem 2rem 1rem;
+    box-shadow: 0px 0px 20px rgb(207, 207, 207);
+    margin: 0 2rem;
+}
+
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Asume que quieres que el carrusel tenga el ancho de la pantalla */
+    position: relative;
+    touch-action: pan-y pinch-zoom;
+    margin-top: 4rem;
+}
+
+.elemento {
+    flex: 0 0 100%;
+    max-width: 100%;
+    user-select: none;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #123c49;
+    padding: 0 2rem;
+}
+
+.texto_elemento {
+    font-size: 1.7rem;
+}
+
+/* Estilos para los puntos de navegación */
+.img-carrusel {
+    width: 100%;
+    height: auto;
+}
+
+.carrusel-nav {
+    text-align: center;
+}
+
+.nav-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-dot.active {
+    background-color: #333;
+}
+
+/* Estilos opcionales para mejorar la interacción táctil */
+.grabbing {
+    cursor: grabbing;
+}
+
+.oportunidades {
+    background-color: #F1F3F9;
+    margin: 3rem 0 0 0;
+    padding: 2rem 2rem 5rem 2rem;
+    text-align: center;
+    color: #123c49;
+}
+
+.texto_oportunidades {
+    width: 80%;
+    margin: 0 auto 6rem auto;
+}
+
+.oportunidades img {
+    height: 12rem;
+}
+
+.img_p {
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.flecha {
+    margin: 3rem 0;
+}
+
+.flecha img{
+    height: 3rem;
+}
+
+.servicios {
+    padding: 0.2rem 4rem;
+    margin: 5rem 1rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 1rem;
+}
+
+.titulo_texto {
+    color: #123c49;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.titulo_texto h1 {
+    font-size: 3.5rem;
+}
+
+.texto_servicios {
+    color: #123c49;
+    text-align: left;
+}
+
+.texto_servicios h1 {
+    font-size: 3rem;
+}
+
+.caja_boton_servicios {
+    display: flex;
+    justify-content: start;
+    margin: 2rem 3rem 4rem 0rem;
+}
+
+.boton_servicios {
+    text-decoration: none;
+    color: white;
+    background-color: #1c626e;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    text-align: center;
+
+    &:hover {
+        background-color: #3694a5;
+    }
+}
+
+.boton_consulta:hover {
+    background-color: #3694a5;
+}
+
+.porque_scrivena {
+    margin: 0 4rem;
+}
+
+.porque_scrivena img {
+    height: 8rem;
+}
+
+.titulo_simulador {
+    color: #123c49;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 8rem;
+}
+
+.area_cliente {
+    text-align: left;
+    margin: 0 3rem;
+
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+.caja_micuenta img {
+    height: 40rem;
+}
+
+.registro {
+    margin: 0 8rem;
+
+    h3 {
+        font-size: 2.3rem;
+    }
+}
+
+.caja_boton_registro {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_registro {
+    text-decoration: none;
+    color: white;
+    background-color: #1c626e;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease;
+    width: 12rem;
+    text-align: center;
+}
+
+.boton_registro:hover {
+    background-color: #3694a5;
+}

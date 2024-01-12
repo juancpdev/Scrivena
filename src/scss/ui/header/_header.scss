@@ -1,0 +1,76 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+header {
+    margin-top: 2rem;
+}
+
+.logo {
+    height: 3.5rem;
+    margin-left: 2rem;
+}
+
+.lista_nav {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.lista_nav hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.navegacion_principal a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 2rem;
+    display: block;
+    border-radius: 1rem;
+}
+
+.contenedor_logo {
+    display: flex;
+    align-items: center;
+}
+
+.menubarra {
+    font-size: 3rem;
+}
+
+.abrir_menu {
+    border: 0;
+    background: transparent;
+    color: rgb(148, 148, 148);
+    cursor: pointer;
+    position: fixed;
+    right: 3rem;
+    z-index: 10;
+}
+
+.abrir_menu:hover span {
+    color: #727272;
+}
+
+.lista_nav a:hover {
+    background-color: #1c666e;
+}
+
+.caja_nav {
+    margin: 2rem 0 5rem auto;
+    text-align: center;
+    background-color: #268893;
+    width: 15rem;
+    position: fixed;
+    right: -100%;
+    top: 7rem;
+    transition: all 0.25s ease-in;
+    border-radius: 1rem;
+    z-index: 10;
+}
+
+.caja_nav.activo {
+    right: 3rem;
+}
