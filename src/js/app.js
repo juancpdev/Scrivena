@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
+    menu();
+    carrouselInicio();
+    añoFooter();
+});
+
+function menu() {
+    const btnFlotante = document.querySelector('.abrir_menu');
+    const menu = document.querySelector('.caja_nav');
+
+    btnFlotante.addEventListener('click', abrirCerrarMenu);
+
+    function abrirCerrarMenu() {
+        if (menu.classList.contains('activo')) {
+            menu.classList.remove('activo');
+            btnFlotante.classList.remove('activo');
+        } else {
+            menu.classList.add('activo');
+            btnFlotante.classList.add('activo');
+        }
+    }
+}
+
+function carrouselInicio() {
     const carrusel = document.querySelector('.carrusel');
     const elementos = document.querySelectorAll('.carrusel .elemento');
     const navContainer = document.querySelector('.carrusel-nav');
@@ -6,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let startX;
     let isDragging = false;
 
-    // Crear puntos de navegación
+    if(carrusel) {
+        // Crear puntos de navegación
     elementos.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.classList.add('nav-dot');
@@ -91,25 +115,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Establecer intervalo para cambiar al siguiente elemento cada 4 segundos
     setInterval(moverSiguiente, 5000);
-
-    const btnFlotante = document.querySelector('.abrir_menu');
-    const menu = document.querySelector('.caja_nav');
-
-    btnFlotante.addEventListener('click', abrirCerrarMenu);
-
-    function abrirCerrarMenu() {
-        if (menu.classList.contains('activo')) {
-            menu.classList.remove('activo');
-            btnFlotante.classList.remove('activo');
-        } else {
-            menu.classList.add('activo');
-            btnFlotante.classList.add('activo');
-        }
     }
 
+}
+
+function añoFooter() {
     // año copy
     document.getElementById('year').textContent = new Date().getFullYear();
-});
-
-  
-  
+}
