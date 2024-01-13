@@ -1,4 +1,4 @@
-<main>
+<main class="scrivena">
     <div class="caja_superior">
         <h1>Tu éxito financiero comienza con <br>SCRIVENA</h1>
         <p>SCRIVENA: Tu aliado clave en la ruta hacia la prosperidad y la estabilidad económica</p>
@@ -108,12 +108,12 @@
                 <p>Obtén tus beneficios en el plazo acordado.</p>
             </div>
         </div>
-        <div class="servicios">
-            <div class="titulo_texto">
+        <div class="nuestros_servicios">
+            <div class="titulo_texto titulo_servicios">
                 <h3>Nuestros Servicios</h3>
                 <p>Desarrollo y Progreso: Financiamiento Versátil para Proyectos Garantizados y Sostenibles</p>
             </div>
-            <div class="texto_servicios">
+            <div class="texto_servicios subtitulo_servicios">
                 <h3>Financiamiento Integral</h3>
                 <p>SCRIVENA proporciona financiamiento personalizado para proyectos variados, abarcando desde soluciones fiduciarias hasta iniciativas ambientales, enfocándonos en el crecimiento sostenible y el cuidado del medio ambiente.</p>
             </div>
@@ -124,218 +124,222 @@
         <div class="titulo_texto">
             <h3>¿Por qué SCRIVENA?</h3>
         </div>
-        <div class="porque_scrivena">
-            <picture>
-                <source srcset="build/img/ico1.avif" type="image/avif" loading="lazy">
-                <source srcset="build/img/ico1.webp" type="image/webp" loading="lazy">
-                <img loading="lazy" src="build/img/ico1.png" alt="">
-            </picture>
-            <p>Optimización de rendimientos y minimización de riesgos ajustados a objetivos financieros individuales.</p>
+        <div class="contenedor--porque_scrivena">
+            <div class="porque_scrivena">
+                <picture>
+                    <source srcset="build/img/ico1.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/ico1.webp" type="image/webp" loading="lazy">
+                    <img loading="lazy" src="build/img/ico1.png" alt="">
+                </picture>
+                <p>Optimización de rendimientos y minimización de riesgos ajustados a objetivos financieros individuales.</p>
+            </div>
+            <div class="porque_scrivena">
+                <picture>
+                    <source srcset="build/img/ico2.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/ico2.webp" type="image/webp" loading="lazy">
+                    <img loading="lazy" src="build/img/ico2.png" alt="">
+                </picture>
+                <p>Inversiones variadas en minería, desarrollos inmobiliarios, remates hipotecarios y fondos de inversión estadounidenses.</p>
+            </div>
+            <div class="porque_scrivena">
+                <picture>
+                    <source srcset="build/img/ico3.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/ico3.webp" type="image/webp" loading="lazy">
+                    <img loading="lazy" src="build/img/ico3.png" alt="">
+                </picture>
+                <p>Ofrecen asesoramiento y educación para tomar decisiones informadas.</p>
+            </div>
+            <div class="porque_scrivena">
+                <picture>
+                    <source srcset="build/img/ico4.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/ico4.webp" type="image/webp" loading="lazy">
+                    <img loading="lazy" src="build/img/ico4.png" alt="">
+                </picture>
+                <p>Estrategias para jubilación y planificación tributaria enfocadas en seguridad financiera a largo plazo.</p>
+            </div>
         </div>
-        <div class="porque_scrivena">
-            <picture>
-                <source srcset="build/img/ico2.avif" type="image/avif" loading="lazy">
-                <source srcset="build/img/ico2.webp" type="image/webp" loading="lazy">
-                <img loading="lazy" src="build/img/ico2.png" alt="">
-            </picture>
-            <p>Inversiones variadas en minería, desarrollos inmobiliarios, remates hipotecarios y fondos de inversión estadounidenses.</p>
-        </div>
-        <div class="porque_scrivena">
-            <picture>
-                <source srcset="build/img/ico3.avif" type="image/avif" loading="lazy">
-                <source srcset="build/img/ico3.webp" type="image/webp" loading="lazy">
-                <img loading="lazy" src="build/img/ico3.png" alt="">
-            </picture>
-            <p>Ofrecen asesoramiento y educación para tomar decisiones informadas.</p>
-        </div>
-        <div class="porque_scrivena">
-            <picture>
-                <source srcset="build/img/ico4.avif" type="image/avif" loading="lazy">
-                <source srcset="build/img/ico4.webp" type="image/webp" loading="lazy">
-                <img loading="lazy" src="build/img/ico4.png" alt="">
-            </picture>
-            <p>Estrategias para jubilación y planificación tributaria enfocadas en seguridad financiera a largo plazo.</p>
-        </div>
-        <div class="titulo_simulador">
-            <h3>Simula tu inversión</h3>
-        </div>
-        <div class="caja_simulador">
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <style>
-                .simulador {
-                    color: #123c49;
-                    border: 1px solid rgba(0, 0, 0, 0.35);
-                    padding: 20px;
-                    border-radius: 15px;
-                    width: 70rem;
-                    max-width: 80%;
-                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-                    margin: 1rem auto 5rem auto;
-                    text-align: center;
-                    padding-top: 4rem;
-                    font-size: 1.7rem;
-                }
-
-                h2,
-                h3 {
-                    color: #123c49;
-                }
-
-                input,
-                select {
-                    margin: 10px 0;
-                    padding: 10px;
-                    font-size: 16px;
-                    border-radius: 5px;
-                    border: 1px solid #268893;
-                    width: 90%;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
-                .boton_simulador {
-                    background-color: #1c626e;
-                    color: #fff;
-                    cursor: pointer;
-                    padding: 1rem;
-                    font-size: 16px;
-                    border-radius: 1rem;
-                    transition: background-color 0.3s ease;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-top: 4rem;
-                    text-decoration: none;
-                    border: 0;
-                }
-
-                .boton_simulador:hover {
-                    background-color: #3694a5;
-                }
-
-                #resultado {
-                    margin-top: 20px;
-                    white-space: pre-line;
-                    font-size: 2rem;
-                    color: #123c49;
-                }
-
-                #chart {
-                    margin-top: 20px;
-                    width: 100%;
-                    height: auto;
-                    display: none;
-                }
-            </style>
-
-            <body>
-                <div class="simulador">
-                    <label for="capital">Capital Inicial:</label>
-                    <input type="number" id="capital" name="capital" required>
-                    <label for="plazo">Plazo de Inversión:</label>
-                    <select id="plazo" name="plazo" required>
-                        <option value="12">12 meses</option>
-                        <option value="18">18 meses</option>
-                        <option value="24">24 meses</option>
-                        <option value="36">36 meses</option>
-                    </select>
-
-                    <label for="tipoInteres">Tipo de Interés:</label>
-                    <select id="tipoInteres" name="tipoInteres" required>
-                        <option value="simple">Interés Simple</option>
-                        <option value="compuesto">Interés Compuesto</option>
-                    </select>
-                    <button type="button" class="boton_simulador" onclick="calcularRendimiento()">Calcular Rendimiento</button>
-                    <h3 id="resultado"></h3>
-                    <canvas id="chart"></canvas>
-                </div>
-
-                <script>
-                    var chart = null;
-
-                    function calcularRendimiento() {
-                        var capital = document.getElementById('capital').value;
-                        var plazo = document.getElementById('plazo').value;
-                        var tipoInteres = document.getElementById('tipoInteres').value;
-
-                        if (plazo < 12) {
-                            alert('El plazo mínimo de inversión es de 12 meses');
-                            return;
-                        }
-
-                        var mensaje = '';
-                        var labels = [];
-                        var data = [];
-
-                        if (tipoInteres == 'simple') {
-                            var rendimientoPorMes = Math.floor(capital * 0.02);
-                            mensaje += 'Interés mensual:' + '\n' + '$' + rendimientoPorMes.toLocaleString('en-US') + '\n' + '\n';
-
-                            var interesGenerado = Math.floor(rendimientoPorMes * plazo);
-                            mensaje += 'Interés total final:' + '\n' + '$' + interesGenerado.toLocaleString('en-US') + '\n';
-
-                            for (var i = 1; i <= plazo; i++) {
-                                labels.push('Mes ' + i);
-                                data.push(Math.floor(rendimientoPorMes * i));
-                            }
-                        } else {
-                            var rendimiento = capital;
-
-                            for (var i = 1; i <= plazo; i++) {
-                                rendimiento = Math.floor(rendimiento * 1.025);
-                                labels.push('Mes ' + i);
-                                data.push(rendimiento);
-                            }
-
-                            mensaje += 'Capital al finalizar el plazo:' + '\n' + '$' + rendimiento.toLocaleString('en-US') + '\n' + '\n';
-
-                            var interesGeneradoCompuesto = Math.floor(rendimiento - capital);
-                            mensaje += 'Intereses generados:' + '\n' + '$' + interesGeneradoCompuesto.toLocaleString('en-US') + '\n';
-                        }
-
-                        document.getElementById('resultado').innerText = mensaje;
-
-                        // Mostrar el gráfico
-                        document.getElementById('chart').style.display = 'block';
-
-                        var ctx = document.getElementById('chart').getContext('2d');
-
-                        if (chart != null) {
-                            chart.destroy();
-                        }
-
-                        chart = new Chart(ctx, {
-                            type: 'line',
-                            data: {
-                                labels: labels,
-                                datasets: [{
-                                    label: 'Rendimiento de la inversión',
-                                    data: data,
-                                    fill: false,
-                                    borderColor: '#123c49',
-                                    tension: 0.1
-                                }]
-                            }
-                        });
+        <div class="contenedor-simulador">
+            <div class="titulo_texto">
+                <h3>Simula tu inversión</h3>
+            </div>
+            <div class="caja_simulador">
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <style>
+                    .simulador {
+                        color: #123c49;
+                        border: 1px solid rgba(0, 0, 0, 0.35);
+                        padding: 20px;
+                        border-radius: 15px;
+                        width: 70rem;
+                        max-width: 80%;
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+                        margin: 1rem auto 5rem auto;
+                        text-align: center;
+                        padding-top: 4rem;
+                        font-size: 1.7rem;
                     }
-                </script>
+
+                    h2,
+                    h3 {
+                        color: #123c49;
+                    }
+
+                    input,
+                    select {
+                        margin: 10px 0;
+                        padding: 10px;
+                        font-size: 16px;
+                        border-radius: 5px;
+                        border: 1px solid #268893;
+                        width: 90%;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .boton_simulador {
+                        padding: 1.2rem 3rem;
+                        border: none;
+                        cursor: pointer;
+                        background-color: rgb(226, 147, 1);
+                        color: white;
+                        font-size: 1.5rem;
+                        border-radius: 1rem;
+                        transition: all .3s ease-in-out;
+                        margin: 2rem 0;
+                    }
+
+                    .boton_simulador:hover {
+                        transform: scale(.985);
+                        background-color: rgb(182, 119, 3);
+                    }
+
+
+                    #resultado {
+                        margin-top: 20px;
+                        white-space: pre-line;
+                        font-size: 2rem;
+                        color: #123c49;
+                    }
+
+                    #chart {
+                        margin-top: 20px;
+                        width: 100%;
+                        height: auto;
+                        display: none;
+                    }
+                </style>
+
+                <body>
+                    <div class="simulador">
+                        <label for="capital">Capital Inicial:</label>
+                        <input type="number" id="capital" name="capital" required>
+                        <label for="plazo">Plazo de Inversión:</label>
+                        <select id="plazo" name="plazo" required>
+                            <option value="12">12 meses</option>
+                            <option value="18">18 meses</option>
+                            <option value="24">24 meses</option>
+                            <option value="36">36 meses</option>
+                        </select>
+
+                        <label for="tipoInteres">Tipo de Interés:</label>
+                        <select id="tipoInteres" name="tipoInteres" required>
+                            <option value="simple">Interés Simple</option>
+                            <option value="compuesto">Interés Compuesto</option>
+                        </select>
+                        <button type="button" class="boton_simulador" onclick="calcularRendimiento()">Calcular Rendimiento</button>
+                        <h3 id="resultado"></h3>
+                        <canvas id="chart"></canvas>
+                    </div>
+
+                    <script>
+                        var chart = null;
+
+                        function calcularRendimiento() {
+                            var capital = document.getElementById('capital').value;
+                            var plazo = document.getElementById('plazo').value;
+                            var tipoInteres = document.getElementById('tipoInteres').value;
+
+                            if (plazo < 12) {
+                                alert('El plazo mínimo de inversión es de 12 meses');
+                                return;
+                            }
+
+                            var mensaje = '';
+                            var labels = [];
+                            var data = [];
+
+                            if (tipoInteres == 'simple') {
+                                var rendimientoPorMes = Math.floor(capital * 0.02);
+                                mensaje += 'Interés mensual:' + '\n' + '$' + rendimientoPorMes.toLocaleString('en-US') + '\n' + '\n';
+
+                                var interesGenerado = Math.floor(rendimientoPorMes * plazo);
+                                mensaje += 'Interés total final:' + '\n' + '$' + interesGenerado.toLocaleString('en-US') + '\n';
+
+                                for (var i = 1; i <= plazo; i++) {
+                                    labels.push('Mes ' + i);
+                                    data.push(Math.floor(rendimientoPorMes * i));
+                                }
+                            } else {
+                                var rendimiento = capital;
+
+                                for (var i = 1; i <= plazo; i++) {
+                                    rendimiento = Math.floor(rendimiento * 1.025);
+                                    labels.push('Mes ' + i);
+                                    data.push(rendimiento);
+                                }
+
+                                mensaje += 'Capital al finalizar el plazo:' + '\n' + '$' + rendimiento.toLocaleString('en-US') + '\n' + '\n';
+
+                                var interesGeneradoCompuesto = Math.floor(rendimiento - capital);
+                                mensaje += 'Intereses generados:' + '\n' + '$' + interesGeneradoCompuesto.toLocaleString('en-US') + '\n';
+                            }
+
+                            document.getElementById('resultado').innerText = mensaje;
+
+                            // Mostrar el gráfico
+                            document.getElementById('chart').style.display = 'block';
+
+                            var ctx = document.getElementById('chart').getContext('2d');
+
+                            if (chart != null) {
+                                chart.destroy();
+                            }
+
+                            chart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: labels,
+                                    datasets: [{
+                                        label: 'Rendimiento de la inversión',
+                                        data: data,
+                                        fill: false,
+                                        borderColor: '#123c49',
+                                        tension: 0.1
+                                    }]
+                                }
+                            });
+                        }
+                    </script>
+            </div>
         </div>
-        <div class="area_cliente">
-            <h3>Controla tus proximos pagos y tus inversiones en la seccion de clientes</h3>
-            <p>Como cliente de Scrivena podrás hacer seguimiento de tus inversiones de manera rápida, estés donde estés.</p>
-        </div>
-        <div class="caja_micuenta">
-            <picture>
-                <source srcset="build/img/micuenta.avif" type="image/avif" loading="lazy">
-                <source srcset="build/img/micuenta.webp" type="image/webp" loading="lazy">
-                <img loading="lazy" src="build/img/micuenta.png" alt="Imagen Carrousel 1">
-            </picture>
-        </div>
-        <div class="registro">
-            <h3>Abre tu cuenta y comienza a invertir</h3>
-            <div class="caja_boton_registro">
-                <a class="boton_registro" href="#">Regístrate</a>
+        <div class="contenedor--area-cliente">
+            <div class="area_cliente">
+                <h3>Controla tus proximos pagos y tus inversiones en la seccion de clientes</h3>
+                <p>Como cliente de Scrivena podrás hacer seguimiento de tus inversiones de manera rápida, estés donde estés.</p>
+            </div>
+            <div class="caja_micuenta">
+                <picture>
+                    <source srcset="build/img/micuenta.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/micuenta.webp" type="image/webp" loading="lazy">
+                    <img loading="lazy" src="build/img/micuenta.png" alt="Imagen Carrousel 1">
+                </picture>
+            </div>
+            <div class="registro">
+                <h3>Abre tu cuenta y comienza a invertir</h3>
+                <div class="caja_boton_registro">
+                    <a class="boton_registro" href="#">Regístrate</a>
+                </div>
             </div>
         </div>
     </div>

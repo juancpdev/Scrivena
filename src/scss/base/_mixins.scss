@@ -22,7 +22,7 @@
     }
 }
 
-@mixin boton($bgColor, $colorTexto) {
+@mixin boton($bgColor, $colorTexto : white) {
     background-color: $bgColor;
     padding: 1rem 4rem;
     color: $colorTexto;
@@ -37,6 +37,25 @@
     &:hover {
         background-color: darken( $bgColor, 10% );
         cursor: pointer;
+    }
+}
+
+@mixin boton2($bgColor, $colorTexto : white) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    border: none;
+    cursor: pointer;
+    background-color: $bgColor;
+    color: $colorTexto;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        transform: scale(.985);
+        background-color: darken($bgColor, 10);
     }
 }
 

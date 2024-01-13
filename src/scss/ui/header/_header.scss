@@ -2,7 +2,17 @@
 @use 'base/variables' as v;
 
 header {
-    margin-top: 2rem;
+    position: fixed;
+    height: 8rem;
+    display: flex;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-bottom: .1rem solid rgba(0, 0, 0, 0.158);
+    z-index: 100;
+
+    @include m.tablet {
+        justify-content: space-around;
+    }
 }
 
 .logo {
@@ -38,6 +48,7 @@ header {
 
 .menubarra {
     font-size: 3rem;
+    color: lighten(v.$principal, 10);
 }
 
 .abrir_menu {
@@ -48,6 +59,10 @@ header {
     position: fixed;
     right: 3rem;
     z-index: 10;
+
+    @include m.tablet {
+        display: none;
+    }
 }
 
 .abrir_menu:hover span {
@@ -56,6 +71,50 @@ header {
 
 .lista_nav a:hover {
     background-color: #1c666e;
+}
+
+.caja_nav-desktop { 
+    display: none;
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: flex-end;
+    }
+
+    .navegacion_principal-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .lista_nav-desktop {
+            display: flex;
+
+            li {
+                @include m.reset-lista;
+                    margin-right: 4rem;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                
+                a {
+                    color: lighten(v.$principal, 20);
+                    &:hover {
+                        color: lighten(v.$principal, 40);
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 1.5px;
+                        background: lighten(v.$principal, 20);
+                        transition: width .5s;
+                    }
+                    &:hover::after {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .caja_nav {
@@ -69,6 +128,10 @@ header {
     transition: all 0.25s ease-in;
     border-radius: 1rem;
     z-index: 10;
+
+    @include m.tablet {
+        display: none;
+    }
 }
 
 .caja_nav.activo {

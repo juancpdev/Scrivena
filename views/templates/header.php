@@ -24,4 +24,23 @@
             </ul>
         </nav>
     </div>
+
+    <div class="caja_nav-desktop">
+        <nav class="navegacion_principal-desktop">
+            <ul class="lista_nav-desktop">
+                <li>
+                    <a href="/servicios">Servicios</a>
+                </li>
+                <li>
+                    <a href="/nosotros">Nosotros</a>
+                </li>
+                <li>
+                    <a href="/portafolio">Portafolio</a>
+                </li>
+                <li>
+                    <a href="/contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>

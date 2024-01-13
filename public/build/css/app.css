@@ -387,71 +387,73 @@ h3 {
   margin-bottom: 5rem;
 }
 
-.caja_superior {
+.scrivena {
+  margin-top: 8rem;
+  /* Estilos para los puntos de navegación */
+  /* Estilos opcionales para mejorar la interacción táctil */
+}
+.scrivena .caja_superior {
   margin: 4rem 4rem;
 }
-.caja_superior h1 {
+.scrivena .caja_superior h1 {
   color: #123c49;
   font-size: 3.4rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .caja_superior h1 {
+  .scrivena .caja_superior h1 {
     font-size: 4rem;
   }
 }
 @media (min-width: 1024px) {
-  .caja_superior h1 {
+  .scrivena .caja_superior h1 {
     font-size: 5rem;
   }
 }
-.caja_superior p {
+.scrivena .caja_superior p {
   font-size: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .caja_superior p {
+  .scrivena .caja_superior p {
     font-size: 1.7rem;
   }
 }
-
-.caja_boton_consulta {
+.scrivena .caja_boton_consulta {
   display: flex;
   justify-content: center;
-  margin: 2rem 3rem 4rem 3rem;
+}
+.scrivena .caja_boton_consulta .boton_consulta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(216, 141, 2);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+}
+.scrivena .caja_boton_consulta .boton_consulta:hover {
+  transform: scale(0.985);
+  background-color: #a56c02;
 }
 @media (min-width: 768px) {
-  .caja_boton_consulta {
-    width: 30rem;
+  .scrivena .caja_boton_consulta .boton_consulta {
+    font-size: 1.6rem;
   }
 }
-.caja_boton_consulta a {
-  font-weight: 500;
-}
-
-.boton_consulta {
-  text-decoration: none;
-  color: white;
-  background-color: #1c626e;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  font-size: 1.8rem;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  text-align: center;
-}
-
-.boton_consulta:hover {
-  background-color: #3694a5;
-}
-
-.caja_section {
+.scrivena .caja_section {
   background-color: #F1F3F9;
   border-radius: 1rem;
   padding: 0 1rem 2rem 1rem;
   box-shadow: 0px 0px 20px rgb(207, 207, 207);
   margin: 0 2rem;
 }
-
-.carrusel {
+.scrivena .carrusel {
   display: flex;
   overflow: hidden;
   width: 100%; /* Asume que quieres que el carrusel tenga el ancho de la pantalla */
@@ -459,8 +461,7 @@ h3 {
   touch-action: pan-y pinch-zoom;
   margin-top: 4rem;
 }
-
-.elemento {
+.scrivena .elemento {
   flex: 0 0 100%;
   max-width: 100%;
   -webkit-user-select: none;
@@ -475,22 +476,20 @@ h3 {
   color: #123c49;
   padding: 0 2rem;
 }
-
-.texto_elemento {
+.scrivena .texto_elemento {
   font-size: 1.7rem;
 }
-
-/* Estilos para los puntos de navegación */
-.img-carrusel {
+.scrivena .img-carrusel {
   width: 100%;
-  height: auto;
+  max-height: 50rem;
 }
-
-.carrusel-nav {
+.scrivena .carrusel-nav {
   text-align: center;
 }
-
-.nav-dot {
+.scrivena .criptomonedas {
+  margin: 3rem 0;
+}
+.scrivena .nav-dot {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -500,207 +499,251 @@ h3 {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
-.nav-dot.active {
+.scrivena .nav-dot.active {
   background-color: #333;
 }
-
-/* Estilos opcionales para mejorar la interacción táctil */
-.grabbing {
+.scrivena .grabbing {
   cursor: grabbing;
 }
-
-.oportunidades {
+.scrivena .oportunidades {
   background-color: #F1F3F9;
   margin: 3rem 0 0 0;
   padding: 2rem 2rem 5rem 2rem;
   text-align: center;
   color: #123c49;
 }
-
-.texto_oportunidades {
+.scrivena .texto_oportunidades {
   width: 80%;
   margin: 0 auto 6rem auto;
 }
-
-.oportunidades img {
+.scrivena .oportunidades img {
   height: 12rem;
 }
-
-.img_p {
+.scrivena .img_p {
   padding: 0 3rem;
   margin: 0 auto;
 }
-
-.flecha {
+@media (min-width: 1024px) {
+  .scrivena .img_p {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+.scrivena .flecha {
   margin: 3rem 0;
 }
-
-.flecha img {
+@media (min-width: 1024px) {
+  .scrivena .flecha {
+    margin: 6rem 0;
+  }
+}
+.scrivena .flecha img {
   height: 3rem;
 }
-
-.servicios {
-  padding: 0.2rem 4rem;
-  margin: 5rem 1rem;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-  border-radius: 1rem;
+@media (min-width: 1024px) {
+  .scrivena .flecha img {
+    transform: rotate(-90deg);
+  }
 }
-
-.titulo_texto {
-  color: #123c49;
+.scrivena .nuestros_servicios {
+  padding: 3rem;
+  margin: 5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1rem;
+  background: linear-gradient(to right, #102c35, #184b5c);
+}
+.scrivena .titulo_servicios {
+  color: white;
   text-align: center;
   margin-bottom: 5rem;
+  font-size: 1.4rem;
 }
-
-.titulo_texto h1 {
-  font-size: 3.5rem;
+@media (min-width: 768px) {
+  .scrivena .titulo_servicios {
+    font-size: 1.6rem;
+  }
 }
-
-.texto_servicios {
-  color: #123c49;
-  text-align: left;
-}
-
-.texto_servicios h1 {
+.scrivena .titulo_servicios h3 {
   font-size: 3rem;
+  color: #49b7d8;
 }
-
-.caja_boton_servicios {
+@media (min-width: 768px) {
+  .scrivena .titulo_servicios h3 {
+    font-size: 4rem;
+  }
+}
+.scrivena .subtitulo_servicios {
+  color: white;
+  text-align: left;
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .scrivena .subtitulo_servicios {
+    font-size: 1.6rem;
+  }
+}
+.scrivena .subtitulo_servicios h3 {
+  font-size: 2.5rem;
+  color: #49b7d8;
+}
+@media (min-width: 768px) {
+  .scrivena .subtitulo_servicios h3 {
+    font-size: 3rem;
+  }
+}
+.scrivena .caja_boton_servicios {
   display: flex;
   justify-content: start;
-  margin: 2rem 3rem 4rem 0rem;
+  margin: 3rem 0;
 }
-
-.boton_servicios {
-  text-decoration: none;
+.scrivena .caja_boton_servicios .boton_servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(216, 141, 2);
   color: white;
-  background-color: #1c626e;
-  padding: 1rem;
+  font-size: 1.5rem;
   border-radius: 1rem;
-  font-size: 1.6rem;
-  transition: background-color 0.3s ease;
-  width: 50%;
-  text-align: center;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
 }
-.boton_servicios:hover {
+.scrivena .caja_boton_servicios .boton_servicios:hover {
+  transform: scale(0.985);
+  background-color: #a56c02;
+}
+@media (min-width: 768px) {
+  .scrivena .caja_boton_servicios .boton_servicios {
+    font-size: 1.6rem;
+  }
+}
+.scrivena .boton_consulta:hover {
   background-color: #3694a5;
 }
-
-.boton_consulta:hover {
-  background-color: #3694a5;
+.scrivena .contenedor--porque_scrivena {
+  margin: 4rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
 }
-
-.porque_scrivena {
-  margin: 0 4rem;
+@media (min-width: 768px) {
+  .scrivena .contenedor--porque_scrivena {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-
-.porque_scrivena img {
+.scrivena .porque_scrivena img {
   height: 8rem;
 }
-
-.titulo_simulador {
+.scrivena .contenedor-simulador {
+  margin: 5rem 0;
+}
+.scrivena .titulo_simulador {
   color: #123c49;
   text-align: center;
   margin-bottom: 0;
   margin-top: 8rem;
 }
-
-.area_cliente {
-  text-align: left;
+.scrivena .contenedor--area-cliente {
+  margin-top: 8rem;
+}
+.scrivena .contenedor--area-cliente .area_cliente {
   margin: 0 3rem;
 }
-.area_cliente p {
+.scrivena .contenedor--area-cliente .area_cliente p {
   font-size: 1.6rem;
 }
-
-.caja_micuenta img {
+.scrivena .contenedor--area-cliente .caja_micuenta img {
   height: 40rem;
 }
-
-.registro {
+.scrivena .contenedor--area-cliente .registro {
   margin: 0 8rem;
 }
-.registro h3 {
+.scrivena .contenedor--area-cliente .registro h3 {
   font-size: 2.3rem;
 }
-
-.caja_boton_registro {
+.scrivena .contenedor--area-cliente .caja_boton_registro {
   display: flex;
   justify-content: center;
 }
-
-.boton_registro {
-  text-decoration: none;
+.scrivena .contenedor--area-cliente .caja_boton_registro .boton_registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(216, 141, 2);
   color: white;
-  background-color: #1c626e;
-  padding: 1rem;
+  font-size: 1.5rem;
   border-radius: 1rem;
-  font-size: 1.8rem;
-  transition: background-color 0.3s ease;
-  width: 12rem;
-  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.scrivena .contenedor--area-cliente .caja_boton_registro .boton_registro:hover {
+  transform: scale(0.985);
+  background-color: #a56c02;
 }
 
-.boton_registro:hover {
-  background-color: #3694a5;
+.servicios {
+  margin-top: 8rem;
 }
-
-.caja_servicios {
+.servicios .caja_servicios {
   padding: 4rem 4rem 8rem 4rem;
   box-shadow: 0 10px 15px -5px rgba(71, 71, 71, 0.5);
   z-index: 1;
 }
-.caja_servicios h1 {
+.servicios .caja_servicios h1 {
   color: #123c49;
   font-size: 6rem;
   text-align: center;
 }
-.caja_servicios p {
+.servicios .caja_servicios p {
   text-align: center;
   margin: 3.5rem 0;
   color: #123c49;
 }
-.caja_servicios .caja_boton_consulta {
+.servicios .caja_servicios .caja_boton_consulta {
   margin: 0 auto;
   width: 80%;
 }
-
-.caja_boton_consulta {
+.servicios .caja_boton_consulta {
   display: flex;
   justify-content: center;
-  margin: 2rem 3rem 4rem 3rem;
+}
+.servicios .caja_boton_consulta .boton_consulta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(216, 141, 2);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+}
+.servicios .caja_boton_consulta .boton_consulta:hover {
+  transform: scale(0.985);
+  background-color: #a56c02;
 }
 @media (min-width: 768px) {
-  .caja_boton_consulta {
-    width: 30rem;
+  .servicios .caja_boton_consulta .boton_consulta {
+    font-size: 1.6rem;
   }
 }
-.caja_boton_consulta a {
-  font-weight: 500;
-}
-
-.boton_consulta {
-  text-decoration: none;
-  color: white;
-  background-color: #1c626e;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  font-size: 1.8rem;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  text-align: center;
-}
-
-.boton_consulta:hover {
-  background-color: #3694a5;
-}
-
-.midseccion {
+.servicios .midseccion {
   background-color: #F1F3F9;
   padding: 2rem;
 }
-.midseccion h2 {
+.servicios .midseccion h2 {
   width: 90%;
   margin: 0 auto 6rem auto;
   font-size: 3rem;
@@ -708,24 +751,22 @@ h3 {
   text-align: center;
   padding-top: 4rem;
 }
-
-.servicios {
+.servicios .servicios {
   padding: 0.2rem 4rem;
   margin: 5rem 1rem;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
   border-radius: 1rem;
 }
-.servicios .titulo_texto {
+.servicios .servicios .titulo_texto {
   text-align: left;
   margin: 3rem 0;
 }
-
-.ultimacaja {
+.servicios .ultimacaja {
   text-align: center;
   display: flex;
   justify-content: center;
 }
-.ultimacaja h2 {
+.servicios .ultimacaja h2 {
   font-size: 3rem;
   margin: 3rem 0;
   padding: 0;
@@ -733,7 +774,18 @@ h3 {
 }
 
 header {
-  margin-top: 2rem;
+  position: fixed;
+  height: 8rem;
+  display: flex;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.158);
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  header {
+    justify-content: space-around;
+  }
 }
 
 .logo {
@@ -769,6 +821,7 @@ header {
 
 .menubarra {
   font-size: 3rem;
+  color: #268697;
 }
 
 .abrir_menu {
@@ -780,6 +833,11 @@ header {
   right: 3rem;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .abrir_menu {
+    display: none;
+  }
+}
 
 .abrir_menu:hover span {
   color: #727272;
@@ -787,6 +845,49 @@ header {
 
 .lista_nav a:hover {
   background-color: #1c666e;
+}
+
+.caja_nav-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .caja_nav-desktop {
+    display: flex;
+    flex-direction: flex-end;
+  }
+}
+.caja_nav-desktop .navegacion_principal-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop {
+  display: flex;
+}
+.caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop li a {
+  color: #31aabf;
+}
+.caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop li a:hover {
+  color: #79cedd;
+}
+.caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #31aabf;
+  transition: width 0.5s;
+}
+.caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop li a:hover::after {
+  width: 50%;
 }
 
 .caja_nav {
@@ -800,6 +901,11 @@ header {
   transition: all 0.25s ease-in;
   border-radius: 1rem;
   z-index: 10;
+}
+@media (min-width: 768px) {
+  .caja_nav {
+    display: none;
+  }
 }
 
 .caja_nav.activo {
