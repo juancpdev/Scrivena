@@ -11,6 +11,7 @@ $router = new Router();
 // Pag Publicas
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
+$router->get('/servicios', [PaginasController::class, 'servicios']);
 
 // Login
 $router->get('/login', [AuthController::class, 'login']);

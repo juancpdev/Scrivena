@@ -18,5 +18,11 @@ class PaginasController {
         ]);
     }
 
+    public static function servicios(Router $router) {
+        $router->render("paginas/servicios", [
+            'titulo' => 'Servicios'
+        ]);
+    }
+
 
 }
