@@ -647,8 +647,91 @@ h3 {
 }
 
 .caja_servicios {
-  margin: 4rem;
+  padding: 4rem 4rem 8rem 4rem;
+  box-shadow: 0 10px 15px -5px rgba(71, 71, 71, 0.5);
+  z-index: 1;
 }
+.caja_servicios h1 {
+  color: #123c49;
+  font-size: 6rem;
+  text-align: center;
+}
+.caja_servicios p {
+  text-align: center;
+  margin: 3.5rem 0;
+  color: #123c49;
+}
+.caja_servicios .caja_boton_consulta {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.caja_boton_consulta {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 3rem 4rem 3rem;
+}
+@media (min-width: 768px) {
+  .caja_boton_consulta {
+    width: 30rem;
+  }
+}
+.caja_boton_consulta a {
+  font-weight: 500;
+}
+
+.boton_consulta {
+  text-decoration: none;
+  color: white;
+  background-color: #1c626e;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.boton_consulta:hover {
+  background-color: #3694a5;
+}
+
+.midseccion {
+  background-color: #F1F3F9;
+  padding: 2rem;
+}
+.midseccion h2 {
+  width: 90%;
+  margin: 0 auto 6rem auto;
+  font-size: 3rem;
+  color: #123c49;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.servicios {
+  padding: 0.2rem 4rem;
+  margin: 5rem 1rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
+}
+.servicios .titulo_texto {
+  text-align: left;
+  margin: 3rem 0;
+}
+
+.ultimacaja {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.ultimacaja h2 {
+  font-size: 3rem;
+  margin: 3rem 0;
+  padding: 0;
+  width: 90%;
+}
+
 header {
   margin-top: 2rem;
 }
@@ -724,7 +807,8 @@ header {
 }
 
 footer {
-  background-color: #1c626e;
+  background-color: #121212;
+  font-weight: 100;
 }
 
 .logo_footer {
@@ -762,7 +846,7 @@ footer {
   display: flex;
   gap: 1.5rem;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .direccion {
@@ -777,7 +861,6 @@ footer {
 .caja_info p {
   color: white;
   margin: 0;
-  font-weight: 400;
 }
 
 .divisor {
@@ -786,7 +869,7 @@ footer {
 }
 
 .caja_redes {
-  margin: 2rem 0;
+  margin: 3rem 0 2rem 0;
   display: flex;
   justify-content: center;
   gap: 3rem;
