@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menu();
     carrouselInicio();
     añoFooter();
+    idiomas();
 });
 
 function menu() {
@@ -123,3 +124,43 @@ function añoFooter() {
     // año copy
     document.getElementById('year').textContent = new Date().getFullYear();
 }
+
+function idiomas() {
+    const languageToggle = document.querySelector('.language-toggle');
+    const circle = document.querySelector('.circle');
+  
+    // Obtener el parámetro de idioma actual de la URL
+    const urlSearchParams = new URLSearchParams(window.location.search);
+  
+    // Función para actualizar la posición del círculo según el idioma
+    function updateCirclePosition() {
+      const langParam = urlSearchParams.get('lang');
+  
+      if (langParam === 'es') {
+        circle.style.transform = 'translate(0, -50%)';
+      } else if (langParam === 'en') {
+        circle.style.transform = 'translate(100%, -50%)';
+      }
+    }
+  
+    // Toggle del botón y actualización de la posición del círculo al hacer clic
+    languageToggle.addEventListener('click', function () {
+      languageToggle.classList.toggle('active');
+  
+      // Obtener el parámetro de idioma actual de la URL
+      const currentLang = urlSearchParams.get('lang');
+  
+      // Cambiar el parámetro de idioma entre 'es' y 'en'
+      const newLang = currentLang === 'es' ? 'en' : 'es';
+  
+      // Actualizar la URL con el nuevo parámetro de idioma
+      urlSearchParams.set('lang', newLang);
+      const newUrl = `${window.location.origin}${window.location.pathname}?${urlSearchParams.toString()}`;
+      window.history.replaceState({}, '', newUrl);
+  
+      // Actualizar la posición del círculo según el idioma después de recargar la página
+      window.location.href = newUrl;
+    });
+
+    updateCirclePosition();
+  }

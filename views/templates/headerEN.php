@@ -1,3 +1,13 @@
+<?php
+// Obtén el valor de la variable 'lang' desde la URL
+$langParam = isset($_GET['lang']) ? $_GET['lang'] : 'en';
+
+// Verifica si estamos en la página de inicio
+$isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'], '/?lang=en') !== false || strpos($_SERVER['REQUEST_URI'], '/?lang=es') !== false);
+
+?>
+
+
 <header class="header">
     <div class="contenedor_logo">
         <a href="/?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">
@@ -9,15 +19,6 @@
         </a>
         <div class="abrir_menu">
             <i class="fa-solid fa-bars menubarra"></i>
-        </div>
-        <div class="lenguaje">
-            <a href="?lang=es">
-                <picture>
-                    <source srcset="build/img/mx1.avif" type="image/avif">
-                    <source srcset="build/img/mx1.webp" type="image/webp">
-                    <img class="logo_lenguaje" loading="lazy" src="build/img/mx1.png">
-                </picture>
-            </a>
         </div>
     </div>
     <div class="caja_nav">
@@ -38,6 +39,10 @@
                 <li>
                     <a href="/contact?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Contact</a>
                 </li>
+                    <hr>
+                <li>
+                    <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Login</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -56,7 +61,19 @@
                 <li>
                     <a href="/contact?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Contact</a>
                 </li>
+                <li>
+                    <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>"><i class="fa-solid fa-right-to-bracket"></i></a>
+                </li>
             </ul>
         </nav>
     </div>
+    <?php if ($isHomePage): ?>
+        <div class="language-toggle">
+            <div class="language-option">ES</div>
+            <div class="toggle-button">
+                <div class="circle"></div>
+            </div>
+            <div class="language-option">EN</div>
+        </div>
+    <?php endif; ?>
 </header>

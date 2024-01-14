@@ -10,7 +10,7 @@ header {
     border-bottom: .1rem solid rgba(0, 0, 0, 0.158);
     z-index: 100;
 
-    @include m.tablet {
+    @include m.tabletXL {
         justify-content: space-around;
     }
 }
@@ -61,7 +61,7 @@ header {
     right: 3rem;
     z-index: 10;
 
-    @include m.tablet {
+    @include m.tabletXL {
         display: none;
     }
 }
@@ -77,7 +77,7 @@ header {
 .caja_nav-desktop { 
     display: none;
 
-    @include m.tablet {
+    @include m.tabletXL {
         display: flex;
         flex-direction: flex-end;
     }
@@ -130,7 +130,7 @@ header {
     border-radius: 1rem;
     z-index: 10;
 
-    @include m.tablet {
+    @include m.tabletXL {
         display: none;
     }
 }
@@ -139,12 +139,53 @@ header {
     right: 3rem;
 }
 
-.lenguaje {
-    position: fixed;
-    right: 8rem;
+.language-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  cursor: pointer;
+  margin-right: 7rem;
 
-    img {
-        height: 2.5rem;
-        margin-left: 1rem;
+  @include m.tabletXL {
+    margin-right: 0;
+    width: auto;
+  }
+
+  .language-option {
+    transition: color 0.3s;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .toggle-button {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 15px;
+    margin: 0 1rem;
+
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 6px;
+      transform: translate(0, -50%);
+      width: 14px;
+      height: 14px;
+      background-color: v.$naranja;
+      border-radius: 50%;
+      transition: transform 0.3s;
     }
+  }
+
+  &:hover {
+    .language-option {
+      color: v.$naranja;
+    }
+  }
+}
+
+.language-toggle.active .toggle-button .circle {
+  transform: translate(100%, -50%);
 }
