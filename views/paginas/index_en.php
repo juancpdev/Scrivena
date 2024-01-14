@@ -330,9 +330,9 @@
         </div>
         <div class="caja_micuenta">
             <picture>
-                <source srcset="build/img/micuenta.avif" type="image/avif" loading="lazy">
-                <source srcset="build/img/micuenta.webp" type="image/webp" loading="lazy">
-                <img loading="lazy" src="build/img/micuenta.png" alt="Imagen Carrousel 1">
+                <source srcset="build/img/Myaccount.avif" type="image/avif" loading="lazy">
+                <source srcset="build/img/Myaccount.webp" type="image/webp" loading="lazy">
+                <img loading="lazy" src="build/img/Myaccount.png" alt="Imagen Carrousel 1">
             </picture>
         </div>
         <div class="registro">

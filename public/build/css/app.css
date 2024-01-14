@@ -793,6 +793,7 @@ header {
 
 .logo {
   height: 3.5rem;
+  max-height: 7vw;
   margin-left: 2rem;
 }
 
@@ -913,6 +914,15 @@ header {
 
 .caja_nav.activo {
   right: 3rem;
+}
+
+.lenguaje {
+  position: fixed;
+  right: 8rem;
+}
+.lenguaje img {
+  height: 2.5rem;
+  margin-left: 1rem;
 }
 
 footer {
