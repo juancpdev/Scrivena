@@ -10,9 +10,19 @@ $router = new Router();
 
 // Pag Publicas
 $router->get('/', [PaginasController::class, 'index']);
-$router->get('/index_en', [PaginasController::class, 'index_en']);
+$router->get('/', [PaginasController::class, 'index']);
+
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
+$router->get('/about-us', [PaginasController::class, 'nosotros']);
+
 $router->get('/servicios', [PaginasController::class, 'servicios']);
+$router->get('/services', [PaginasController::class, 'servicios']);
+
+$router->get('/portafolio', [PaginasController::class, 'portafolio']);
+$router->get('/portfolio', [PaginasController::class, 'portafolio']);
+
+$router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->get('/contact', [PaginasController::class, 'contacto']);
 
 // Login
 $router->get('/login', [AuthController::class, 'login']);

@@ -261,7 +261,7 @@
                             var tipoInteres = document.getElementById('tipoInteres').value;
 
                             if (plazo < 12) {
-                                alert('El plazo mínimo de inversión es de 12 meses');
+                                alert('The minimum investment term is 12 months');
                                 return;
                             }
 
@@ -271,10 +271,10 @@
 
                             if (tipoInteres == 'simple') {
                                 var rendimientoPorMes = Math.floor(capital * 0.02);
-                                mensaje += 'Interés mensual:' + '\n' + '$' + rendimientoPorMes.toLocaleString('en-US') + '\n' + '\n';
+                                mensaje += 'Monthly interest:' + '\n' + '$' + rendimientoPorMes.toLocaleString('en-US') + '\n' + '\n';
 
                                 var interesGenerado = Math.floor(rendimientoPorMes * plazo);
-                                mensaje += 'Interés total final:' + '\n' + '$' + interesGenerado.toLocaleString('en-US') + '\n';
+                                mensaje += 'Final total interest:' + '\n' + '$' + interesGenerado.toLocaleString('en-US') + '\n';
 
                                 for (var i = 1; i <= plazo; i++) {
                                     labels.push('Mes ' + i);
@@ -289,10 +289,10 @@
                                     data.push(rendimiento);
                                 }
 
-                                mensaje += 'Capital al finalizar el plazo:' + '\n' + '$' + rendimiento.toLocaleString('en-US') + '\n' + '\n';
+                                mensaje += 'Capital at the end of the term:' + '\n' + '$' + rendimiento.toLocaleString('en-US') + '\n' + '\n';
 
                                 var interesGeneradoCompuesto = Math.floor(rendimiento - capital);
-                                mensaje += 'Intereses generados:' + '\n' + '$' + interesGeneradoCompuesto.toLocaleString('en-US') + '\n';
+                                mensaje += 'Interest generated:' + '\n' + '$' + interesGeneradoCompuesto.toLocaleString('en-US') + '\n';
                             }
 
                             document.getElementById('resultado').innerText = mensaje;
@@ -311,7 +311,7 @@
                                 data: {
                                     labels: labels,
                                     datasets: [{
-                                        label: 'Rendimiento de la inversión',
+                                        label: 'Investment performance',
                                         data: data,
                                         fill: false,
                                         borderColor: '#123c49',

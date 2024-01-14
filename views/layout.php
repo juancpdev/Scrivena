@@ -15,9 +15,21 @@
 </head>
 <body>
     <?php 
-        include_once __DIR__ .'/templates/header.php';
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : 'es';
+
+        $headerPath = __DIR__ . "/templates/header{$idioma}.php";
+        $footerPath = __DIR__ . "/templates/footer{$idioma}.php";
+    
+        if (file_exists($headerPath)) {
+            include_once $headerPath;
+        }
+        
         echo $contenido;
-        include_once __DIR__ .'/templates/footer.php'; 
+
+        if (file_exists($footerPath)) {
+            include_once $footerPath;
+        }
+        
     ?>
     <script src="/build/js/bundle.min.js" defer></script>
 </body>
