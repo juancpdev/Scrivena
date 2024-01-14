@@ -14,6 +14,8 @@
     <div class="caja_nav">
         <nav class="navegacion_principal">
             <ul class="lista_nav">
+                <li><a href="/index_en">Ingles</a></li>
+                <hr>
                 <li><a href="/servicios">Servicios</a></li>
                 <hr>
                 <li><a href="/nosotros">Nosotros</a></li>

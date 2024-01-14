@@ -5,7 +5,7 @@
     margin-top: 8rem;
     
     .caja_servicios {
-        padding: 4rem 4rem 8rem 4rem;
+        padding: 4rem 4rem 7rem 4rem;
         box-shadow: 0 10px 15px -5px rgba(71, 71, 71, 0.5);
         z-index: 1;
     
@@ -30,6 +30,7 @@
     .caja_boton_consulta {
         display: flex;
         justify-content: center;
+        margin-bottom: 4rem;
         
         .boton_consulta {
             @include m.boton2(v.$naranja);
@@ -65,6 +66,7 @@
         .titulo_texto {
             text-align: left;
             margin: 3rem 0;
+            color: #123c49;
         }
     }
     

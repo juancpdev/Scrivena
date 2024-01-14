@@ -651,7 +651,7 @@ h3 {
   margin-top: 8rem;
 }
 .scrivena .contenedor--area-cliente {
-  margin-top: 8rem;
+  margin-top: 1rem;
 }
 .scrivena .contenedor--area-cliente .area_cliente {
   margin: 0 3rem;
@@ -660,6 +660,7 @@ h3 {
   font-size: 1.6rem;
 }
 .scrivena .contenedor--area-cliente .caja_micuenta img {
+  margin-top: 2rem;
   height: 40rem;
 }
 .scrivena .contenedor--area-cliente .registro {
@@ -694,7 +695,7 @@ h3 {
   margin-top: 8rem;
 }
 .servicios .caja_servicios {
-  padding: 4rem 4rem 8rem 4rem;
+  padding: 4rem 4rem 7rem 4rem;
   box-shadow: 0 10px 15px -5px rgba(71, 71, 71, 0.5);
   z-index: 1;
 }
@@ -715,6 +716,7 @@ h3 {
 .servicios .caja_boton_consulta {
   display: flex;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 .servicios .caja_boton_consulta .boton_consulta {
   display: flex;
@@ -760,6 +762,7 @@ h3 {
 .servicios .servicios .titulo_texto {
   text-align: left;
   margin: 3rem 0;
+  color: #123c49;
 }
 .servicios .ultimacaja {
   text-align: center;

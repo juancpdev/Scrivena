@@ -24,5 +24,11 @@ class PaginasController {
         ]);
     }
 
+    public static function index_en(Router $router) {
+        $router->render("paginas/index_en", [
+            'titulo' => 'Homepage'
+        ]);
+    }
+
 
 }

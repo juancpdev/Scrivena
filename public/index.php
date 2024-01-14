@@ -10,6 +10,7 @@ $router = new Router();
 
 // Pag Publicas
 $router->get('/', [PaginasController::class, 'index']);
+$router->get('/index_en', [PaginasController::class, 'index_en']);
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
 $router->get('/servicios', [PaginasController::class, 'servicios']);
 
