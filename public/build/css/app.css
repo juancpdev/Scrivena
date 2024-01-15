@@ -893,6 +893,92 @@ h3 {
   color: #123c49;
 }
 
+.portafolio {
+  margin-top: 8rem;
+  background-color: #F1F3F9;
+}
+.portafolio .caja_portafolio {
+  padding: 4rem 4rem 7rem 4rem;
+  background-color: white;
+}
+.portafolio .caja_portafolio h1 {
+  color: #123c49;
+  font-size: 6rem;
+  text-align: center;
+}
+.portafolio .caja_portafolio p {
+  text-align: center;
+  margin: 3.5rem 0;
+  color: #123c49;
+}
+.portafolio .caja_portafolio .caja_boton_consulta {
+  margin: 0 auto;
+  width: 80%;
+}
+.portafolio .caja_boton_consulta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.portafolio .caja_boton_consulta .boton_consulta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(216, 141, 2);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+}
+.portafolio .caja_boton_consulta .boton_consulta:hover {
+  transform: scale(0.985);
+  background-color: #a56c02;
+}
+@media (min-width: 768px) {
+  .portafolio .caja_boton_consulta .boton_consulta {
+    font-size: 1.6rem;
+  }
+}
+.portafolio .midseccion {
+  margin: 3rem;
+}
+.portafolio .midseccion .portafolio_padre {
+  margin: 6rem 3rem;
+}
+.portafolio .midseccion .portafolio_padre h3 {
+  color: #123c49;
+}
+.portafolio .midseccion .portafolio_padre p {
+  color: #123c49;
+}
+.portafolio .midseccion .portafolio_padre .caja_imagen_portafolio {
+  display: flex;
+  justify-content: center;
+}
+.portafolio .midseccion .portafolio_padre .caja_imagen_portafolio img {
+  width: 50rem;
+  max-width: 100%;
+}
+.portafolio .midseccion .portafolio_padre .divisor {
+  height: 2px;
+  background-color: black;
+  border: none;
+  width: 90%;
+}
+.portafolio .midseccion .portafolio1 {
+  margin-bottom: 4rem;
+}
+.portafolio .midseccion .portafolio2 {
+  margin: 4rem 0;
+}
+.portafolio .midseccion .portafolio3 {
+  margin: 4rem 0;
+}
+
 header {
   position: fixed;
   height: 8rem;

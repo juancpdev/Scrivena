@@ -1,0 +1,90 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.portafolio {
+    margin-top: 8rem;
+    background-color: #F1F3F9;
+
+    .caja_portafolio {
+        padding: 4rem 4rem 7rem 4rem;
+        background-color: white;
+
+        h1 {
+            color: #123c49;
+            font-size: 6rem;
+            text-align: center;
+        }
+    
+        p {
+            text-align: center;
+            margin: 3.5rem 0;
+            color: #123c49;
+        }
+    
+        .caja_boton_consulta {
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+
+    .caja_boton_consulta {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        
+        .boton_consulta {
+            @include m.boton2(v.$naranja);
+            font-size: 1.4rem;
+    
+            @include m.tablet {
+                font-size: 1.6rem;
+            }    
+        }
+    }
+
+    .midseccion {
+        margin: 3rem;
+
+        .portafolio_padre {
+            margin: 6rem 3rem;
+
+            h3 {
+                color: #123c49;
+            }
+    
+            p {
+                color: #123c49;
+            }
+
+            .caja_imagen_portafolio {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 50rem;
+                    max-width: 100%;
+                }
+            }
+
+            .divisor {
+                height: 2px;
+                background-color: black;
+                border: none;
+                width: 90%;
+            }
+        }
+
+        .portafolio1 {
+            margin-bottom: 4rem;
+        }
+
+        .portafolio2 {
+            margin: 4rem 0;
+        }
+
+        .portafolio3 {
+            margin: 4rem 0;
+        }
+    }
+}
