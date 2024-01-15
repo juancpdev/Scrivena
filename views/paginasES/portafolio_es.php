@@ -24,8 +24,7 @@
             </div>
             <div class="portafolio2">
                 <h3>Desarrollos Inmobiliarios</h3>
-                <p>
-La inversión en desarrollos inmobiliarios, abarcando propiedades residenciales, comerciales, industriales y recreativas, puede generar retornos financieros sólidos y beneficios tangibles. Ofrece ingresos estables por alquileres y ventas, además de potenciales ganancias de capital por apreciación del valor. Además, actúa como una cobertura contra la inflación, ya que el valor de la propiedad suele incrementarse con el tiempo.</p>
+                <p>La inversión en desarrollos inmobiliarios, abarcando propiedades residenciales, comerciales, industriales y recreativas, puede generar retornos financieros sólidos y beneficios tangibles. Ofrece ingresos estables por alquileres y ventas, además de potenciales ganancias de capital por apreciación del valor. Además, actúa como una cobertura contra la inflación, ya que el valor de la propiedad suele incrementarse con el tiempo.</p>
                 <div class="caja_imagen_portafolio">
                     <picture>
                         <source srcset="build/img/desarrollo.avif" type="image/avif" loading="lazy">
@@ -48,6 +47,81 @@ La inversión en desarrollos inmobiliarios, abarcando propiedades residenciales,
                     </picture>
                 </div>
             </div>
+            <div>
+                <hr class="divisor">
+            </div>
+            <div class="portafolio4">
+                <h3>Remates Inmobiliarios</h3>
+                <p>Enfocándonos en oportunidades únicas, nuestro fondo de inversión se especializa en remates inmobiliarios, logrando un rendimiento excepcional del 9% mensual. Esta estrategia nos permite ofrecer a nuestros inversores no solo rendimientos atractivos, sino también una vía innovadora y eficiente para capitalizar en el dinámico mercado inmobiliario.</p>
+                <div class="caja_imagen_portafolio">
+                    <picture>
+                        <source srcset="build/img/inmueble.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/inmueble.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/inmueble.png" alt="Imagen Carrousel 1">
+                    </picture>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="seccion_baja">
+        <h3>Gestión patrimonial eficiente para maximizar rentabilidad y proteger su inversión.</h3>
+        <div class="caja_check">
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Asesoramiento personalizado</p>
+            </div>
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Optimización de cartera</p>
+            </div>
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Diversificación de activos</p>
+            </div>
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Seguridad financiera</p>
+            </div>
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Rentabilidad sostenible</p>
+            </div>
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Protección de patrimonio</p>
+            </div>
+            <div class="check">
+                <picture>
+                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                </picture>
+                <p>Informes de rendimiento</p>
+            </div>
+        </div>       
     </div>
 </main>

@@ -947,7 +947,7 @@ h3 {
   margin: 3rem;
 }
 .portafolio .midseccion .portafolio_padre {
-  margin: 6rem 3rem;
+  margin: 6rem 0;
 }
 .portafolio .midseccion .portafolio_padre h3 {
   color: #123c49;
@@ -977,6 +977,34 @@ h3 {
 }
 .portafolio .midseccion .portafolio3 {
   margin: 4rem 0;
+}
+.portafolio .midseccion .portafolio3 {
+  margin: 4rem 0;
+}
+.portafolio .seccion_baja {
+  padding: 4rem 3rem 6rem 3rem;
+  background-color: #123c49;
+}
+.portafolio .seccion_baja h3 {
+  color: #49b7d8;
+  font-size: 2.5rem;
+}
+.portafolio .seccion_baja p {
+  font-size: 1.5rem;
+  color: white;
+}
+.portafolio .seccion_baja .caja_check {
+  margin: 0 1rem;
+}
+.portafolio .seccion_baja .caja_check .check {
+  display: flex;
+  align-items: center;
+}
+.portafolio .seccion_baja .caja_check .check img {
+  width: 2rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 header {
