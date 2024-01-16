@@ -1,6 +1,6 @@
 // widget-script.js
 document.addEventListener("DOMContentLoaded", function() {
-  var cajaSection = document.querySelector('.caja_section');
+  var cajaSection = document.querySelector('.criptos');
 
   if(cajaSection) {
     var container = document.createElement('div');
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             ],
             "showSymbolLogo": true,
-            "colorTheme": "light",
+            "colorTheme": "dark",
             "isTransparent": false,
             "displayMode": "adaptive",
             "locale": "es"

@@ -392,11 +392,29 @@ h3 {
   /* Estilos para los puntos de navegación */
   /* Estilos opcionales para mejorar la interacción táctil */
 }
-.scrivena .caja_superior {
-  margin: 4rem 4rem;
+.scrivena .imagen-inicio {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-inicio2.avif") type("image/avif"), url("/build/img/header-inicio2.webp") type("image/webp"), url("/build/img/header-inicio2.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/header-inicio2.avif") type("image/avif"), url("/build/img/header-inicio2.webp") type("image/webp"), url("/build/img/header-inicio2.jpg") type("image/jpeg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (min-width: 768px) {
+  .scrivena .imagen-inicio {
+    font-size: 4rem;
+    padding: 6rem 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .scrivena .imagen-inicio {
+    font-size: 7rem;
+    padding: 10rem 0;
+  }
 }
 .scrivena .caja_superior h1 {
-  color: #123c49;
+  margin: 0;
+  color: #FFFFFF;
   font-size: 3.4rem;
   text-align: center;
 }
@@ -407,12 +425,13 @@ h3 {
 }
 @media (min-width: 1024px) {
   .scrivena .caja_superior h1 {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 .scrivena .caja_superior p {
   font-size: 1.5rem;
   text-align: center;
+  color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .scrivena .caja_superior p {
@@ -435,6 +454,7 @@ h3 {
   font-size: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
   font-size: 1.4rem;
 }
 .scrivena .caja_boton_consulta .boton_consulta:hover {
@@ -447,11 +467,18 @@ h3 {
   }
 }
 .scrivena .caja_section {
-  background-color: #F1F3F9;
   border-radius: 1rem;
   padding: 0 1rem 2rem 1rem;
   box-shadow: 0px 0px 20px rgb(207, 207, 207);
   margin: 0 2rem;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+@media (min-width: 768px) {
+  .scrivena .caja_section {
+    width: min(95%, 60rem);
+    margin: 0 auto;
+  }
 }
 .scrivena .carrusel {
   display: flex;
@@ -473,15 +500,18 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #123c49;
-  padding: 0 2rem;
+  padding: 2rem 2rem 0 2rem;
+}
+.scrivena .titulo_elemento {
+  color: #FFFFFF;
 }
 .scrivena .texto_elemento {
   font-size: 1.7rem;
+  color: #FFFFFF;
 }
 .scrivena .img-carrusel {
   width: 100%;
-  max-height: 50rem;
+  max-height: 30rem;
 }
 .scrivena .carrusel-nav {
   text-align: center;
@@ -500,17 +530,24 @@ h3 {
   transition: background-color 0.3s;
 }
 .scrivena .nav-dot.active {
-  background-color: #333;
+  background-color: rgb(216, 141, 2);
 }
 .scrivena .grabbing {
   cursor: grabbing;
 }
-.scrivena .oportunidades {
+.scrivena .contenedor-oportunidades {
   background-color: #F1F3F9;
-  margin: 3rem 0 0 0;
+}
+.scrivena .oportunidades {
   padding: 2rem 2rem 5rem 2rem;
   text-align: center;
   color: #123c49;
+}
+@media (min-width: 768px) {
+  .scrivena .oportunidades {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+  }
 }
 .scrivena .texto_oportunidades {
   width: 80%;
@@ -611,6 +648,7 @@ h3 {
   font-size: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
   font-size: 1.4rem;
 }
 .scrivena .caja_boton_servicios .boton_servicios:hover {
@@ -685,6 +723,7 @@ h3 {
   font-size: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 .scrivena .contenedor--area-cliente .caja_boton_registro .boton_registro:hover {
   transform: scale(0.985);
@@ -696,16 +735,22 @@ h3 {
 }
 .servicios .caja_servicios {
   padding: 4rem 4rem 7rem 4rem;
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-servicios.avif") type("image/avif"), url("/build/img/header-servicios.webp") type("image/webp"), url("/build/img/header-servicios.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/header-servicios.avif") type("image/avif"), url("/build/img/header-servicios.webp") type("image/webp"), url("/build/img/header-servicios.jpg") type("image/jpeg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .servicios .caja_servicios h1 {
-  color: #123c49;
-  font-size: 6rem;
+  color: white;
+  font-size: clamp(4rem, 8vw, 6rem);
   text-align: center;
 }
 .servicios .caja_servicios p {
   text-align: center;
   margin: 3.5rem 0;
-  color: #123c49;
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .servicios .caja_servicios .caja_boton_consulta {
   margin: 0 auto;
@@ -728,6 +773,7 @@ h3 {
   font-size: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
   font-size: 1.4rem;
 }
 .servicios .caja_boton_consulta .boton_consulta:hover {
@@ -739,36 +785,72 @@ h3 {
     font-size: 1.6rem;
   }
 }
-.servicios .midseccion {
+.servicios .contenedor-servicios {
   background-color: #F1F3F9;
   padding: 2rem;
+}
+@media (min-width: 768px) {
+  .servicios .midseccion {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+  }
 }
 .servicios .midseccion h2 {
   width: 90%;
   margin: 0 auto 6rem auto;
-  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   color: #123c49;
   text-align: center;
   padding-top: 4rem;
 }
-.servicios .servicios {
-  padding: 0.2rem 4rem;
-  margin: 5rem 1rem;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-  border-radius: 1rem;
+.servicios .grid-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
-.servicios .servicios .titulo_texto {
+@media (min-width: 1024px) {
+  .servicios .grid-servicios {
+    flex-direction: row;
+    display: flex;
+    gap: 4rem;
+    margin: 6rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .servicios .servicios-arriba {
+    display: flex;
+    align-items: center;
+  }
+}
+.servicios .servicios-abajo {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+@media (min-width: 1024px) {
+  .servicios .servicios-abajo {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+.servicios .servicio {
+  padding: 1rem 4rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: #fece75;
+}
+.servicios .servicio .titulo_texto {
   text-align: left;
   margin: 3rem 0;
-  color: #123c49;
 }
 .servicios .ultimacaja {
   text-align: center;
   display: flex;
   justify-content: center;
+  margin: 3rem 0;
 }
 .servicios .ultimacaja h2 {
-  font-size: 3rem;
+  font-size: clamp(3rem, 3vw, 4rem);
   margin: 3rem 0;
   padding: 0;
   width: 90%;
@@ -813,6 +895,7 @@ h3 {
   font-size: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
   font-size: 1.4rem;
 }
 .nosotros .caja_boton_consulta .boton_consulta:hover {
@@ -932,6 +1015,7 @@ h3 {
   font-size: 1.5rem;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
   font-size: 1.4rem;
 }
 .portafolio .caja_boton_consulta .boton_consulta:hover {

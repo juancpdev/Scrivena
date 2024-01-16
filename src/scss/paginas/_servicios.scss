@@ -6,17 +6,27 @@
     
     .caja_servicios {
         padding: 4rem 4rem 7rem 4rem;
+        background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%),
+        image-set(
+            url('/build/img/header-servicios.avif') type('image/avif'),
+            url('/build/img/header-servicios.webp') type('image/webp'),
+            url('/build/img/header-servicios.jpg') type('image/jpeg')
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
     
         h1 {
-            color: #123c49;
-            font-size: 6rem;
+            color: white;
+            font-size: clamp(4rem, 8vw, 6rem);
             text-align: center;
         }
     
         p {
             text-align: center;
             margin: 3.5rem 0;
-            color: #123c49;
+            color: white;
+            font-size: clamp(1.5rem, 3vw, 2rem);
         }
     
         .caja_boton_consulta {
@@ -40,31 +50,67 @@
         }
     }
 
-    
-    .midseccion {
+    .contenedor-servicios {
         background-color: #F1F3F9;
         padding: 2rem;
+    }
     
+    .midseccion {
+        @include m.tablet {
+            @include m.contenedor;
+        }
+
         h2 {
             width: 90%;
             margin: 0 auto 6rem auto;
-            font-size: 3rem;
+            font-size: clamp(2rem, 3vw, 3rem);
             color: #123c49;
             text-align: center;
             padding-top: 4rem;
         }
     }
     
-    .servicios {
-        padding: 0.2rem 4rem;
-        margin: 5rem 1rem;
+    .grid-servicios {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        @include m.desktop {
+            flex-direction: row;
+            display: flex;
+            gap: 4rem;
+            margin: 6rem 0;
+        }
+        
+    }
+
+    .servicios-arriba {
+        @include m.desktop {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .servicios-abajo {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        @include m.desktop {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+    
+    }
+
+    .servicio {
+        padding: 1rem 4rem;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-        border-radius: 1rem;
+        background-color: lighten(v.$naranja, 30);
     
         .titulo_texto {
             text-align: left;
             margin: 3rem 0;
-            color: #123c49;
+            
         }
     }
     
@@ -72,9 +118,10 @@
         text-align: center;
         display: flex;
         justify-content: center;
+        margin: 3rem 0;
     
         h2 {
-            font-size: 3rem;
+            font-size: clamp(3rem, 3vw, 4rem);
             margin: 3rem 0;
             padding: 0;
             width: 90%;

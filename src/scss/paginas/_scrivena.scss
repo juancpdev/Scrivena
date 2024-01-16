@@ -3,12 +3,35 @@
 
 .scrivena {
     margin-top: 8rem;
+
+    .imagen-inicio {
+        padding: 4rem 2rem;
+        background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%),
+        image-set(
+            url('/build/img/header-inicio2.avif') type('image/avif'),
+            url('/build/img/header-inicio2.webp') type('image/webp'),
+            url('/build/img/header-inicio2.jpg') type('image/jpeg')
+        );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include m.tablet {
+            font-size: 4rem;
+            padding: 6rem 2rem;
+        }
+
+        @include m.desktop {
+            font-size: 7rem;
+            padding: 10rem 0;
+        }
+    }
     
     .caja_superior {
-        margin: 4rem 4rem;
-    
+
         h1 {
-            color: #123c49;
+            margin: 0;
+            color: v.$blanco;
             font-size: 3.4rem;
             text-align: center;
     
@@ -17,13 +40,14 @@
             }
     
             @include m.desktop {
-                font-size: 5rem;
+                font-size: 6rem;
             }
         }
     
         p {
             font-size: 1.5rem;
             text-align: center;
+            color: v.$blanco;
     
             @include m.tablet {
                 font-size: 1.7rem;
@@ -46,11 +70,14 @@
     }
     
     .caja_section {
-        background-color: #F1F3F9;
         border-radius: 1rem;
         padding: 0 1rem 2rem 1rem;
         box-shadow: 0px 0px 20px rgb(207, 207, 207);
         margin: 0 2rem;
+        backdrop-filter: blur(20px);
+        @include m.tablet {
+            @include m.contenedor-sm;
+        }
     }
     
     .carrusel {
@@ -72,18 +99,22 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        color: #123c49;
-        padding: 0 2rem;
+        padding: 2rem 2rem 0 2rem;
     }
     
+    .titulo_elemento {
+        color: v.$blanco;
+    }
+
     .texto_elemento {
         font-size: 1.7rem;
+        color: v.$blanco;
     }
     
     /* Estilos para los puntos de navegación */
     .img-carrusel {
         width: 100%;
-        max-height: 50rem;
+        max-height: 30rem;
     }
     
     .carrusel-nav {
@@ -106,7 +137,7 @@
     }
     
     .nav-dot.active {
-        background-color: #333;
+        background-color: v.$naranja;
     }
     
     /* Estilos opcionales para mejorar la interacción táctil */
@@ -114,12 +145,18 @@
         cursor: grabbing;
     }
     
-    .oportunidades {
+    .contenedor-oportunidades {
         background-color: #F1F3F9;
-        margin: 3rem 0 0 0;
+    }
+
+    .oportunidades {
         padding: 2rem 2rem 5rem 2rem;
         text-align: center;
         color: #123c49;
+        
+        @include m.tablet {
+            @include m.contenedor;
+        }
     }
     
     .texto_oportunidades {
