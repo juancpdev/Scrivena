@@ -7,25 +7,7 @@
     background-color: #F1F3F9;
 
     .caja_portafolio {
-        padding: 4rem 4rem 7rem 4rem;
-        background-color: white;
-
-        h1 {
-            color: #123c49;
-            font-size: 6rem;
-            text-align: center;
-        }
-    
-        p {
-            text-align: center;
-            margin: 3.5rem 0;
-            color: #123c49;
-        }
-    
-        .caja_boton_consulta {
-            margin: 0 auto;
-            width: 80%;
-        }
+        @include m.header-paginas(portafolio);
     }
 
     .caja_boton_consulta {

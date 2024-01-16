@@ -1,2 +1,27 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
+
+.contacto {
+
+    margin-top: 8rem;
+    background-color: #F1F3F9;
+
+    .caja_contacto {
+        @include m.header-paginas(contacto);
+    }
+
+    .caja_boton_consulta {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        
+        .boton_consulta {
+            @include m.boton2(v.$naranja);
+            font-size: 1.4rem;
+    
+            @include m.tablet {
+                font-size: 1.6rem;
+            }    
+        }
+    }
+}

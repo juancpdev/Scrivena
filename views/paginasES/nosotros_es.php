@@ -1,11 +1,5 @@
 <main class="nosotros">
-    <div class="caja_nosotros">
-        <h1>Nosotros</h1>
-        <p>Expertos en Inversiones y Financiamiento</p>
-        <div class="caja_boton_consulta">
-            <a class="boton_consulta" href="#">AGENDA UNA CONSULTA</a>
-        </div>
-    </div>
+    <?php include_once __DIR__ . "/../templates/paginas-titulo.php" ?>
     <div class="midseccion">
         <div class="caja_titulo">
             <h2>Bienvenido a SCRIVENA</h2>
