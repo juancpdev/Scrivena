@@ -66,13 +66,5 @@ $isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'],
             </ul>
         </nav>
     </div>
-    <?php if ($isHomePage): ?>
-        <div class="language-toggle">
-            <div class="language-option">ES</div>
-            <div class="toggle-button">
-                <div class="circle"></div>
-            </div>
-            <div class="language-option">EN</div>
-        </div>
-    <?php endif; ?>
+    <?php include_once __DIR__ . "/btn-idioma.php" ?>
 </header>

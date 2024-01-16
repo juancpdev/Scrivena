@@ -1,4 +1,5 @@
 <main class="scrivena">
+    
     <div class="imagen-inicio">
         <div class="caja_superior">
             <h1>Tu éxito financiero comienza con <br>SCRIVENA</h1>

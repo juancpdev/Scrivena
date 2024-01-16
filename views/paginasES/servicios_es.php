@@ -1,11 +1,5 @@
 <main class="servicios">
-    <div class="caja_servicios">
-        <h1>Servicios</h1>
-        <p>Potenciando el Futuro: Inversión Estratégica y Financiamiento Sostenible</p>
-        <div class="caja_boton_consulta">
-            <a class="boton_consulta" href="#">AGENDA UNA CONSULTA</a>
-        </div>
-    </div>
+    <?php include_once __DIR__ . "/../templates/paginas-titulo.php" ?>
     <section class="contenedor-servicios">
         <div class="midseccion">
             <h2>Desarrollo y Progreso: Financiamiento Versátil para Proyectos Garantizados y Sostenibles</h2>

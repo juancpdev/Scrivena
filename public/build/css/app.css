@@ -349,6 +349,10 @@ a {
   flex: 1;
 }
 
+.none {
+  opacity: 0;
+}
+
 h1, h2, h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
@@ -734,13 +738,13 @@ h3 {
   padding: 4rem 4rem 7rem 4rem;
   background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-servicios.avif") type("image/avif"), url("/build/img/header-servicios.webp") type("image/webp"), url("/build/img/header-servicios.jpg") type("image/jpeg"));
   background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/header-servicios.avif") type("image/avif"), url("/build/img/header-servicios.webp") type("image/webp"), url("/build/img/header-servicios.jpg") type("image/jpeg"));
-  background-repeat: no-repeat;
+  d-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .servicios .caja_servicios h1 {
   color: white;
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(5rem, -0.8rem + 10vw, 8rem);
   text-align: center;
 }
 .servicios .caja_servicios p {
@@ -859,17 +863,22 @@ h3 {
 }
 .nosotros .caja_nosotros {
   padding: 4rem 4rem 7rem 4rem;
-  background-color: white;
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-nosotros.avif") type("image/avif"), url("/build/img/header-nosotros.webp") type("image/webp"), url("/build/img/header-nosotros.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/header-nosotros.avif") type("image/avif"), url("/build/img/header-nosotros.webp") type("image/webp"), url("/build/img/header-nosotros.jpg") type("image/jpeg"));
+  d-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .nosotros .caja_nosotros h1 {
-  color: #123c49;
-  font-size: 6rem;
+  color: white;
+  font-size: clamp(5rem, -0.8rem + 10vw, 8rem);
   text-align: center;
 }
 .nosotros .caja_nosotros p {
   text-align: center;
   margin: 3.5rem 0;
-  color: #123c49;
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .nosotros .caja_nosotros .caja_boton_consulta {
   margin: 0 auto;
@@ -973,57 +982,28 @@ h3 {
   color: #123c49;
 }
 
-.contacto {
-  margin-top: 8rem;
-  background-color: #F1F3F9;
-}
-.contacto .caja_contacto {
-  padding: 4rem;
-  background-color: white;
-}
-.contacto .caja_contacto h1 {
-  color: #123c49;
-  font-size: 6rem;
-  text-align: center;
-}
-.contacto .caja_contacto p {
-  text-align: center;
-  margin: 3.5rem 0;
-  color: #123c49;
-}
-.contacto .caja_contacto .caja_boton_consulta {
-  margin: 0 auto;
-  width: 80%;
-}
-.contacto .midseccion {
-  margin: 3rem;
-}
-.contacto .midseccion h2 {
-  color: #123c49;
-  font-size: 2.5rem;
-}
-.contacto .midseccion p {
-  color: #123c49;
-  font-size: 1.5rem;
-}
-
 .portafolio {
   margin-top: 8rem;
   background-color: #F1F3F9;
 }
 .portafolio .caja_portafolio {
   padding: 4rem 4rem 7rem 4rem;
-  background-color: white;
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-portafolio.avif") type("image/avif"), url("/build/img/header-portafolio.webp") type("image/webp"), url("/build/img/header-portafolio.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/header-portafolio.avif") type("image/avif"), url("/build/img/header-portafolio.webp") type("image/webp"), url("/build/img/header-portafolio.jpg") type("image/jpeg"));
+  d-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .portafolio .caja_portafolio h1 {
-  color: #123c49;
-  font-size: 6rem;
+  color: white;
+  font-size: clamp(5rem, -0.8rem + 10vw, 8rem);
   text-align: center;
 }
 .portafolio .caja_portafolio p {
   text-align: center;
   margin: 3.5rem 0;
-  color: #123c49;
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 .portafolio .caja_portafolio .caja_boton_consulta {
   margin: 0 auto;
@@ -1280,6 +1260,7 @@ header {
   transition: color 0.3s;
   font-size: 1.5rem;
   font-weight: bold;
+  color: rgb(216, 141, 2);
 }
 .language-toggle .toggle-button {
   position: relative;
@@ -1299,9 +1280,6 @@ header {
   background-color: rgb(216, 141, 2);
   border-radius: 50%;
   transition: transform 0.3s;
-}
-.language-toggle:hover .language-option {
-  color: rgb(216, 141, 2);
 }
 
 .language-toggle.active .toggle-button .circle {

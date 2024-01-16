@@ -39,28 +39,32 @@ class PaginasController {
     public static function servicios(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/servicios_{$idioma}", [
-            'titulo' => $idioma === 'es' ? 'Servicios' : 'Services'
+            'titulo' => $idioma === 'es' ? 'Servicios' : 'Services',
+            'subtitulo' => $idioma === 'es' ? "Potenciando el Futuro: Inversión Estratégica y Financiamiento Sostenible" : "Empowering the Future: Strategic Investment and Sustainable Financing"
         ]);
     }
 
     public static function nosotros(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/nosotros_{$idioma}", [
-            'titulo' => $idioma === 'es' ? 'Nosotros' : 'About Us'
+            'titulo' => $idioma === 'es' ? 'Nosotros' : 'About Us',
+            'subtitulo' => $idioma === 'es' ? "Expertos en Inversiones y Financiamient" : "Investment and Financing Experts"
         ]);
     }
 
     public static function portafolio(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/portafolio_{$idioma}", [
-            'titulo' => $idioma === 'es' ? 'Portafolio' : 'Portfolio'
+            'titulo' => $idioma === 'es' ? 'Portafolio' : 'Portfolio',
+            'subtitulo' => $idioma === 'es' ? "Rendimientos Sólidos - Conoce Nuestro Portafolio" : "Solid Returns - Learn About Our Portfolio"
         ]);
     }
     
     public static function contacto(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/contacto_{$idioma}", [
-            'titulo' => $idioma === 'es' ? 'Contacto' : 'Contact'
+            'titulo' => $idioma === 'es' ? 'Contacto' : 'Contact',
+            'subtitulo' => $idioma === 'es' ? "CONTACTO" : "CONTACTO"
         ]);
     }
     

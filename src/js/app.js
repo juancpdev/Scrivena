@@ -138,8 +138,10 @@ function idiomas() {
 
       if (langParam === "es") {
         circle.style.transform = "translate(0, -50%)";
+        console.log("ES");
       } else if (langParam === "en") {
         circle.style.transform = "translate(100%, -50%)";
+        console.log("EN");
       }
     }
 
@@ -155,15 +157,20 @@ function idiomas() {
 
       // Actualizar la URL con el nuevo parámetro de idioma
       urlSearchParams.set("lang", newLang);
-      const newUrl = `${window.location.origin}${
-        window.location.pathname
-      }?${urlSearchParams.toString()}`;
-      window.history.replaceState({}, "", newUrl);
+      const newUrl = `${window.location.origin}${window.location.pathname}?${urlSearchParams.toString()}`;
 
-      // Actualizar la posición del círculo según el idioma después de recargar la página
-      window.location.href = newUrl;
+      // Actualizar la posición del círculo después de un pequeño retraso
+      setTimeout(() => {
+        updateCirclePosition();
+      }, 300); // Ajusta el valor del retraso según sea necesario
+
+      // Actualizar la URL sin recargar completamente la página
+      setTimeout(() => {
+        window.location.href = newUrl;
+      }, 600);
     });
 
+    
     updateCirclePosition();
   }
 }
