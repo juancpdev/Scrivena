@@ -1,2 +1,43 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
+
+.contacto {
+    margin-top: 8rem;
+    background-color: #F1F3F9;
+
+    .caja_contacto {
+        padding: 4rem;
+        background-color: white;
+    
+        h1 {
+            color: #123c49;
+            font-size: 6rem;
+            text-align: center;
+        }
+    
+        p {
+            text-align: center;
+            margin: 3.5rem 0;
+            color: #123c49;
+        }
+    
+        .caja_boton_consulta {
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+
+    .midseccion {
+        margin: 3rem;
+
+        h2 {
+            color: #123c49;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: #123c49;
+            font-size: 1.5rem;
+        }
+    }
+}

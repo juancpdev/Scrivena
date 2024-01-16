@@ -394,8 +394,8 @@ h3 {
 }
 .scrivena .imagen-inicio {
   padding: 4rem 2rem;
-  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-inicio2.avif") type("image/avif"), url("/build/img/header-inicio2.webp") type("image/webp"), url("/build/img/header-inicio2.jpg") type("image/jpeg"));
-  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/header-inicio2.avif") type("image/avif"), url("/build/img/header-inicio2.webp") type("image/webp"), url("/build/img/header-inicio2.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/inicio-header1.avif") type("image/avif"), url("/build/img/inicio-header1.webp") type("image/webp"), url("/build/img/inicio-header1.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/inicio-header1.avif") type("image/avif"), url("/build/img/inicio-header1.webp") type("image/webp"), url("/build/img/inicio-header1.jpg") type("image/jpeg"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -469,7 +469,7 @@ h3 {
 .scrivena .caja_section {
   border-radius: 1rem;
   padding: 0 1rem 2rem 1rem;
-  box-shadow: 0px 0px 20px rgb(207, 207, 207);
+  box-shadow: 0px 0px 20px rgb(120, 120, 120);
   margin: 0 2rem;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -515,9 +515,6 @@ h3 {
 }
 .scrivena .carrusel-nav {
   text-align: center;
-}
-.scrivena .criptomonedas {
-  margin: 3rem 0;
 }
 .scrivena .nav-dot {
   display: inline-block;
@@ -974,6 +971,40 @@ h3 {
 }
 .nosotros .nosotros4 p {
   color: #123c49;
+}
+
+.contacto {
+  margin-top: 8rem;
+  background-color: #F1F3F9;
+}
+.contacto .caja_contacto {
+  padding: 4rem;
+  background-color: white;
+}
+.contacto .caja_contacto h1 {
+  color: #123c49;
+  font-size: 6rem;
+  text-align: center;
+}
+.contacto .caja_contacto p {
+  text-align: center;
+  margin: 3.5rem 0;
+  color: #123c49;
+}
+.contacto .caja_contacto .caja_boton_consulta {
+  margin: 0 auto;
+  width: 80%;
+}
+.contacto .midseccion {
+  margin: 3rem;
+}
+.contacto .midseccion h2 {
+  color: #123c49;
+  font-size: 2.5rem;
+}
+.contacto .midseccion p {
+  color: #123c49;
+  font-size: 1.5rem;
 }
 
 .portafolio {
