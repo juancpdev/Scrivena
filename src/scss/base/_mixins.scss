@@ -201,7 +201,7 @@
         image-set(
             url('#{$image-path}.avif') type('image/avif'),
             url('#{$image-path}.webp') type('image/webp'),
-            url('#{$image-path}.jpg') type('image/jpeg')
+            url('#{$image-path}.png') type('image/png')
         );d-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
