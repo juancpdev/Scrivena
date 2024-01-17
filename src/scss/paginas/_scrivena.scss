@@ -241,7 +241,7 @@
     
     .caja_boton_servicios {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         margin: 3rem 0;
     
         .boton_servicios {
@@ -290,21 +290,52 @@
         margin-top: 1rem;
 
         .area_cliente {
-            margin: 0 3rem;
+            margin: 8rem 3rem 0 3rem;
+            @include m.desktop {
+                h3 {
+                    font-size: 4rem;
+                }
+            }
         
             p {
                 font-size: 1.6rem;
             }
         }
         
+        .caja_micuenta {
+            margin-bottom: 3rem;
+
+            @include m.desktop {
+                display: flex;
+                width: 80%;
+                margin: 0 auto;
+
+                .texto_micuenta {
+                    margin: auto;
+                    width: 60%;
+
+                    .caja_boton_servicios {
+                        justify-content: center;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
         .caja_micuenta img {
             margin-top: 2rem;
-            height: 40rem;
+            height: 30rem;
         }
         
         .registro {
-            margin: 0 8rem;
-        
+            margin: 0 5rem;
+            @include m.desktop {
+                margin-top: 7rem;
+            }
+
             h3 {
                 font-size: 2.3rem;
             }

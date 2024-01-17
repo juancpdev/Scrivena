@@ -334,15 +334,22 @@
             </div>
             <div class="contenedor--area-cliente">
                 <div class="area_cliente">
-                    <h3>Controla tus proximos pagos y tus inversiones en la seccion de clientes</h3>
-                    <p>Como cliente de Scrivena podrás hacer seguimiento de tus inversiones de manera rápida, estés donde estés.</p>
+                    <h3>Explora Nuestro Portafolio Diversificado</h3>
                 </div>
                 <div class="caja_micuenta">
-                    <picture>
-                        <source srcset="build/img/micuenta.avif" type="image/avif" loading="lazy">
-                        <source srcset="build/img/micuenta.webp" type="image/webp" loading="lazy">
-                        <img loading="lazy" src="build/img/micuenta.png" alt="Imagen Carrousel 1">
-                    </picture>
+                    <div>
+                        <picture>
+                            <source srcset="build/img/portafolioico4.avif" type="image/avif" loading="lazy">
+                            <source srcset="build/img/portafolioico4.webp" type="image/webp" loading="lazy">
+                            <img loading="lazy" src="build/img/portafolioico4.png" alt="Imagen Carrousel 1">
+                        </picture>
+                    </div>
+                    <div class="texto_micuenta">
+                        <p>Nuestro enfoque estratégico en la selección de inversiones nos permite maximizar el potencial de crecimiento mientras gestionamos efectivamente el riesgo. Desde oportunidades emergentes hasta inversiones establecidas, nuestro portafolio está diseñado para alinear las metas financieras de nuestros clientes con oportunidades de mercado excepcionales.</p>
+                        <div class="caja_boton_servicios">
+                            <a class="boton_servicios" href="#">Conocer más</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="registro">
                     <h3>Abre tu cuenta y comienza a invertir</h3>

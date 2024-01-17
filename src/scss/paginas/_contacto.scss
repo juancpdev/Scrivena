@@ -25,7 +25,7 @@
     } 
 
     .midseccion {
-        margin: 10rem 0;
+        margin: 8rem 0 5rem 0;
         padding: 5rem 0;
         background-color: lighten(v.$naranja, 30);
         display: flex;
@@ -39,6 +39,7 @@
         h2 {
             margin: 0;
             @include m.texto-fluido(2rem, 5rem);
+            font-size: 3rem;
         }
 
         p {
