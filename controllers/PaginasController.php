@@ -64,7 +64,7 @@ class PaginasController {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/contacto_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Contacto' : 'Contact',
-            'subtitulo' => $idioma === 'es' ? "CONTACTO" : "CONTACTO"
+            'subtitulo' => $idioma === 'es' ? "Comunicación Directa y Personalizada" : "Direct and Personalized Communication"
         ]);
     }
     

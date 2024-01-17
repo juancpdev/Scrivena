@@ -1,0 +1,114 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.formulario-contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 10rem 3rem;
+
+    .formulario {
+        max-width: 100rem;
+        width: 80rem;
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.253);
+    }
+
+    .campo-contenedor {
+        margin-bottom: 20px;
+    }
+
+    .campo_contenedor-arriba {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+
+        .campo-orden {
+            margin-right: 1rem;
+            font-weight: bold;
+            color: v.$naranja;
+        }
+    }
+
+    .campo_contenedor-abajo {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .campo {
+            width: 100%;
+            position: relative;
+    
+            &:hover,
+            &:focus-within {
+                input,
+                textarea {
+                    transition: all .3s ease;
+                    border-color: lighten(v.$naranja, 30);
+                }
+            }
+
+            input {
+                width: 100%;
+                border: .2rem solid rgb(230, 226, 226);
+                border-radius: .5rem;
+                padding: 1.3rem;
+                font-size: 1.6rem;
+                background: v.$blanco;
+
+                &:focus {
+                    border: 2px solid v.$naranja;
+                    outline: none;
+                }
+            }
+
+            .input-email {
+                padding-left: 4rem;  // Deja espacio para el ícono
+                background: url('/build/img/mail-svg.svg') no-repeat 1rem center;
+                background-size: 2rem; 
+                background-color: v.$blanco;
+            }
+
+            .input-telefono {
+                padding-left: 4rem;  // Deja espacio para el ícono
+                background: url('/build/img/telefono-svg.svg') no-repeat 1rem center;
+                background-size: 2rem; 
+                background-color: v.$blanco;
+            }
+
+            textarea {
+                width: 100%;
+                border: .2rem solid rgb(230, 226, 226);
+                border-radius: .5rem;
+                padding: 1.3rem;
+                font-size: 1.6rem;
+                resize: none;
+                background: v.$blanco;
+
+                &:focus {
+                    border: 2px solid v.$naranja;
+                    outline: none;
+                }
+            }
+            
+        }
+    }
+    
+    .campo_contenedor-nombre {
+        @include m.tablet {
+            flex-direction: row;
+        }
+    }
+
+    .contenedor-boton {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .boton {
+            @include m.boton2(v.$naranja);
+        }
+    }
+
+
+}
