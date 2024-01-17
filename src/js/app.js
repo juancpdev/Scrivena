@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   menu();
   carrouselInicio();
-  añoFooter();
   idiomas();
 });
 
@@ -119,11 +118,6 @@ function carrouselInicio() {
     // Establecer intervalo para cambiar al siguiente elemento cada 4 segundos
     setInterval(moverSiguiente, 5000);
   }
-}
-
-function añoFooter() {
-  // año copy
-  document.getElementById("year").textContent = new Date().getFullYear();
 }
 
 function idiomas() {

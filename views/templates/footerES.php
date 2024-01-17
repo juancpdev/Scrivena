@@ -43,6 +43,6 @@
         <hr>
     </div>
     <div class="derechosreservados">
-        <p>&copy; Scrivena <span id="year"></span> - Todos los derechos reservado</p>
+        <p>&copy; Scrivena <span id="year">2024</span> - Todos los derechos reservado</p>
     </div>    
 </footer>
