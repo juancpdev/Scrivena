@@ -9,15 +9,17 @@ function menu() {
   const btnFlotante = document.querySelector(".abrir_menu");
   const menu = document.querySelector(".caja_nav");
 
-  btnFlotante.addEventListener("click", abrirCerrarMenu);
+  if(btnFlotante) {
+    btnFlotante.addEventListener("click", abrirCerrarMenu);
 
-  function abrirCerrarMenu() {
-    if (menu.classList.contains("activo")) {
-      menu.classList.remove("activo");
-      btnFlotante.classList.remove("activo");
-    } else {
-      menu.classList.add("activo");
-      btnFlotante.classList.add("activo");
+    function abrirCerrarMenu() {
+      if (menu.classList.contains("activo")) {
+        menu.classList.remove("activo");
+        btnFlotante.classList.remove("activo");
+      } else {
+        menu.classList.add("activo");
+        btnFlotante.classList.add("activo");
+      }
     }
   }
 }
