@@ -1120,6 +1120,24 @@ h3 {
   margin-top: 8rem;
   background-color: #F1F3F9;
 }
+.portafolio h3 {
+  color: #123c49;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .portafolio h3 {
+    font-size: 3rem;
+  }
+}
+.portafolio p {
+  color: #123c49;
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  .portafolio p {
+    font-size: 1.5rem;
+  }
+}
 .portafolio .caja_portafolio {
   padding: 4rem 4rem 7rem 4rem;
   background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-portafolio.avif") type("image/avif"), url("/build/img/header-portafolio.webp") type("image/webp"), url("/build/img/header-portafolio.png") type("image/png"));
@@ -1175,14 +1193,14 @@ h3 {
 .portafolio .midseccion {
   margin: 3rem;
 }
+@media (min-width: 768px) {
+  .portafolio .midseccion {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+  }
+}
 .portafolio .midseccion .portafolio_padre {
   margin: 6rem 0;
-}
-.portafolio .midseccion .portafolio_padre h3 {
-  color: #123c49;
-}
-.portafolio .midseccion .portafolio_padre p {
-  color: #123c49;
 }
 .portafolio .midseccion .portafolio_padre .caja_imagen_portafolio {
   display: flex;
@@ -1193,8 +1211,8 @@ h3 {
   max-width: 100%;
 }
 .portafolio .midseccion .portafolio_padre .divisor {
-  height: 2px;
-  background-color: black;
+  height: 0.3rem;
+  background-color: #1c626e;
   border: none;
   width: 90%;
 }
@@ -1210,9 +1228,13 @@ h3 {
 .portafolio .midseccion .portafolio3 {
   margin: 4rem 0;
 }
-.portafolio .seccion_baja {
+.portafolio .seccion_baja-contenedor {
   padding: 4rem 3rem 6rem 3rem;
   background-color: #123c49;
+}
+.portafolio .seccion_baja {
+  width: min(95%, 120rem);
+  margin: 0 auto;
 }
 .portafolio .seccion_baja h3 {
   color: #49b7d8;

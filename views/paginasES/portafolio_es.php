@@ -57,65 +57,67 @@
             </div>
         </div>
     </div>
-    <div class="seccion_baja">
-        <h3>Gestión patrimonial eficiente para maximizar rentabilidad y proteger su inversión.</h3>
-        <div class="caja_check">
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Asesoramiento personalizado</p>
+    <div class="seccion_baja-contenedor">
+        <div class="seccion_baja">
+            <h3>Gestión patrimonial eficiente para maximizar rentabilidad y proteger su inversión.</h3>
+            <div class="caja_check">
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Asesoramiento personalizado</p>
+                </div>
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Optimización de cartera</p>
+                </div>
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Diversificación de activos</p>
+                </div>
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Seguridad financiera</p>
+                </div>
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Rentabilidad sostenible</p>
+                </div>
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Protección de patrimonio</p>
+                </div>
+                <div class="check">
+                    <picture>
+                        <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <p>Informes de rendimiento</p>
+                </div>
             </div>
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Optimización de cartera</p>
-            </div>
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Diversificación de activos</p>
-            </div>
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Seguridad financiera</p>
-            </div>
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Rentabilidad sostenible</p>
-            </div>
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Protección de patrimonio</p>
-            </div>
-            <div class="check">
-                <picture>
-                    <source srcset="build/img/check.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/check.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/check.png" alt="Imagen Carrousel 1">
-                </picture>
-                <p>Informes de rendimiento</p>
-            </div>
-        </div>       
+        </div>
     </div>
 </main>
