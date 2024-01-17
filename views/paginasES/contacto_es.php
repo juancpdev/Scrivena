@@ -2,7 +2,7 @@
     <?php include_once __DIR__ . "/../templates/paginas-titulo.php" ?>
     <main>
         <div class="midseccion">
-            <h2>Contáctenos</h2>
+            <h2>Conéctese con Nuestros Expertos en Inversión</h2>
             <p>2525 Ponce de Leon Boulevard, Coral Gables, Miami, FL 33134, USA.</p>
         </div>
         <?php include_once __DIR__ . '/../templates/alertas.php' ?>

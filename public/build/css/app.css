@@ -699,17 +699,47 @@ h3 {
   margin-top: 1rem;
 }
 .scrivena .contenedor--area-cliente .area_cliente {
-  margin: 0 3rem;
+  margin: 8rem 3rem 0 3rem;
+}
+@media (min-width: 1024px) {
+  .scrivena .contenedor--area-cliente .area_cliente h3 {
+    font-size: 4rem;
+  }
 }
 .scrivena .contenedor--area-cliente .area_cliente p {
   font-size: 1.6rem;
 }
+.scrivena .contenedor--area-cliente .caja_micuenta {
+  margin-bottom: 3rem;
+}
+@media (min-width: 1024px) {
+  .scrivena .contenedor--area-cliente .caja_micuenta {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .scrivena .contenedor--area-cliente .caja_micuenta .texto_micuenta {
+    margin: auto;
+    width: 60%;
+  }
+  .scrivena .contenedor--area-cliente .caja_micuenta .texto_micuenta .caja_boton_servicios {
+    justify-content: center;
+  }
+  .scrivena .contenedor--area-cliente .caja_micuenta .texto_micuenta p {
+    font-size: 2rem;
+  }
+}
 .scrivena .contenedor--area-cliente .caja_micuenta img {
   margin-top: 2rem;
-  height: 40rem;
+  height: 30rem;
 }
 .scrivena .contenedor--area-cliente .registro {
-  margin: 0 8rem;
+  margin: 0 5rem;
+}
+@media (min-width: 1024px) {
+  .scrivena .contenedor--area-cliente .registro {
+    margin-top: 7rem;
+  }
 }
 .scrivena .contenedor--area-cliente .registro h3 {
   font-size: 2.3rem;
@@ -1095,7 +1125,7 @@ h3 {
   }
 }
 .contacto .midseccion {
-  margin: 10rem 0;
+  margin: 8rem 0 5rem 0;
   padding: 5rem 0;
   background-color: #fece75;
   display: flex;
@@ -1109,6 +1139,7 @@ h3 {
 .contacto .midseccion h2 {
   margin: 0;
   font-size: clamp(2rem, -0.8rem + 10vw, 5rem);
+  font-size: 3rem;
 }
 .contacto .midseccion p {
   padding: 0 5rem;
@@ -1261,7 +1292,7 @@ h3 {
 .formulario-contenedor {
   display: flex;
   justify-content: center;
-  margin: 10rem 3rem;
+  margin: 5rem 3rem 10rem 3rem;
 }
 .formulario-contenedor .formulario {
   max-width: 100rem;
