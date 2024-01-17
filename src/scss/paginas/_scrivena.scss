@@ -194,7 +194,12 @@
         margin: 5rem 1rem;
         @include m.shadow;
         border-radius: 1rem;
-        background: linear-gradient(to right, #102c35, #184b5c); 
+        background: linear-gradient(to right, #102c35, #184b5c);
+
+        @include m.desktop {
+            padding: 3rem 10rem;
+            margin: 5rem 8rem;
+        }
     }
     
     .titulo_servicios {
