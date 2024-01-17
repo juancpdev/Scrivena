@@ -10,8 +10,8 @@
         <div class="caja_footer">
             <div class="caja_terminos cajahijo">
                 <div class="caja_terminos">
-                    <a href="#">Términos y condiciones</a>
-                    <a href="#">Aviso de privacidad</a>
+                    <a href="">Términos y condiciones</a>
+                    <a href="">Aviso de privacidad</a>
                 </div>
             </div>
             <div class="caja_info cajahijo">    
@@ -26,13 +26,13 @@
         <hr>
     </div>
     <div class="caja_redes">
-        <a href="#">
+        <a href="">
             <i class="iconos iconos__footer fa-brands fa-whatsapp"></i>
         </a>
-        <a href="#">
+        <a target="_blank" href="https://t.me/scrivena">
             <i class="iconos iconos__footer fa-brands fa-telegram"></i>
         </a>
-        <a href="#">
+        <a target="_blank" href="https://www.instagram.com/scrivenatrust">
             <i class="iconos iconos__footer fa-brands fa-instagram"></i>
         </a>
     </div>

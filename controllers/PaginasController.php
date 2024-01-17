@@ -40,7 +40,8 @@ class PaginasController {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/servicios_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Servicios' : 'Services',
-            'subtitulo' => $idioma === 'es' ? "Potenciando el Futuro: Inversión Estratégica y Financiamiento Sostenible" : "Empowering the Future: Strategic Investment and Sustainable Financing"
+            'subtitulo' => $idioma === 'es' ? "Potenciando el Futuro: Inversión Estratégica y Financiamiento Sostenible" : "Empowering the Future: Strategic Investment and Sustainable Financing",
+            'clase' => 'Servicios'
         ]);
     }
 
@@ -48,7 +49,8 @@ class PaginasController {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/nosotros_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Nosotros' : 'About Us',
-            'subtitulo' => $idioma === 'es' ? "Expertos en Inversiones y Financiamient" : "Investment and Financing Experts"
+            'subtitulo' => $idioma === 'es' ? "Expertos en Inversiones y Financiamient" : "Investment and Financing Experts",
+            'clase' => 'Nosotros'
         ]);
     }
 
@@ -56,7 +58,8 @@ class PaginasController {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/portafolio_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Portafolio' : 'Portfolio',
-            'subtitulo' => $idioma === 'es' ? "Rendimientos Sólidos - Conoce Nuestro Portafolio" : "Solid Returns - Learn About Our Portfolio"
+            'subtitulo' => $idioma === 'es' ? "Rendimientos Sólidos - Conoce Nuestro Portafolio" : "Solid Returns - Learn About Our Portfolio",
+            'clase' => 'Portafolio'
         ]);
     }
     
@@ -64,7 +67,8 @@ class PaginasController {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
         $router->render("paginas{$idioma}/contacto_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Contacto' : 'Contact',
-            'subtitulo' => $idioma === 'es' ? "Comunicación Directa y Personalizada" : "Direct and Personalized Communication"
+            'subtitulo' => $idioma === 'es' ? "Comunicación Directa y Personalizada" : "Direct and Personalized Communication",
+            'clase' => 'Contacto'
         ]);
     }
     

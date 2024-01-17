@@ -6,7 +6,7 @@
             <p>SCRIVENA: Tu aliado clave en la ruta hacia la prosperidad y la estabilidad económica</p>
         </div>
         <div class="caja_boton_consulta">
-            <a class="boton_consulta" href="#">AGENDA UNA CONSULTA</a>
+            <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
         </div>
         <div class="caja_section">
             <div class="carrusel">
@@ -127,7 +127,7 @@
                     <p>SCRIVENA proporciona financiamiento personalizado para proyectos variados, abarcando desde soluciones fiduciarias hasta iniciativas ambientales, enfocándonos en el crecimiento sostenible y el cuidado del medio ambiente.</p>
                 </div>
                 <div class="caja_boton_servicios">
-                    <a class="boton_servicios" href="#">Conocer más</a>
+                    <a class="boton_servicios" href="/servicios">Conocer más</a>
                 </div>
             </div>
             <div class="titulo_texto">
@@ -347,14 +347,14 @@
                     <div class="texto_micuenta">
                         <p>Nuestro enfoque estratégico en la selección de inversiones nos permite maximizar el potencial de crecimiento mientras gestionamos efectivamente el riesgo. Desde oportunidades emergentes hasta inversiones establecidas, nuestro portafolio está diseñado para alinear las metas financieras de nuestros clientes con oportunidades de mercado excepcionales.</p>
                         <div class="caja_boton_servicios">
-                            <a class="boton_servicios" href="#">Conocer más</a>
+                            <a class="boton_servicios" href="/portafolio">Conocer más</a>
                         </div>
                     </div>
                 </div>
                 <div class="registro">
                     <h3>Abre tu cuenta y comienza a invertir</h3>
                     <div class="caja_boton_registro">
-                        <a class="boton_registro" href="#">Regístrate</a>
+                        <a class="boton_registro" href="">Regístrate</a>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@
             <p>SCRIVENA: Your key ally on the path to prosperity and economic stability</p>
         </div>
         <div class="caja_boton_consulta">
-            <a class="boton_consulta" href="#">SCHEDULE A CONSULTATION</a>
+            <a class="boton_consulta" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScl3bNyS9g4F8Qv8DgZBypN9fL-johOmN-R443h-7UBF9VuqA/viewform">SCHEDULE A CONSULTATION</a>
         </div>
         <div class="caja_section">
             <div class="carrusel">
@@ -127,7 +127,7 @@
                     <p>SCRIVENA provides personalized financing for a variety of projects, ranging from fiduciary solutions to environmental initiatives, focusing on sustainable growth and environmental care.</p>
                 </div>
                 <div class="caja_boton_servicios">
-                    <a class="boton_servicios" href="#">Learn more</a>
+                    <a class="boton_servicios" href="/services?lang=en">Learn more</a>
                 </div>
             </div>
             <div class="titulo_texto">
@@ -169,7 +169,7 @@
             </div>
             <div class="contenedor-simulador">
                 <div class="titulo_texto">
-                    <h3>Simula tu inversión</h3>
+                    <h3>Simulate your investment</h3>
                 </div>
                 <div class="caja_simulador">
                     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -348,14 +348,14 @@
                     <div class="texto_micuenta">
                         <p>Our strategic approach in selecting investments allows us to maximize growth potential while effectively managing risk. From emerging opportunities to established investments, our portfolio is designed to align our clients' financial goals with exceptional market opportunities.</p>
                         <div class="caja_boton_servicios">
-                            <a class="boton_servicios" href="#">Learn more</a>
+                            <a class="boton_servicios" href="/portfolio?lang=en">Learn more</a>
                         </div>
                     </div>
                 </div>
                 <div class="registro">
                     <h3>Open your account and start investing</h3>
                     <div class="caja_boton_registro">
-                        <a class="boton_registro" href="#">Register</a>
+                        <a class="boton_registro" href="">Register</a>
                     </div>
                 </div>
             </div>

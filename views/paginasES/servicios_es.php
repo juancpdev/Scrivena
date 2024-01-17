@@ -1,5 +1,9 @@
 <main class="servicios">
     <?php include_once __DIR__ . "/../templates/paginas-titulo.php" ?>
+    <div class="caja_boton_consulta">
+        <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
+    </div>
+</div>
     <section class="contenedor-servicios">
         <div class="midseccion">
             <h2>Desarrollo y Progreso: Financiamiento Versátil para Proyectos Garantizados y Sostenibles</h2>
@@ -40,7 +44,7 @@
                 <h2>Gestión Patrimonial o Planificación Patrimonial.<br>Estamos aquí para ayudarte.</h2>
             </div>
             <div class="caja_boton_consulta">
-                <a class="boton_consulta" href="#">AGENDA UNA CONSULTA</a>
+                <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
             </div>
         </div>
     </section>

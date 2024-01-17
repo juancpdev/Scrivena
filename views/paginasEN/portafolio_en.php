@@ -1,5 +1,9 @@
 <main class="portafolio">
     <?php include_once __DIR__ . "/../templates/paginas-titulo.php" ?>
+        <div class="caja_boton_consulta">
+            <a class="boton_consulta" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScl3bNyS9g4F8Qv8DgZBypN9fL-johOmN-R443h-7UBF9VuqA/viewform">SCHEDULE A CONSULTATION</a>
+        </div>
+    </div>
     <div class="midseccion">
         <div class="portafolio_padre">
             <div class="portafolio1">

@@ -138,10 +138,8 @@ function idiomas() {
 
       if (langParam === "es") {
         circle.style.transform = "translate(0, -50%)";
-        console.log("ES");
       } else if (langParam === "en") {
         circle.style.transform = "translate(100%, -50%)";
-        console.log("EN");
       }
     }
 

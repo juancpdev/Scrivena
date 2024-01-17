@@ -38,10 +38,13 @@ $isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'],
                 <li>
                     <a href="/contact?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Contact</a>
                 </li>
+                <!-- 
                     <hr>
                 <li>
                     <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Login</a>
                 </li>
+                -->
+                
             </ul>
         </nav>
     </div>
@@ -60,9 +63,11 @@ $isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'],
                 <li>
                     <a href="/contact?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Contact</a>
                 </li>
+                <!-- 
                 <li>
                     <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>"><i class="fa-solid fa-right-to-bracket"></i></a>
                 </li>
+                -->
             </ul>
         </nav>
     </div>

@@ -1,5 +1,9 @@
 <main class="contacto">
     <?php include_once __DIR__ . "/../templates/paginas-titulo.php" ?>
+        <div class="caja_boton_consulta">
+            <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
+        </div>
+    </div>
     <main>
         <div class="midseccion">
             <h2>Conéctese con Nuestros Expertos en Inversión</h2>
@@ -8,7 +12,7 @@
         <?php include_once __DIR__ . '/../templates/alertas.php' ?>
 
         <div class="formulario-contenedor">
-            <form action="/contacto" method="POST" class="formulario" novalidate>
+            <form class="formulario" novalidate>
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">1.</span>
@@ -61,7 +65,7 @@
                 </div>
 
                 <div class="contenedor-boton">
-                    <input class="boton" type="submit" value="Enviar Mensaje">
+                    <input class="boton" type="button" value="Enviar Mensaje">
                 </div>
             </form>
         </div>
