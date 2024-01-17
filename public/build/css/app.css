@@ -593,6 +593,12 @@ h3 {
   border-radius: 1rem;
   background: linear-gradient(to right, #102c35, #184b5c);
 }
+@media (min-width: 1024px) {
+  .scrivena .nuestros_servicios {
+    padding: 3rem 10rem;
+    margin: 5rem 8rem;
+  }
+}
 .scrivena .titulo_servicios {
   color: white;
   text-align: center;
