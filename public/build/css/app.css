@@ -1309,6 +1309,11 @@ h3 {
   color: #49b7d8;
   font-size: 2.5rem;
 }
+@media (min-width: 1024px) {
+  .portafolio .seccion_baja h3 {
+    text-align: center;
+  }
+}
 .portafolio .seccion_baja p {
   font-size: 1.5rem;
   color: white;
@@ -1333,6 +1338,11 @@ h3 {
 .portafolio .seccion_baja .caja_check .check {
   display: flex;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .portafolio .seccion_baja .caja_check .check {
+    justify-content: center;
+  }
 }
 .portafolio .seccion_baja .caja_check .check img {
   width: 2rem;
@@ -1539,6 +1549,7 @@ header {
 }
 .caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop {
   display: flex;
+  padding: 0;
 }
 .caja_nav-desktop .navegacion_principal-desktop .lista_nav-desktop li {
   margin: 0;

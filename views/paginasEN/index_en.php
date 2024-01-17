@@ -34,8 +34,8 @@
                         <source srcset="build/img/elemento3.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento3.png" alt="Imagen Carrousel 3">
                     </picture>
-                    <h3 class="titulo_elemento">Grow your money without commissions!</h3>
-                    <p class="texto_elemento">With SCRIVENA, say goodbye to the static money in your bank account</p>
+                    <h3 class="titulo_elemento">We care about your peace of mind</h3>
+                    <p class="texto_elemento">Your financial success at your fingertips: with the support of our experts, achieve your wealth goals</p>
                 </div>
                 <div class="elemento">
                     <picture>
@@ -43,8 +43,8 @@
                         <source srcset="build/img/elemento4.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento4.png" alt="Imagen Carrousel 4">
                     </picture>
-                    <h3 class="titulo_elemento">We care about your peace of mind</h3>
-                    <p class="texto_elemento">Your financial success at your fingertips: with the support of our experts, achieve your wealth goals</p>
+                    <h3 class="titulo_elemento">Grow your money without commissions!</h3>
+                    <p class="texto_elemento">With SCRIVENA, say goodbye to the static money in your bank account</p>
                 </div>
             </div>
             <div class="carrusel-nav">

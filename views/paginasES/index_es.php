@@ -34,8 +34,8 @@
                         <source srcset="build/img/elemento3.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento3.png" alt="Imagen Carrousel 3">
                     </picture>
-                    <h3 class="titulo_elemento">¡Haz crecer tu dinero sin comisiones!</h3>
-                    <p class="texto_elemento">Con SCRIVENA dile adiós al dinero estático de tu cuenta bancaria</p>
+                    <h3 class="titulo_elemento">Nos importa tu tranquilidad</h3>
+                    <p class="texto_elemento">Tu éxito financiero al alcance de la mano: con el apoyo de nuestros expertos, logra tus metas patrimoniales</p>
                 </div>
                 <div class="elemento">
                     <picture>
@@ -43,8 +43,8 @@
                         <source srcset="build/img/elemento4.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento4.png" alt="Imagen Carrousel 4">
                     </picture>
-                    <h3 class="titulo_elemento">Nos importa tu tranquilidad</h3>
-                    <p class="texto_elemento">Tu éxito financiero al alcance de la mano: con el apoyo de nuestros expertos, logra tus metas patrimoniales</p>
+                    <h3 class="titulo_elemento">¡Haz crecer tu dinero sin comisiones!</h3>
+                    <p class="texto_elemento">Con SCRIVENA dile adiós al dinero estático de tu cuenta bancaria</p>
                 </div>
             </div>
             <div class="carrusel-nav">

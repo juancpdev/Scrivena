@@ -24,11 +24,11 @@ $isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'],
         <nav class="navegacion_principal">
             <ul class="lista_nav">
                 <li>
-                    <a href="/servicios?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Servicios</a>
+                    <a href="/nosotros?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Nosotros</a>
                 </li>
                 <hr>
                 <li>
-                    <a href="/nosotros?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Nosotros</a>
+                    <a href="/servicios?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Servicios</a>
                 </li>
                 <hr>
                 <li>
@@ -51,10 +51,10 @@ $isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'],
         <nav class="navegacion_principal-desktop">
             <ul class="lista_nav-desktop">
                 <li>
-                    <a href="/servicios?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Servicios</a>
+                    <a href="/nosotros?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Nosotros</a>
                 </li>
                 <li>
-                    <a href="/nosotros?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Nosotros</a>
+                    <a href="/servicios?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Servicios</a>
                 </li>
                 <li>
                     <a href="/portafolio?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Portafolio</a>
