@@ -303,7 +303,7 @@
         }
         
         .caja_micuenta {
-            margin-bottom: 3rem;
+            margin: 0 2rem;
 
             @include m.desktop {
                 display: flex;
@@ -327,17 +327,31 @@
 
         .caja_micuenta img {
             margin-top: 2rem;
-            height: 30rem;
+            height: 20rem;
+
+            @include m.tablet {
+                height: 30rem;
+            }
         }
         
         .registro {
-            margin: 0 5rem;
+            padding: 3rem;
+            margin: 8rem 1rem;
+            @include m.shadow;
+            border-radius: 1rem;
+            background: linear-gradient(to right, #102c35, #184b5c);
+    
             @include m.desktop {
-                margin-top: 7rem;
+                padding: 3rem 10rem;
+                margin: 8rem 6rem 5rem 6rem;
             }
-
+        
             h3 {
-                font-size: 2.3rem;
+                font-size: 2.5rem;
+                color: #b3edff;
+                @include m.tablet {
+                    font-size: 3rem;
+                }
             }
         }
         

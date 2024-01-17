@@ -710,7 +710,7 @@ h3 {
   font-size: 1.6rem;
 }
 .scrivena .contenedor--area-cliente .caja_micuenta {
-  margin-bottom: 3rem;
+  margin: 0 2rem;
 }
 @media (min-width: 1024px) {
   .scrivena .contenedor--area-cliente .caja_micuenta {
@@ -731,18 +731,34 @@ h3 {
 }
 .scrivena .contenedor--area-cliente .caja_micuenta img {
   margin-top: 2rem;
-  height: 30rem;
+  height: 20rem;
+}
+@media (min-width: 768px) {
+  .scrivena .contenedor--area-cliente .caja_micuenta img {
+    height: 30rem;
+  }
 }
 .scrivena .contenedor--area-cliente .registro {
-  margin: 0 5rem;
+  padding: 3rem;
+  margin: 8rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1rem;
+  background: linear-gradient(to right, #102c35, #184b5c);
 }
 @media (min-width: 1024px) {
   .scrivena .contenedor--area-cliente .registro {
-    margin-top: 7rem;
+    padding: 3rem 10rem;
+    margin: 8rem 6rem 5rem 6rem;
   }
 }
 .scrivena .contenedor--area-cliente .registro h3 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
+  color: #b3edff;
+}
+@media (min-width: 768px) {
+  .scrivena .contenedor--area-cliente .registro h3 {
+    font-size: 3rem;
+  }
 }
 .scrivena .contenedor--area-cliente .caja_boton_registro {
   display: flex;
@@ -1277,6 +1293,20 @@ h3 {
 }
 .portafolio .seccion_baja .caja_check {
   margin: 0 1rem;
+}
+@media (min-width: 768px) {
+  .portafolio .seccion_baja .caja_check {
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .portafolio .seccion_baja .caja_check {
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .portafolio .seccion_baja .caja_check .check {
   display: flex;

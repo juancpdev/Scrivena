@@ -105,6 +105,14 @@
     
             .caja_check {
                 margin: 0 1rem;
+                
+                @include m.tablet {
+                    @include m.grid(2, 0rem);
+                }
+
+                @include m.desktop {
+                    @include m.grid(3, 0rem);
+                }
     
                 .check {
                     display: flex;
