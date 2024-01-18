@@ -9,21 +9,25 @@
             <h2>Connect with Our Investment Experts</h2>
             <p>2525 Ponce de Leon Boulevard, Coral Gables, Miami, FL 33134, USA.</p>
         </div>
-        <?php include_once __DIR__ . '/../templates/alertas.php' ?>
 
         <div class="formulario-contenedor">
-            <form class="formulario" novalidate>
-                <div class="campo-contenedor">
+            <form method="POST" action="/contact?lang=en" class="formulario">
+            <?php if($mensaje) { ?>
+                <div class="contenedor-alerta">
+                    <p class="alerta-correcto"> <?php echo $mensaje; ?> </p>
+                </div>
+            <?php } ?>
+            <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">1.</span>
-                        <p class="campo-nombre">First and Last Name</p>
+                        <p class="campo-nombre">Name and Last name</p>
                     </div>
                     <div class="campo_contenedor-abajo campo_contenedor-nombre">
                         <div class="campo">
-                            <input type="text" name="nombre" id="nombre" placeholder="First Name">
+                            <input type="text" name="contacto[nombre]" id="nombre" placeholder="Name" required>
                         </div>
                         <div class="campo">
-                            <input type="text" name="apellido" id="nombre" placeholder="Last Name">
+                            <input type="text" name="contacto[apellido] id="nombre" placeholder="Last name" required>
                         </div>
                     </div>
                 </div>
@@ -35,7 +39,7 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input class="input-email" type="email" name="email" id="email" placeholder="Email">
+                            <input class="input-email" type="email" name="contacto[email]" id="email" placeholder="Email" required>
                         </div>
                     </div>
                 </div>
@@ -43,11 +47,11 @@
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">3.</span>
-                        <p class="campo-email">Phone Number</p>
+                        <p class="campo-email">Phone number</p>
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input class="input-telefono" id="telefono" type="number" name="telefono" placeholder="Enter your phone number">
+                            <input class="input-telefono" id="telefono" type="number" name="contacto[telefono]" placeholder="Phone" required>
                         </div>
                     </div>
                 </div>
@@ -59,13 +63,13 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <textarea id="mensaje" name="mensaje" placeholder="Message" rows="8"></textarea>
+                            <textarea id="mensaje" name="contacto[mensaje]" placeholder="Message" rows="8" required></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="contenedor-boton">
-                    <input class="boton" type="button" value="Send Message">
+                    <input class="boton" type="submit" value="Send Message">
                 </div>
             </form>
         </div>

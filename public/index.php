@@ -22,7 +22,9 @@ $router->get('/portafolio', [PaginasController::class, 'portafolio']);
 $router->get('/portfolio', [PaginasController::class, 'portafolio']);
 
 $router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->post('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/contact', [PaginasController::class, 'contacto']);
+$router->post('/contact', [PaginasController::class, 'contacto']);
 
 // Login
 $router->get('/login', [AuthController::class, 'login']);

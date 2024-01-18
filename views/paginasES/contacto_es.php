@@ -9,10 +9,14 @@
             <h2>Conéctese con Nuestros Expertos en Inversión</h2>
             <p>2525 Ponce de Leon Boulevard, Coral Gables, Miami, FL 33134, USA.</p>
         </div>
-        <?php include_once __DIR__ . '/../templates/alertas.php' ?>
 
         <div class="formulario-contenedor">
-            <form class="formulario" novalidate>
+            <form method="POST" action="/contacto?lang=es" class="formulario">
+            <?php if($mensaje) { ?>
+                <div class="contenedor-alerta">
+                    <p class="alerta-correcto"> <?php echo $mensaje; ?> </p>
+                </div>
+            <?php } ?>
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">1.</span>
@@ -20,10 +24,10 @@
                     </div>
                     <div class="campo_contenedor-abajo campo_contenedor-nombre">
                         <div class="campo">
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                            <input type="text" name="contacto[nombre]" id="nombre" placeholder="Nombre" required>
                         </div>
                         <div class="campo">
-                            <input type="text" name="apellido" id="nombre" placeholder="Apellido">
+                            <input type="text" name="contacto[apellido] id="nombre" placeholder="Apellido" required>
                         </div>
                     </div>
                 </div>
@@ -35,7 +39,7 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input class="input-email" type="email" name="email" id="email" placeholder="Email">
+                            <input class="input-email" type="email" name="contacto[email]" id="email" placeholder="Email" required>
                         </div>
                     </div>
                 </div>
@@ -47,7 +51,7 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input class="input-telefono" id="telefono" type="number" name="telefono" placeholder="Escribe tu teléfono">
+                            <input class="input-telefono" id="telefono" type="number" name="contacto[telefono]" placeholder="Teléfono" required>
                         </div>
                     </div>
                 </div>
@@ -59,13 +63,13 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="8"></textarea>
+                            <textarea id="mensaje" name="contacto[mensaje]" placeholder="Mensaje" rows="8" required></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="contenedor-boton">
-                    <input class="boton" type="button" value="Enviar Mensaje">
+                    <input class="boton" type="submit" value="Enviar Mensaje">
                 </div>
             </form>
         </div>

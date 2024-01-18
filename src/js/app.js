@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   menu();
   carrouselInicio();
   idiomas();
+  alertaFormulario();
 });
 
 function menu() {
@@ -168,3 +169,15 @@ function idiomas() {
     updateCirclePosition();
   }
 }
+
+// Alerta Formulario
+function alertaFormulario() {
+  const alerta = document.querySelector(".alerta-correcto");
+
+  if(alerta) {
+      setTimeout(() => {
+        alerta.remove();
+    }, 4000);
+  }
+}
+

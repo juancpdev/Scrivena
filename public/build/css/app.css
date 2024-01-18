@@ -1088,6 +1088,15 @@ h3 {
   margin-top: 8rem;
   background-color: #F1F3F9;
 }
+.contacto .alerta-correcto {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  background-color: #abffab;
+  border-left: 0.5rem solid rgb(0, 120, 0);
+  color: rgb(0, 120, 0);
+}
 .contacto .caja_contacto {
   padding: 4rem 4rem 7rem 4rem;
   background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/header-contacto.avif") type("image/avif"), url("/build/img/header-contacto.webp") type("image/webp"), url("/build/img/header-contacto.png") type("image/png"));
