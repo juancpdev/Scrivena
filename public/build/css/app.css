@@ -1694,6 +1694,13 @@ footer {
   flex-direction: column;
   align-items: flex-start;
 }
+.caja_terminos a {
+  border-bottom: 1px solid black;
+  transition: all 0.3s ease;
+}
+.caja_terminos a:hover {
+  border-bottom: 1px solid rgb(134, 134, 134);
+}
 
 .direccion {
   display: flex;
@@ -1737,6 +1744,51 @@ footer {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.terminos, .privacidad {
+  margin-top: 6rem;
+}
+.terminos .titulo, .privacidad .titulo {
+  background-color: #667282;
+  color: white;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .terminos .titulo, .privacidad .titulo {
+    height: 30rem;
+  }
+}
+.terminos h1, .privacidad h1 {
+  font-size: clamp(2rem, -0.8rem + 10vw, 7rem);
+  padding: 0 1rem;
+}
+.terminos .contenedor-caja, .privacidad .contenedor-caja {
+  margin: 5rem 2rem;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .terminos .contenedor-caja, .privacidad .contenedor-caja {
+    padding: 0;
+    width: min(95%, 120rem);
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+}
+.terminos .contenedor-caja .subtitulo, .privacidad .contenedor-caja .subtitulo {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  font-size: 1.7rem;
+}
+.terminos .contenedor-caja p, .privacidad .contenedor-caja p {
+  line-height: 2.5rem;
+  color: #667282;
   font-size: 1.5rem;
 }
 /*# sourceMappingURL=app.css.map */

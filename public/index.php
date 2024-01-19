@@ -26,6 +26,15 @@ $router->post('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/contact', [PaginasController::class, 'contacto']);
 $router->post('/contact', [PaginasController::class, 'contacto']);
 
+$router->get('/terminos', [PaginasController::class, 'terminos']);
+$router->get('/terms', [PaginasController::class, 'terminos']);
+
+$router->get('/privacidad', [PaginasController::class, 'privacidad']);
+$router->get('/privacy', [PaginasController::class, 'privacidad']);
+
+// Terminos y avisos
+
+
 // Login
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/login', [AuthController::class, 'login']);

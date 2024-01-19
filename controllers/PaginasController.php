@@ -102,47 +102,75 @@ class PaginasController {
                         <head>
                             <meta charset="UTF-8">
                             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <link rel="preconnect" href="https://fonts.googleapis.com">
-                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+                            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+                            <title>Contacto Profesional</title>
                             <style>
                                 body {
-                                    font-family: 'Roboto', sans-serif;
-                                    color: #1c626e;
-                                    background-color: #00515f7e;
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    background-color: #eaeaea;
+                                    color: #333;
+                                    margin: 0;
+                                    padding: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100vh;
                                 }
-                                h1 {
+
+                                .contacto-container {
+                                    background-color: #ffffff;
+                                    padding: 20px;
+                                    border-radius: 12px;
+                                    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+                                    width: 100%;
+                                    max-width: 600px;
                                     text-align: center;
-                                    font-weight: bold;
+                                }
+
+                                .contacto-header {
                                     margin-bottom: 30px;
                                 }
-                                .mensaje {
-                                    max-width: 600px;
-                                    margin: 0 auto;
-                                    padding: 20px;
-                                    background-color: white;
-                                    border: 1px solid #ddd;
-                                    border-radius: 5px;
-                                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                                }
-                                .mensaje img {
-                                    margin-top: 30px;
-                                    max-width: 100%;
+
+                                .contacto-header .logo {
+                                    max-width: 100px;
                                     height: auto;
+                                    margin-bottom: 15px;
                                 }
+
+                                .contacto-header h1 {
+                                    font-weight: 700;
+                                    color: #00515f;
+                                    margin: 0;
+                                }
+
+                                .contacto-info p {
+                                    font-size: 16px;
+                                    line-height: 1.8;
+                                    margin: 10px 0;
+                                    color: #555;
+                                }
+
+                                .contacto-info p strong {
+                                    color: #000;
+                                }
+
                             </style>
                         </head>
                         <body>
-                        <div class="mensaje">
-                            <h1>Mensaje de Contacto</h1>
-                            <p><strong>Nombre:</strong> {$respuesta['nombre']} {$respuesta['apellido']}</p>
-                            <p><strong>Email:</strong> {$respuesta['email']}</p>
-                            <p><strong>Teléfono:</strong> {$respuesta['telefono']}</p>
-                            <p><strong>Mensaje:</strong> {$respuesta['mensaje']}</p>
-                            <img src="https://i.ibb.co/1GGG4jB/LOGOSCRIVENA.png" alt="Logo Scrivena">
-                        </div>
-                    </body>
-                    </html>
+                            <div class="contacto-container">
+                                <div class="contacto-header">
+                                    <img src="https://i.ibb.co/1GGG4jB/LOGOSCRIVENA.png" alt="Logo Scrivena" class="logo">
+                                    <h1>Mensaje de Contacto</h1>
+                                </div>
+                                <div class="contacto-info">
+                                    <p><strong>Nombre:</strong> {$respuesta['nombre']} {$respuesta['apellido']}</p>
+                                    <p><strong>Email:</strong> {$respuesta['email']}</p>
+                                    <p><strong>Teléfono:</strong> {$respuesta['telefono']}</p>
+                                    <p><strong>Mensaje:</strong> {$respuesta['mensaje']}</p>
+                                </div>
+                            </div>
+                        </body>
+                        </html>
                 HTML;
     
                 $mail->Body = $contenido;
@@ -167,4 +195,17 @@ class PaginasController {
         ]);
     }
     
+    public static function terminos(Router $router) {
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+        $router->render("paginas{$idioma}/terminos_{$idioma}", [
+            'titulo' => $idioma === 'es' ? 'Términos y Condiciones' : 'Terms and Conditions'
+        ]);
+    }
+
+    public static function privacidad(Router $router) {
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+        $router->render("paginas{$idioma}/privacidad_{$idioma}", [
+            'titulo' => $idioma === 'es' ? 'Aviso de Privacidad' : 'Notice of Privacy'
+        ]);
+    }
 }

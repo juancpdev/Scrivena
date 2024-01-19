@@ -355,7 +355,7 @@
                 <div class="registro">
                     <h3>Open your account and start investing</h3>
                     <div class="caja_boton_registro">
-                        <a class="boton_registro" href="">Register</a>
+                        <a class="boton_registro" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScl3bNyS9g4F8Qv8DgZBypN9fL-johOmN-R443h-7UBF9VuqA/viewform">Invest with Scrivena</a>
                     </div>
                 </div>
             </div>

@@ -10,8 +10,8 @@
         <div class="caja_footer">
             <div class="caja_terminos cajahijo">
                 <div class="caja_terminos">
-                    <a href="">Términos y condiciones</a>
-                    <a href="">Aviso de privacidad</a>
+                    <a href="/terminos?lang=es">Términos y condiciones</a>
+                    <a href="/privacidad?lang=es">Aviso de privacidad</a>
                 </div>
             </div>
             <div class="caja_info cajahijo">    

@@ -1,3 +1,6 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
 footer {
     background-color: #121212;
     font-weight: 100;
@@ -39,6 +42,15 @@ footer {
     gap: 1.5rem;
     flex-direction: column;
     align-items: flex-start;
+    
+    
+    a {
+        border-bottom: 1px solid black;
+        transition: all .3s ease;
+        &:hover {
+            border-bottom: 1px solid rgb(134, 134, 134);
+        }
+    }
 }
 
 .direccion {
@@ -85,5 +97,52 @@ footer {
     margin-bottom: 0;
     padding-bottom: 2rem;
     font-size: 1.5rem;
+}
+
+.terminos, .privacidad {
+    margin-top: 6rem;
+
+    .titulo {
+        background-color: #667282;
+        color: white;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include m.tablet {
+            height: 30rem;
+        }
+    }
+
+    h1 {
+        
+        @include m.texto-fluido(2rem, 7rem);
+        padding: 0 1rem;
+    }
+
+    .contenedor-caja {
+        margin: 5rem 2rem;
+        padding: 0 1rem;
+        @include m.tablet {
+            padding: 0;
+            @include m.contenedor;
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+        }
+
+        .subtitulo {
+            color: black;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            font-size: 1.7rem;
+        }
+
+        p {
+            line-height: 2.5rem;
+            color: #667282;
+            font-size: 1.5rem;
+        }
+    }
 }
 

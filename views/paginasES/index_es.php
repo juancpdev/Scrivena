@@ -347,14 +347,14 @@
                     <div class="texto_micuenta">
                         <p>Nuestro enfoque estratégico en la selección de inversiones nos permite maximizar el potencial de crecimiento mientras gestionamos efectivamente el riesgo. Desde oportunidades emergentes hasta inversiones establecidas, nuestro portafolio está diseñado para alinear las metas financieras de nuestros clientes con oportunidades de mercado excepcionales.</p>
                         <div class="caja_boton_servicios">
-                            <a class="boton_servicios" href="/portafolio">Conocer más</a>
+                            <a class="boton_servicios" href="/portafolio?lang=es">Conocer más</a>
                         </div>
                     </div>
                 </div>
                 <div class="registro">
                     <h3>Abre tu cuenta y comienza a invertir</h3>
                     <div class="caja_boton_registro">
-                        <a class="boton_registro" href="">Regístrate</a>
+                        <a class="boton_registro" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">Invierte con Scrivena</a>
                     </div>
                 </div>
             </div>
