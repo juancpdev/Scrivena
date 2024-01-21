@@ -346,8 +346,8 @@
                     </div>
                     <div class="texto_micuenta">
                         <p>Nuestro enfoque estratégico en la selección de inversiones nos permite maximizar el potencial de crecimiento mientras gestionamos efectivamente el riesgo. Desde oportunidades emergentes hasta inversiones establecidas, nuestro portafolio está diseñado para alinear las metas financieras de nuestros clientes con oportunidades de mercado excepcionales.</p>
-                        <div class="caja_boton_servicios">
-                            <a class="boton_servicios" href="/portafolio?lang=es">Conocer más</a>
+                        <div class="caja_boton_portafolio">
+                            <a class="boton_portafolio" href="/portafolio?lang=es">Conocer más</a>
                         </div>
                     </div>
                 </div>

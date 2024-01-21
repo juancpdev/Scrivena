@@ -646,7 +646,7 @@ h3 {
 }
 .scrivena .caja_boton_servicios {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 3rem 0;
 }
 .scrivena .caja_boton_servicios .boton_servicios {
@@ -670,6 +670,35 @@ h3 {
 }
 @media (min-width: 768px) {
   .scrivena .caja_boton_servicios .boton_servicios {
+    font-size: 1.6rem;
+  }
+}
+.scrivena .caja_boton_portafolio {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.scrivena .caja_boton_portafolio .boton_portafolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(216, 141, 2);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.scrivena .caja_boton_portafolio .boton_portafolio:hover {
+  transform: scale(0.985);
+  background-color: #a56c02;
+}
+@media (min-width: 768px) {
+  .scrivena .caja_boton_portafolio .boton_portafolio {
     font-size: 1.6rem;
   }
 }

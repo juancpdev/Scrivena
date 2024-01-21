@@ -246,7 +246,7 @@
     
     .caja_boton_servicios {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 3rem 0;
     
         .boton_servicios {
@@ -259,6 +259,23 @@
         }
         
     }
+
+    .caja_boton_portafolio {
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0;
+    
+        .boton_portafolio {
+            @include m.boton2(v.$naranja);
+            font-size: 1.4rem;
+
+            @include m.tablet {
+                font-size: 1.6rem;
+            }
+        }
+        
+    }
+    
     
     .boton_consulta:hover {
         background-color: #3694a5;

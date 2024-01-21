@@ -347,8 +347,8 @@
                     </div>
                     <div class="texto_micuenta">
                         <p>Our strategic approach in selecting investments allows us to maximize growth potential while effectively managing risk. From emerging opportunities to established investments, our portfolio is designed to align our clients' financial goals with exceptional market opportunities.</p>
-                        <div class="caja_boton_servicios">
-                            <a class="boton_servicios" href="/portfolio?lang=en">Learn more</a>
+                        <div class="caja_boton_portafolio">
+                            <a class="boton_portafolio" href="/portfolio?lang=en">Learn more</a>
                         </div>
                     </div>
                 </div>
