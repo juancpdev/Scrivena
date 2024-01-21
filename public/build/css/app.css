@@ -543,6 +543,12 @@ h3 {
   padding: 2rem 2rem 5rem 2rem;
   text-align: center;
   color: #123c49;
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .scrivena .oportunidades {
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 768px) {
   .scrivena .oportunidades {
@@ -640,7 +646,7 @@ h3 {
 }
 .scrivena .caja_boton_servicios {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 3rem 0;
 }
 .scrivena .caja_boton_servicios .boton_servicios {
@@ -712,6 +718,9 @@ h3 {
 .scrivena .contenedor--area-cliente .caja_micuenta {
   margin: 0 2rem;
 }
+.scrivena .contenedor--area-cliente .caja_micuenta .texto_micuenta {
+  margin: 0 5rem;
+}
 @media (min-width: 1024px) {
   .scrivena .contenedor--area-cliente .caja_micuenta {
     display: flex;
@@ -726,7 +735,12 @@ h3 {
     justify-content: center;
   }
   .scrivena .contenedor--area-cliente .caja_micuenta .texto_micuenta p {
-    font-size: 2rem;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .scrivena .contenedor--area-cliente .caja_micuenta .texto_micuenta p {
+    font-size: 1.6rem;
   }
 }
 .scrivena .contenedor--area-cliente .caja_micuenta img {
@@ -735,7 +749,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .scrivena .contenedor--area-cliente .caja_micuenta img {
-    height: 30rem;
+    height: 24rem;
   }
 }
 .scrivena .contenedor--area-cliente .registro {
@@ -785,6 +799,14 @@ h3 {
 
 .servicios {
   margin-top: 8rem;
+}
+.servicios p {
+  font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+  .servicios p {
+    font-size: 1.5rem;
+  }
 }
 .servicios .caja_servicios {
   padding: 4rem 4rem 7rem 4rem;
@@ -1020,6 +1042,11 @@ h3 {
   color: white;
   font-size: 1.4rem;
 }
+@media (min-width: 768px) {
+  .nosotros .midseccion .nosotros1 .nosotros1-hijo p {
+    font-size: 1.5rem;
+  }
+}
 .nosotros .nosotros2 {
   margin: 3rem;
 }
@@ -1061,6 +1088,11 @@ h3 {
   color: white;
   font-size: 1.4rem;
 }
+@media (min-width: 768px) {
+  .nosotros .nosotros3 .nosotros3-hijo p {
+    font-size: 1.5rem;
+  }
+}
 .nosotros .nosotros4 {
   margin: 6rem 0;
   text-align: center;
@@ -1076,7 +1108,7 @@ h3 {
 }
 .nosotros .nosotros4 p {
   color: #123c49;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 @media (min-width: 768px) {
   .nosotros .nosotros4 p {
@@ -1187,7 +1219,7 @@ h3 {
 }
 .portafolio p {
   color: #123c49;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 @media (min-width: 768px) {
   .portafolio p {

@@ -3,6 +3,13 @@
 
 .servicios {
     margin-top: 8rem;
+
+    p {
+        font-size: 1.4rem;
+        @include m.tablet {
+            font-size: 1.5rem
+        }
+    }
     
     .caja_servicios {
         @include m.header-paginas(servicios);
