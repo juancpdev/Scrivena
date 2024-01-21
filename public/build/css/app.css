@@ -1183,7 +1183,7 @@ h3 {
 }
 .contacto .midseccion {
   margin: 8rem 0 5rem 0;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   background-color: #fece75;
   display: flex;
   flex-direction: column;
