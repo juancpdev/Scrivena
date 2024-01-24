@@ -26,7 +26,7 @@
         <hr>
     </div>
     <div class="caja_redes">
-        <a href="">
+        <a target="_blank" href="https://wa.me/525535821478?text=Hola,%20deseo%20consultar%20sobre%20las%20opciones%20de%20inversión%20que%20ofrecen.">
             <i class="iconos iconos__footer fa-brands fa-whatsapp"></i>
         </a>
         <a target="_blank" href="https://t.me/scrivena">

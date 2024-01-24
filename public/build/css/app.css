@@ -470,6 +470,15 @@ h3 {
     font-size: 1.6rem;
   }
 }
+.scrivena .logowp {
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  z-index: 1000;
+}
+.scrivena .logowp img {
+  width: 7rem;
+}
 .scrivena .caja_section {
   border-radius: 1rem;
   padding: 0 1rem 2rem 1rem;
@@ -824,6 +833,22 @@ h3 {
 .scrivena .contenedor--area-cliente .caja_boton_registro .boton_registro:hover {
   transform: scale(0.985);
   background-color: #a56c02;
+}
+.scrivena .logowp a {
+  opacity: 0; /* Inicialmente oculto */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transiciones para transform y opacity */
+}
+.scrivena .logowp a.visible {
+  opacity: 1; /* Hacer visible después de 3 segundos */
+}
+@media (min-width: 1024px) {
+  .scrivena .logowp a:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño del botón al pasar el mouse por encima */
+    transition: transform 0.3s ease-in-out;
+  }
+  .scrivena .logowp a img {
+    transition: transform 0.3s ease-in-out; /* Aplica la transición al estado normal de la imagen */
+  }
 }
 
 .servicios {
