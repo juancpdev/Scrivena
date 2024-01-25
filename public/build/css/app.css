@@ -318,7 +318,6 @@ body {
   font-size: 1.8rem;
   margin: 0;
   padding: 0;
-  height: 100%;
   padding: 0 !important;
   display: flex;
   flex-direction: column;
@@ -398,8 +397,8 @@ h3 {
 }
 .scrivena .imagen-inicio {
   padding: 4rem 2rem;
-  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), -webkit-image-set(url("/build/img/inicio-header1.avif") type("image/avif"), url("/build/img/inicio-header1.webp") type("image/webp"), url("/build/img/inicio-header1.jpg") type("image/jpeg"));
-  background: linear-gradient(180deg, rgba(0, 19, 46, 0.6) 0%, rgba(0, 19, 46, 0.6) 100%), image-set(url("/build/img/inicio-header1.avif") type("image/avif"), url("/build/img/inicio-header1.webp") type("image/webp"), url("/build/img/inicio-header1.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(51, 51, 51, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), -webkit-image-set(url("/build/img/inicio-header3.avif") type("image/avif"), url("/build/img/inicio-header3.webp") type("image/webp"), url("/build/img/inicio-header3.jpg") type("image/jpeg"));
+  background: linear-gradient(180deg, rgba(51, 51, 51, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), image-set(url("/build/img/inicio-header3.avif") type("image/avif"), url("/build/img/inicio-header3.webp") type("image/webp"), url("/build/img/inicio-header3.jpg") type("image/jpeg"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -440,6 +439,7 @@ h3 {
 @media (min-width: 768px) {
   .scrivena .caja_superior p {
     font-size: 1.7rem;
+    margin: 3rem 0;
   }
 }
 .scrivena .caja_boton_consulta {
@@ -467,7 +467,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .scrivena .caja_boton_consulta .boton_consulta {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 .scrivena .logowp {
@@ -489,13 +489,33 @@ h3 {
   padding: 0 1rem 2rem 1rem;
   box-shadow: 0px 0px 20px rgb(120, 120, 120);
   margin: 0 2rem;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 @media (min-width: 768px) {
   .scrivena .caja_section {
     width: min(95%, 60rem);
     margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .scrivena .caja_section {
+    width: 70%;
+    padding: 1rem 1rem 2rem 1rem;
+    margin-top: 5rem;
+  }
+}
+.scrivena .imagen_compu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .scrivena .imagen_compu {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .scrivena .imagen_celu {
+    display: none;
   }
 }
 .scrivena .carrusel {
@@ -519,6 +539,29 @@ h3 {
   justify-content: center;
   text-align: center;
   padding: 2rem 2rem 0 2rem;
+}
+@media (min-width: 1024px) {
+  .scrivena .elemento {
+    flex-direction: row;
+    text-align: start;
+    padding-top: 4rem;
+  }
+  .scrivena .elemento img {
+    width: 100%;
+    max-height: 36rem;
+  }
+}
+@media (min-width: 1024px) {
+  .scrivena .texto_carrusel {
+    margin-left: 7rem;
+    width: 50%;
+  }
+  .scrivena .texto_carrusel h3 {
+    font-size: 4rem;
+  }
+  .scrivena .texto_carrusel p {
+    font-size: 2rem;
+  }
 }
 .scrivena .titulo_elemento {
   color: #FFFFFF;

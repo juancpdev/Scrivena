@@ -11,40 +11,68 @@
         <div class="caja_section">
             <div class="carrusel">
                 <div class="elemento">
-                    <picture>
+                    <picture class="imagen_celu">
                         <source srcset="build/img/elemento1.avif" type="image/avif" loading="lazy">
                         <source srcset="build/img/elemento1.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento1.png" alt="Imagen Carrousel 1">
                     </picture>
-                    <h3 class="titulo_elemento">Tu éxito financiero comienza con SCRIVENA</h3>
-                    <p class="texto_elemento">SCRIVENA: Tu aliado clave en la ruta hacia la prosperidad y la estabilidad económica</p>
+                    <picture class="imagen_compu">
+                        <source srcset="build/img/elemento11.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/elemento11.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/elemento11.png" alt="Imagen Carrousel 1">
+                    </picture>
+                    <div class="texto_carrusel">
+                        <h3 class="titulo_elemento">Tu Primer Paso Hacia el Éxito Financiero</h3>
+                        <p class="texto_elemento">Descubre la Ruta hacia la Prosperidad y Estabilidad Económica con Tu Aliado Clave, SCRIVENA</p>
+                    </div>
                 </div>
                 <div class="elemento">
-                    <picture>
+                    <picture class="imagen_celu">
                         <source srcset="build/img/elemento2.avif" type="image/avif" loading="lazy">
                         <source srcset="build/img/elemento2.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento2.png" alt="Imagen Carrousel 2">
                     </picture>
-                    <h3 class="titulo_elemento">Da el siguiente paso en tus inversiones</h3>
-                    <p class="texto_elemento">Maximizando tu potencial financiero: estrategias avanzadas para invertir con éxito</p>
+                    <picture class="imagen_compu">
+                        <source srcset="build/img/elemento22.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/elemento22.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/elemento22.png" alt="Imagen Carrousel 2">
+                    </picture>
+                    <div class="texto_carrusel">
+                        <h3 class="titulo_elemento">Da el siguiente paso en tus inversiones</h3>
+                        <p class="texto_elemento">Maximizando tu potencial financiero: estrategias avanzadas para invertir con éxito</p>
+                    </div>
                 </div>
                 <div class="elemento">
-                    <picture>
+                    <picture class="imagen_celu">
                         <source srcset="build/img/elemento3.avif" type="image/avif" loading="lazy">
                         <source srcset="build/img/elemento3.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento3.png" alt="Imagen Carrousel 3">
                     </picture>
-                    <h3 class="titulo_elemento">Nos importa tu tranquilidad</h3>
-                    <p class="texto_elemento">Tu éxito financiero al alcance de la mano: con el apoyo de nuestros expertos, logra tus metas patrimoniales</p>
+                    <picture class="imagen_compu">
+                        <source srcset="build/img/elemento33.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/elemento33.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/elemento33.png" alt="Imagen Carrousel 3">
+                    </picture>
+                    <div class="texto_carrusel">
+                        <h3 class="titulo_elemento">Nos importa tu tranquilidad</h3>
+                        <p class="texto_elemento">Tu éxito financiero al alcance de la mano: con el apoyo de nuestros expertos, logra tus metas patrimoniales</p>
+                    </div>
                 </div>
                 <div class="elemento">
-                    <picture>
+                    <picture class="imagen_celu">
                         <source srcset="build/img/elemento4.avif" type="image/avif" loading="lazy">
                         <source srcset="build/img/elemento4.webp" type="image/webp" loading="lazy">
                         <img class="img-carrusel" loading="lazy" src="build/img/elemento4.png" alt="Imagen Carrousel 4">
                     </picture>
-                    <h3 class="titulo_elemento">¡Haz crecer tu dinero sin comisiones!</h3>
-                    <p class="texto_elemento">Con SCRIVENA dile adiós al dinero estático de tu cuenta bancaria</p>
+                    <picture class="imagen_compu">
+                        <source srcset="build/img/elemento44.avif" type="image/avif" loading="lazy">
+                        <source srcset="build/img/elemento44.webp" type="image/webp" loading="lazy">
+                        <img class="img-carrusel" loading="lazy" src="build/img/elemento44.png" alt="Imagen Carrousel 4">
+                    </picture>
+                    <div class="texto_carrusel">
+                        <h3 class="titulo_elemento">¡Haz crecer tu dinero sin comisiones!</h3>
+                        <p class="texto_elemento">Con SCRIVENA dile adiós al dinero estático de tu cuenta bancaria</p>
+                    </div>
                 </div>
             </div>
             <div class="carrusel-nav">
