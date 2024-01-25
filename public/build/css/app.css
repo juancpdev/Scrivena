@@ -477,7 +477,12 @@ h3 {
   z-index: 1000;
 }
 .scrivena .logowp img {
-  width: 7rem;
+  width: 5rem;
+}
+@media (min-width: 1024px) {
+  .scrivena .logowp img {
+    width: 7rem;
+  }
 }
 .scrivena .caja_section {
   border-radius: 1rem;
