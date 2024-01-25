@@ -180,10 +180,3 @@ function alertaFormulario() {
     }, 4000);
   }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-      var whatsappButton = document.querySelector('.logowp a');
-      whatsappButton.classList.add('visible');
-  }, 3000); // 3000 milisegundos equivalen a 3 segundos
-});
