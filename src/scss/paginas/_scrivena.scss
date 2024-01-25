@@ -410,27 +410,4 @@
             }
         }
     }
-
-    .logowp a {
-        opacity: 0; /* Inicialmente oculto */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transiciones para transform y opacity */
-    }
-    
-    .logowp a.visible {
-        opacity: 1; /* Hacer visible después de 3 segundos */
-    }
-
-    @include m.desktop {
-        
-        .logowp a:hover img{
-            transform: scale(1.2); /* Aumenta el tamaño del botón al pasar el mouse por encima */
-            transition: transform 0.3s ease-in-out;
-        } 
-        
-        .logowp a img {
-            transition: transform 0.3s ease-in-out; /* Aplica la transición al estado normal de la imagen */
-        }
-    }
-    
-    
 }

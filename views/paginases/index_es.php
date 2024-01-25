@@ -8,15 +8,6 @@
         <div class="caja_boton_consulta">
             <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
         </div>
-        <div class="logowp">
-            <a target="_blank" href="https://wa.me/525535821478?text=Hola,%20deseo%20consultar%20sobre%20las%20opciones%20de%20inversión%20que%20ofrecen.">
-                <picture>
-                    <source srcset="build/img/logowp.avif" type="image/avif" loading="lazy">
-                    <source srcset="build/img/logowp.webp" type="image/webp" loading="lazy">
-                    <img class="img-carrusel" loading="lazy" src="build/img/logowp.png" alt="logowp">
-                </picture>
-            </a>
-        </div>
         <div class="caja_section">
             <div class="carrusel">
                 <div class="elemento">
