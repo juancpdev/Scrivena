@@ -513,7 +513,7 @@ h3 {
     display: block;
   }
   .scrivena .imagen_compu img {
-    border-radius: 2rem;
+    border-radius: 1rem;
   }
 }
 @media (min-width: 1024px) {
