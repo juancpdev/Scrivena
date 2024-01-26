@@ -63,6 +63,6 @@
         }
         
     ?>
-    <script src="/build/js/bundle.min.js?v=1.6" defer></script>
+    <script src="/build/js/bundle.js?v=1.6" defer></script>
 </body>
 </html>
