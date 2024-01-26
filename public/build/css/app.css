@@ -1597,7 +1597,7 @@ header {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.158);
   z-index: 100;
 }
-@media (min-width: 855px) {
+@media (min-width: 1024px) {
   header {
     justify-content: space-around;
   }
@@ -1649,7 +1649,7 @@ header {
   right: 3rem;
   z-index: 10;
 }
-@media (min-width: 855px) {
+@media (min-width: 1024px) {
   .abrir_menu {
     display: none;
   }
@@ -1666,10 +1666,9 @@ header {
 .caja_nav-desktop {
   display: none;
 }
-@media (min-width: 855px) {
+@media (min-width: 1024px) {
   .caja_nav-desktop {
     display: flex;
-    flex-direction: flex-end;
   }
 }
 .caja_nav-desktop .navegacion_principal-desktop {
@@ -1719,7 +1718,7 @@ header {
   border-radius: 1rem;
   z-index: 10;
 }
-@media (min-width: 855px) {
+@media (min-width: 1024px) {
   .caja_nav {
     display: none;
   }
@@ -1737,7 +1736,7 @@ header {
   cursor: pointer;
   margin-right: 7rem;
 }
-@media (min-width: 855px) {
+@media (min-width: 1024px) {
   .language-toggle {
     margin-right: 0;
     width: auto;

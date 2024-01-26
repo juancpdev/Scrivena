@@ -9,7 +9,7 @@ header {
     background-color: rgb(0, 0, 0);
     border-bottom: .1rem solid rgba(0, 0, 0, 0.158);
     z-index: 100;
-    @include m.tabletXL {
+    @include m.desktop {
         justify-content: space-around;
     }
 }
@@ -60,7 +60,7 @@ header {
     right: 3rem;
     z-index: 10;
 
-    @include m.tabletXL {
+    @include m.desktop {
         display: none;
     }
 }
@@ -76,9 +76,8 @@ header {
 .caja_nav-desktop { 
     display: none;
 
-    @include m.tabletXL {
+    @include m.desktop {
         display: flex;
-        flex-direction: flex-end;
     }
 
     .navegacion_principal-desktop {
@@ -129,7 +128,7 @@ header {
     border-radius: 1rem;
     z-index: 10;
 
-    @include m.tabletXL {
+    @include m.desktop {
         display: none;
     }
 }
@@ -146,7 +145,7 @@ header {
   cursor: pointer;
   margin-right: 7rem;
 
-  @include m.tabletXL {
+  @include m.desktop {
     margin-right: 0;
     width: auto;
   }
