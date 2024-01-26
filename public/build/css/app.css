@@ -512,6 +512,9 @@ h3 {
   .scrivena .imagen_compu {
     display: block;
   }
+  .scrivena .imagen_compu img {
+    border-radius: 2rem;
+  }
 }
 @media (min-width: 1024px) {
   .scrivena .imagen_celu {

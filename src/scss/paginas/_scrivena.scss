@@ -108,6 +108,10 @@
 
         @include m.desktop {
             display: block;
+            
+            img {
+                border-radius: 2rem;
+            }
         }
     }
 
