@@ -96,7 +96,7 @@
             @include m.contenedor-sm;
         }
 
-        @include m.desktop {
+        @include m.desktopXL {
             width: 70%;
             padding: 1rem 1rem 2rem 1rem;
             margin-top: 5rem;
@@ -106,7 +106,7 @@
     .imagen_compu {
         display: none;
 
-        @include m.desktop {
+        @include m.desktopXL {
             display: block;
             
             img {
@@ -116,7 +116,7 @@
     }
 
     .imagen_celu {
-        @include m.desktop {
+        @include m.desktopXL {
             display: none;
         }
     }
@@ -142,7 +142,7 @@
         text-align: center;
         padding: 2rem 2rem 0 2rem;
 
-        @include m.desktop {
+        @include m.desktopXL {
             flex-direction: row;
             text-align: start;
             padding-top: 4rem;
@@ -155,7 +155,7 @@
     }
 
     .texto_carrusel {
-        @include m.desktop {
+        @include m.desktopXL {
             margin-left: 7rem;
             width: 50%;
 
