@@ -26,7 +26,7 @@
 
     .midseccion {
         margin: 8rem 0 5rem 0;
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
         background-color: lighten(v.$naranja, 30);
         display: flex;
         flex-direction: column;
@@ -39,8 +39,10 @@
 
         h2 {
             margin: 0;
-            @include m.texto-fluido(2rem, 5rem);
-            font-size: 3rem;
+            font-size: 2rem;
+            @include m.tablet {
+                font-size: 3rem;
+            }
         }
 
         p {

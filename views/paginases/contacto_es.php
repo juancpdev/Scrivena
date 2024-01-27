@@ -4,7 +4,7 @@
         <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
     </div>
     </div>
-    <main>
+    <section>
         <div class="midseccion">
             <h2>Conéctese con Nuestros Expertos en Inversión</h2>
             <p>2525 Ponce de Leon Boulevard, Coral Gables, Miami, FL 33134, USA.</p>
@@ -85,5 +85,5 @@
                 </form>
             </div>
         </div>
-    </main>
+    </section>
 </main>

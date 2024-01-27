@@ -184,10 +184,9 @@ class PaginasController {
     
                 // Éxito
                 $mensaje = $idioma === 'es' ? 'Mensaje enviado correctamente' : 'Message sent successfully';
-            } catch (Exception $e) {
+            } catch (Exception) {
                 // Error
-                $mensaje = $idioma === 'es' ? "El mensaje no se pudo enviar: " : "Failed to send the message: ";
-                $mensaje .= $e->getMessage();
+                $mensaje = $idioma === 'es' ? "El mensaje no se pudo enviar" : "Failed to send the message";
             }
         }
     

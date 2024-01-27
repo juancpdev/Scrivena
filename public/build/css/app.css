@@ -1273,7 +1273,7 @@ h3 {
 }
 .contacto .midseccion {
   margin: 8rem 0 5rem 0;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
   background-color: #fece75;
   display: flex;
   flex-direction: column;
@@ -1285,8 +1285,12 @@ h3 {
 }
 .contacto .midseccion h2 {
   margin: 0;
-  font-size: clamp(2rem, -0.8rem + 10vw, 5rem);
-  font-size: 3rem;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .contacto .midseccion h2 {
+    font-size: 3rem;
+  }
 }
 .contacto .midseccion p {
   padding: 0 5rem;
