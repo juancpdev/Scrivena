@@ -172,13 +172,15 @@ function idiomas() {
 
 // Alerta Formulario
 function alertaFormulario() {
-  const alerta = document.querySelector(".alerta");
+  const alertas = document.querySelectorAll(".desaparecer-alerta");
 
-  if(alerta) {
+  alertas.forEach(alerta => {
+    if(alerta) {
       setTimeout(() => {
         alerta.remove();
-    }, 4000);
-  }
+      }, 4000);
+    }
+  });
 }
 
 // ChatBot

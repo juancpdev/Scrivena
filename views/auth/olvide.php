@@ -1,25 +1,34 @@
 <main class="auth">
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-    <p class="auth__texto">Recupera tu acceso a DevWebcamp</p> 
+    <p class="auth__texto">Recupera tu acceso a Scrivena</p> 
 
-    <?php
+    <div class="caja-contenedor-formulario">
+        <div class="contenedor-formulario contenedor-formulario--olvide">
+        <?php
         require_once __DIR__ . '/../templates/alertas.php';
-    ?>
+        ?>
+            <form method="POST" action="/olvide" class="formulario formulario--olvide">
 
-    <form method="POST" action="/olvide" class="formulario">
-        <div class="formulario__campo">
-            <label for="email" class="formulario__label">Email</label>
-            <input
-                type="email"
-                class="formulario__input"
-                placeholder="Tu Email"
-                id="email"
-                name="email"
-            >
-        </div>
+                <div class="campo-contenedor">
+                    <div class="campo_contenedor-arriba">
+                        <span class="campo-orden">1.</span>
+                        <p class="campo-titulo">Email</p>
+                    </div>
+                    <div class="campo_contenedor-abajo">
+                        <div class="campo">
+                            <input 
+                                class="formulario__input input-email" 
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                placeholder="Email">
+                        </div>
+                    </div>
+                </div>
 
-        <input type="submit" class="formulario__submit" value="Enviar Instrucciones">
-    </form>
+                <div class="contenedor-boton">
+                    <input class="boton boton--login" type="submit" value="Enviar Instrucciones">
+                </div>
 
     <div class="acciones">
         <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>

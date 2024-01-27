@@ -1,14 +1,18 @@
 @use "base/mixins" as m;
 @use "base/variables" as v;
 
-.caja-contenedor-contacto {
+.caja-contenedor-formulario {
     display: flex;
     justify-content: center;
     margin: 5rem 3rem 10rem 3rem;
 
-    .contenedor-contacto {
+    .contenedor-formulario {
         max-width: 100rem;
         width: 80rem;
+
+        &--login, &--olvide {
+            width: 60rem;
+        }
     }
 
     .formulario {
@@ -123,6 +127,10 @@
         justify-content: flex-end;
         .boton {
             @include m.boton2(v.$naranja);
+
+            &--login {
+                width: 100%;
+            }
         }
     }
 

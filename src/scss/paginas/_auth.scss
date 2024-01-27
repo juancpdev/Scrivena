@@ -1,10 +1,12 @@
 @use 'base/mixins' as m;
 
 .auth {
-    @include m.contenedor-sm;
+
     margin-top: 8rem;
+    background-color: #F1F3F9;
 }
 
 .auth__texto {
     font-size: 2rem;
+    text-align: center;
 }

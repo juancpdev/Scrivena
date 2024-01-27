@@ -391,13 +391,13 @@ h3 {
 }
 
 .auth {
-  width: min(95%, 60rem);
-  margin: 0 auto;
   margin-top: 8rem;
+  background-color: #F1F3F9;
 }
 
 .auth__texto {
   font-size: 2rem;
+  text-align: center;
 }
 
 .scrivena {
@@ -1486,55 +1486,58 @@ h3 {
   align-items: center;
 }
 
-.caja-contenedor-contacto {
+.caja-contenedor-formulario {
   display: flex;
   justify-content: center;
   margin: 5rem 3rem 10rem 3rem;
 }
-.caja-contenedor-contacto .contenedor-contacto {
+.caja-contenedor-formulario .contenedor-formulario {
   max-width: 100rem;
   width: 80rem;
 }
-.caja-contenedor-contacto .formulario {
+.caja-contenedor-formulario .contenedor-formulario--login, .caja-contenedor-formulario .contenedor-formulario--olvide {
+  width: 60rem;
+}
+.caja-contenedor-formulario .formulario {
   padding: 3rem;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.253);
 }
-.caja-contenedor-contacto .campo-contenedor {
+.caja-contenedor-formulario .campo-contenedor {
   margin-bottom: 20px;
 }
-.caja-contenedor-contacto .campo_contenedor-arriba {
+.caja-contenedor-formulario .campo_contenedor-arriba {
   display: flex;
   align-items: center;
   font-weight: 500;
 }
-.caja-contenedor-contacto .campo_contenedor-arriba .campo-orden {
+.caja-contenedor-formulario .campo_contenedor-arriba .campo-orden {
   margin-right: 1rem;
   font-weight: bold;
   color: rgb(216, 141, 2);
   margin-top: 1.8rem;
   margin-bottom: 1rem;
 }
-.caja-contenedor-contacto .campo_contenedor-arriba .campo-titulo {
+.caja-contenedor-formulario .campo_contenedor-arriba .campo-titulo {
   margin-bottom: 1rem;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo {
+.caja-contenedor-formulario .campo_contenedor-abajo {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo {
   width: 100%;
   position: relative;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo:hover input,
-.caja-contenedor-contacto .campo_contenedor-abajo .campo:hover textarea, .caja-contenedor-contacto .campo_contenedor-abajo .campo:focus-within input,
-.caja-contenedor-contacto .campo_contenedor-abajo .campo:focus-within textarea {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:hover input,
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:hover textarea, .caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within input,
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within textarea {
   transition: all 0.3s ease;
   border-color: #fece75;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo input {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo input {
   width: 100%;
   border: 0.2rem solid rgb(230, 226, 226);
   border-radius: 0.5rem;
@@ -1542,29 +1545,29 @@ h3 {
   font-size: 1.6rem;
   background: #FFFFFF;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo input:focus {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo input:focus {
   border: 2px solid rgb(216, 141, 2);
   outline: none;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo .input-email {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo .input-email {
   padding-left: 4rem;
   background: url("/build/img/mail-svg.svg") no-repeat 1rem center;
   background-size: 2rem;
   background-color: #FFFFFF;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo .input-telefono {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo .input-telefono {
   padding-left: 4rem;
   background: url("/build/img/telefono-svg.svg") no-repeat 1rem center;
   background-size: 2rem;
   background-color: #FFFFFF;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo .input-password {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo .input-password {
   padding-left: 4rem;
   background: url("/build/img/password.svg") no-repeat 0.7rem center;
   background-size: 2.7rem;
   background-color: #FFFFFF;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo textarea {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo textarea {
   width: 100%;
   border: 0.2rem solid rgb(230, 226, 226);
   border-radius: 0.5rem;
@@ -1573,21 +1576,21 @@ h3 {
   resize: none;
   background: #FFFFFF;
 }
-.caja-contenedor-contacto .campo_contenedor-abajo .campo textarea:focus {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo textarea:focus {
   border: 2px solid rgb(216, 141, 2);
   outline: none;
 }
 @media (min-width: 768px) {
-  .caja-contenedor-contacto .campo_contenedor-nombre {
+  .caja-contenedor-formulario .campo_contenedor-nombre {
     flex-direction: row;
   }
 }
-.caja-contenedor-contacto .contenedor-boton {
+.caja-contenedor-formulario .contenedor-boton {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.caja-contenedor-contacto .contenedor-boton .boton {
+.caja-contenedor-formulario .contenedor-boton .boton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1601,22 +1604,22 @@ h3 {
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
-.caja-contenedor-contacto .contenedor-boton .boton:hover {
+.caja-contenedor-formulario .contenedor-boton .boton:hover {
   transform: scale(0.985);
   background-color: #a56c02;
 }
+.caja-contenedor-formulario .contenedor-boton .boton--login {
+  width: 100%;
+}
 
-.acciones, .acciones--centrar {
+.acciones {
   margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
-}
-.acciones--centrar {
   justify-content: center;
 }
 .acciones__enlace {
   color: #1a1b15;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 header {
