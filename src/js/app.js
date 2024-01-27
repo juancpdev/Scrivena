@@ -172,7 +172,7 @@ function idiomas() {
 
 // Alerta Formulario
 function alertaFormulario() {
-  const alerta = document.querySelector(".alerta-correcto");
+  const alerta = document.querySelector(".alerta");
 
   if(alerta) {
       setTimeout(() => {

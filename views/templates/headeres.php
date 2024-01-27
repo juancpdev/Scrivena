@@ -64,7 +64,7 @@ $isHomePage = ($_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'],
                 </li>
                 
                 <li>
-                    <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Mi Cuenta</a>
+                    <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Iniciar Sesión</a>
                 </li>
                 
             </ul>

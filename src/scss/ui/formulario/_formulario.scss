@@ -1,14 +1,17 @@
 @use "base/mixins" as m;
 @use "base/variables" as v;
 
-.formulario-contenedor {
+.caja-contenedor-contacto {
     display: flex;
     justify-content: center;
     margin: 5rem 3rem 10rem 3rem;
 
-    .formulario {
+    .contenedor-contacto {
         max-width: 100rem;
         width: 80rem;
+    }
+
+    .formulario {
         padding: 3rem;
         border-radius: 1rem;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.253);
@@ -27,6 +30,12 @@
             margin-right: 1rem;
             font-weight: bold;
             color: v.$naranja;
+            margin-top: 1.8rem;
+            margin-bottom: 1rem; 
+        }
+
+        .campo-titulo {
+            margin-bottom: 1rem; 
         }
     }
 
@@ -74,6 +83,13 @@
                 padding-left: 4rem;  // Deja espacio para el ícono
                 background: url('/build/img/telefono-svg.svg') no-repeat 1rem center;
                 background-size: 2rem; 
+                background-color: v.$blanco;
+            }
+
+            .input-password {
+                padding-left: 4rem;  // Deja espacio para el ícono
+                background: url('/build/img/password.svg') no-repeat 0.7rem center;
+                background-size: 2.7rem; 
                 background-color: v.$blanco;
             }
 

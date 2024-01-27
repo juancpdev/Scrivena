@@ -176,7 +176,11 @@ class PaginasController {
                 $mail->Body = $contenido;
     
                 // Enviar el mail
-                $mail->send();
+                if($mail->send()) {
+                    $mensaje = "Mensaje enviado correctamente";
+                } else {
+                    $mensaje = "El mensaje no se pudo enviar...";
+                }
     
                 // Éxito
                 $mensaje = $idioma === 'es' ? 'Mensaje enviado correctamente' : 'Message sent successfully';

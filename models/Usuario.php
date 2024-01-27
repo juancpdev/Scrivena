@@ -48,29 +48,6 @@ class Usuario extends ActiveRecord {
 
     }
 
-    // Validación para cuentas nuevas
-    public function validar_cuenta() {
-        if(!$this->nombre) {
-            self::$alertas['error'][] = 'El Nombre es Obligatorio';
-        }
-        if(!$this->apellido) {
-            self::$alertas['error'][] = 'El Apellido es Obligatorio';
-        }
-        if(!$this->email) {
-            self::$alertas['error'][] = 'El Email es Obligatorio';
-        }
-        if(!$this->password) {
-            self::$alertas['error'][] = 'El Password no puede ir vacio';
-        }
-        if(strlen($this->password) < 6) {
-            self::$alertas['error'][] = 'El password debe contener al menos 6 caracteres';
-        }
-        if($this->password !== $this->password2) {
-            self::$alertas['error'][] = 'Los password son diferentes';
-        }
-        return self::$alertas;
-    }
-
     // Valida un email
     public function validarEmail() {
         if(!$this->email) {
