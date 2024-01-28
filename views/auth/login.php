@@ -4,9 +4,9 @@
 
     <div class="caja-contenedor-formulario">
         <div class="contenedor-formulario contenedor-formulario--login">
-        <?php
-        require_once __DIR__ . '/../templates/alertas.php';
-        ?>
+            <?php
+            require_once __DIR__ . '/../templates/alertas.php';
+            ?>
             <form method="POST" action="/login" class="formulario formulario--login">
 
                 <div class="campo-contenedor">
@@ -16,12 +16,7 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input 
-                                class="formulario__input input-email" 
-                                type="email" 
-                                name="email" 
-                                id="email" 
-                                placeholder="Email">
+                            <input class="formulario__input input-email" type="email" name="email" id="email" placeholder="Email">
                         </div>
                     </div>
                 </div>
@@ -33,12 +28,7 @@
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input 
-                                class="formulario__input input-password" 
-                                type="password" 
-                                name="password" 
-                                id="password" 
-                                placeholder="Password">
+                            <input class="formulario__input input-password" type="password" name="password" id="password" placeholder="Password">
                         </div>
                     </div>
                 </div>
@@ -46,7 +36,7 @@
                 <div class="contenedor-boton">
                     <input class="boton boton--login" type="submit" value="Iniciar Sesión">
                 </div>
-
+            
                 <div class="acciones">
                     <a href="/olvide" class="acciones__enlace">¿Olvidaste tu Password?</a>
                 </div>

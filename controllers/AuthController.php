@@ -21,8 +21,6 @@ class AuthController {
                 // Verificar quel el usuario exista
                 $usuario = Usuario::where('email', $usuario->email);
 
-
-
                 if(!$usuario || !$usuario->confirmado ) {
                     Usuario::setAlerta('error', 'El Usuario No Existe o no esta confirmado');
                 } else {
@@ -90,7 +88,6 @@ class AuthController {
             $_SESSION = [];
             header('Location: /');
         }
-       
     }
 
     public static function olvide(Router $router) {
@@ -117,20 +114,15 @@ class AuthController {
                     $email = new Email( $usuario->email, $usuario->nombre, $usuario->token );
                     $email->enviarInstrucciones();
 
-
                     // Imprimir la alerta
                     // Usuario::setAlerta('exito', 'Hemos enviado las instrucciones a tu email');
-
                     $alertas['exito'][] = 'Hemos enviado las instrucciones a tu email';
                 } else {
-                 
                     // Usuario::setAlerta('error', 'El Usuario no existe o no esta confirmado');
-
                     $alertas['error'][] = 'El Usuario no existe o no esta confirmado';
                 }
             }
         }
-
         // Muestra la vista
         $router->render('auth/olvide', [
             'titulo' => 'Olvide mi Password',
@@ -154,7 +146,6 @@ class AuthController {
             $token_valido = false;
         }
 
-
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Añadir el nuevo password
@@ -167,8 +158,9 @@ class AuthController {
                 // Hashear el nuevo password
                 $usuario->hashPassword();
 
-                // Eliminar el Token
+                // Eliminar el Token y actualizar BD
                 $usuario->token = null;
+                $usuario->cambiopass = '1';
 
                 // Guardar el usuario en la BD
                 $resultado = $usuario->guardar();

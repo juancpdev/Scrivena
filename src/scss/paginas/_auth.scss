@@ -1,12 +1,26 @@
 @use 'base/mixins' as m;
 
 .auth {
-
+    padding: 2rem 0;
     margin-top: 8rem;
     background-color: #F1F3F9;
+
+    @include m.tablet {
+        padding: 5rem 0;
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 3rem;
+
+        @include m.tablet {
+            font-size: 4rem;
+        }
+    }
+
+    &__texto {
+        text-align: center;
+        font-size: 1.7rem;
+    }
 }
 
-.auth__texto {
-    font-size: 2rem;
-    text-align: center;
-}

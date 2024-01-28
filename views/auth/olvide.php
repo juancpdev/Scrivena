@@ -4,9 +4,9 @@
 
     <div class="caja-contenedor-formulario">
         <div class="contenedor-formulario contenedor-formulario--olvide">
-        <?php
-        require_once __DIR__ . '/../templates/alertas.php';
-        ?>
+            <?php
+            require_once __DIR__ . '/../templates/alertas.php';
+            ?>
             <form method="POST" action="/olvide" class="formulario formulario--olvide">
 
                 <div class="campo-contenedor">
@@ -29,8 +29,11 @@
                 <div class="contenedor-boton">
                     <input class="boton boton--login" type="submit" value="Enviar Instrucciones">
                 </div>
-
-    <div class="acciones">
-        <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>
+            
+                <div class="acciones">
+                    <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>
+                </div>
+            </form>
+        </div>
     </div>
 </main>

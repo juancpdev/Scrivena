@@ -12,13 +12,12 @@ class Usuario extends ActiveRecord {
     public $email;
     public $password;
     public $password2;
+    public $password_actual;
+    public $password_nuevo;
     public $confirmado;
     public $token;
     public $admin;
     public $cambiopass;
-
-    public $password_actual;
-    public $password_nuevo;
 
     
     public function __construct($args = [])
@@ -29,6 +28,8 @@ class Usuario extends ActiveRecord {
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? '';
+        $this->password_actual = $args['password_actual'] ?? '';
+        $this->password_nuevo = $args['password_nuevo'] ?? '';
         $this->confirmado = $args['confirmado'] ?? 0;
         $this->token = $args['token'] ?? '';
         $this->admin = $args['admin'] ?? '';
@@ -63,25 +64,27 @@ class Usuario extends ActiveRecord {
 
     // Valida el Password 
     public function validarPassword() {
-        if(!$this->password) {
-            self::$alertas['error'][] = 'El Password no puede ir vacio';
+        if((!($this->password) || !($this->password2))) {
+            self::$alertas['error'][] = "El password es Obligatorio";
         }
-        if(strlen($this->password) < 6) {
-            self::$alertas['error'][] = 'El password debe contener al menos 6 caracteres';
+        if(strlen($this->password) < 6 || strlen($this->password2) < 6 ) {
+            self::$alertas['error'][] = "El password debe contener al menos 6 caracteres";
         }
+        if($this->password !== $this->password2) {
+            self::$alertas['error'][] = "Los passwords no coinciden";
+        }
+        
         return self::$alertas;
     }
 
     public function nuevo_password() : array {
-        if(!$this->password_actual) {
-            self::$alertas['error'][] = 'El Password Actual no puede ir vacio';
+        if((!($this->password_actual) || !($this->password_nuevo))) {
+            self::$alertas['error'][] = "Los passwords son Obligatorio";
         }
-        if(!$this->password_nuevo) {
-            self::$alertas['error'][] = 'El Password Nuevo no puede ir vacio';
+        if(strlen($this->password_actual) < 6 || strlen($this->password_nuevo) < 6 ) {
+            self::$alertas['error'][] = "El password debe contener al menos 6 caracteres";
         }
-        if(strlen($this->password_nuevo) < 6) {
-            self::$alertas['error'][] = 'El Password debe contener al menos 6 caracteres';
-        }
+        
         return self::$alertas;
     }
 

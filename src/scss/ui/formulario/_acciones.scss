@@ -8,5 +8,11 @@
     &__enlace {
         color: v.$negro;
         font-size: 1.5rem;
+        transition: all .2s ease;
+
+        &:hover {
+            color: lighten(v.$principal, 10);
+            
+        }
     }
 }

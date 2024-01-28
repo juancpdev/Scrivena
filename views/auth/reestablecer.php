@@ -2,29 +2,57 @@
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
     <p class="auth__texto">Coloca tu nuevo password</p> 
 
-    <?php
+    <div class="caja-contenedor-formulario">
+        <div class="contenedor-formulario contenedor-formulario--reestablecer">
+        <?php
         require_once __DIR__ . '/../templates/alertas.php';
-    ?>
+        ?>
+        
+        <?php if($token_valido) { ?>
+            <form method="POST" class="formulario formulario--olvide" novalidate>
+                <div class="campo-contenedor">
+                    <div class="campo_contenedor-arriba">
+                        <span class="campo-orden">1.</span>
+                        <p class="campo-titulo">Password</p>
+                    </div>
+                    <div class="campo_contenedor-abajo">
+                        <div class="campo">
+                            <input 
+                                class="formulario__input input-password" 
+                                type="password" 
+                                name="password" 
+                                id="password" 
+                                placeholder="Nuevo Password">
+                        </div>
+                    </div>
+                </div>
 
-    <?php if($token_valido) { ?>
-        <form method="POST" class="formulario">
-            <div class="formulario__campo">
-                <label for="password" class="formulario__label">Nuevo Password</label>
-                <input
-                    type="password"
-                    class="formulario__input"
-                    placeholder="Tu Nuevo Password"
-                    id="password"
-                    name="password"
-                >
-            </div>
+                <div class="campo-contenedor">
+                    <div class="campo_contenedor-arriba">
+                        <span class="campo-orden">2.</span>
+                        <p class="campo-titulo">Repetir Password</p>
+                    </div>
+                    <div class="campo_contenedor-abajo">
+                        <div class="campo">
+                            <input 
+                                class="formulario__input input-password" 
+                                type="password" 
+                                name="password2" 
+                                id="password2" 
+                                placeholder="Confirmar Password">
+                        </div>
+                    </div>
+                </div>
 
-            <input type="submit" class="formulario__submit" value="Guardar Password">
-        </form>
-    <?php } ?>
-
-    <div class="acciones">
-        <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>
-        <a href="/registro" class="acciones__enlace">¿Aún no tienes una cuenta? Obtener una</a>
-    </div>
+                <div class="contenedor-boton">
+                    <input class="boton boton--login" type="submit" value="Guardar Password">
+                </div>
+        <?php } ?>
+                <div class="acciones">
+                    <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>
+                </div>
+            </form>
 </main>
+
+
+
