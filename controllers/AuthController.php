@@ -21,12 +21,11 @@ class AuthController {
                 // Verificar quel el usuario exista
                 $usuario = Usuario::where('email', $usuario->email);
 
-                if(!$usuario || !$usuario->confirmado ) {
-                    Usuario::setAlerta('error', 'El Usuario No Existe o no esta confirmado');
+                if(!$usuario) {
+                    Usuario::setAlerta('error', 'El Usuario No Existe');
                 } else {
                     // El Usuario existe
-
-                    if($usuario->cambiopass === "0") {
+                    if (intval($usuario->cambiopass) === 0) {
                         if ($_POST['password'] == $usuario->password) {
                         
                             // Iniciar la sesión
@@ -41,13 +40,13 @@ class AuthController {
                             if($usuario->admin) {
                                 header('Location: /admin/dashboard');
                             } else {
-                                header('Location: /');
+                                header('Location: /dashboard');
                             }
                             
                         } else {
                             Usuario::setAlerta('error', 'Password Incorrecto');
                         }
-                    } else if ($usuario->cambiopass === "1") {
+                    } else if (intval($usuario->cambiopass) === 1) {
                         if( password_verify($_POST['password'], $usuario->password) ) {
                         
                             // Iniciar la sesión
@@ -101,7 +100,7 @@ class AuthController {
                 // Buscar el usuario
                 $usuario = Usuario::where('email', $usuario->email);
 
-                if($usuario && $usuario->confirmado) {
+                if($usuario) {
 
                     // Generar un nuevo token
                     $usuario->crearToken();
@@ -119,7 +118,7 @@ class AuthController {
                     $alertas['exito'][] = 'Hemos enviado las instrucciones a tu email';
                 } else {
                     // Usuario::setAlerta('error', 'El Usuario no existe o no esta confirmado');
-                    $alertas['error'][] = 'El Usuario no existe o no esta confirmado';
+                    $alertas['error'][] = 'El Usuario no existe';
                 }
             }
         }
@@ -182,42 +181,4 @@ class AuthController {
         ]);
     }
 
-    public static function mensaje(Router $router) {
-
-        $router->render('auth/mensaje', [
-            'titulo' => 'Cuenta Creada Exitosamente'
-        ]);
-    }
-
-    public static function confirmar(Router $router) {
-        
-        $token = s($_GET['token']);
-
-        if(!$token) header('Location: /');
-
-        // Encontrar al usuario con este token
-        $usuario = Usuario::where('token', $token);
-
-        if(empty($usuario)) {
-            // No se encontró un usuario con ese token
-            Usuario::setAlerta('error', 'Token No Válido');
-        } else {
-            // Confirmar la cuenta
-            $usuario->confirmado = 1;
-            $usuario->token = '';
-            unset($usuario->password2);
-            
-            // Guardar en la BD
-            $usuario->guardar();
-
-            Usuario::setAlerta('exito', 'Cuenta Comprobada Correctamente');
-        }
-
-     
-
-        $router->render('auth/confirmar', [
-            'titulo' => 'Confirma tu cuenta DevWebcamp',
-            'alertas' => Usuario::getAlertas()
-        ]);
-    }
 }

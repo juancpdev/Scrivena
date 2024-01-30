@@ -1,3 +1,27 @@
+<?php
+// Obtén el valor de la variable 'lang' desde la URL
+$langParam = isset($_GET['lang']) ? $_GET['lang'] : 'es';
+
+// Inicia la sesión si no está iniciada
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+if (is_admin()) {
+    // Si ya ha iniciado sesión, redirige a otra página (puedes elegir la que desees)
+    header("Location: /admin/dashboard");
+    exit(); // Asegura que el script no continúe después de la redirección
+}
+
+// Verifica si ya ha iniciado sesión
+if (is_auth()) {
+    // Si ya ha iniciado sesión, redirige a otra página (puedes elegir la que desees)
+    header("Location: /dashboard?lang=$langParam");
+    exit(); // Asegura que el script no continúe después de la redirección
+}
+
+?>
+
 <main class="auth">
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
     <p class="auth__texto">Coloca tu nuevo password</p> 

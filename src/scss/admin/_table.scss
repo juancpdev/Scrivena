@@ -1,0 +1,84 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.table {
+    margin: 5rem 0 2rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    @include m.tablet {
+        margin: 5rem 0 3rem 0;
+    }
+
+    @include m.shadow;
+
+    &__thead {
+        background-color: v.$gris-oscuro;
+        color: v.$blanco;
+    }
+
+    &__th {
+        padding: 1rem 2rem;
+        text-align: left;
+        font-size: 1.3rem;
+        @include m.tablet {
+            font-size: 2rem;
+        }
+    }
+    
+    &__tr {
+        &:nth-of-type(even) {
+            background-color: darken(v.$gris-claro, 4%);
+        }
+    }
+
+    &__td {
+        padding: 1.5rem 2rem;
+        font-size: 1.2rem;
+
+        @include m.tablet {
+            font-size: 1.6rem;
+        }
+
+        &--acciones {
+            @extend .table__td;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            align-items: center;
+            height: 7rem;
+            
+            @include m.tablet {
+                gap: 2rem;
+                height: 6rem;
+            }
+        }
+    }
+
+    &__accion {
+        all: unset;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: v.$bold;
+        display: flex;
+        align-items: center;
+
+        @include m.tablet {
+            font-size: 1.4rem;
+        }
+
+        &--icono {
+            padding-right: .5rem;
+        }
+        &--editar {
+            color: v.$principal;
+        }
+        &--eliminar {
+           color: v.$rojo;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    
+}

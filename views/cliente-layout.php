@@ -62,24 +62,21 @@
     </script>
 </head>
 
-<body>
+<body class="dashboard">
     <?php
-    $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : 'es';
-
-    $headerPath = __DIR__ . "/templates/header{$idioma}.php";
-    $footerPath = __DIR__ . "/templates/footer{$idioma}.php";
-
-    if (file_exists($headerPath)) {
-        include_once $headerPath;
-    }
-
-    echo $contenido;
-
-    if (file_exists($footerPath)) {
-        include_once $footerPath;
-    }
-
+    include_once __DIR__ . '/templates/cliente-header.php';
     ?>
+    <div class="dashboard__grid">
+        <?php
+        include_once __DIR__ . '/templates/cliente-sidebar.php';
+        ?>
+
+        <main class="dashboard__contenido">
+            <?php
+            echo $contenido;
+            ?>
+        </main>
+    </div>
     <script src="/build/js/bundle.js?v=1.6" defer></script>
 </body>
 

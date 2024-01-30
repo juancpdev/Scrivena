@@ -4,7 +4,7 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'confirmado', 'token', 'admin', 'cambiopass'];
+    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'token', 'admin', 'cambiopass'];
 
     public $id;
     public $nombre;
@@ -14,7 +14,6 @@ class Usuario extends ActiveRecord {
     public $password2;
     public $password_actual;
     public $password_nuevo;
-    public $confirmado;
     public $token;
     public $admin;
     public $cambiopass;
@@ -30,9 +29,8 @@ class Usuario extends ActiveRecord {
         $this->password2 = $args['password2'] ?? '';
         $this->password_actual = $args['password_actual'] ?? '';
         $this->password_nuevo = $args['password_nuevo'] ?? '';
-        $this->confirmado = $args['confirmado'] ?? 0;
         $this->token = $args['token'] ?? '';
-        $this->admin = $args['admin'] ?? '';
+        $this->admin = $args['admin'] ?? 0;
         $this->cambiopass = $args['cambiopass'] ?? 0;
     }
 

@@ -3,8 +3,11 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
+use Controllers\APIClientes;
+use Controllers\ClientesController;
 use Controllers\AuthController;
 use Controllers\PaginasController;
+use Controllers\DashboardController;
 
 $router = new Router();
 
@@ -26,18 +29,18 @@ $router->post('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/contact', [PaginasController::class, 'contacto']);
 $router->post('/contact', [PaginasController::class, 'contacto']);
 
+// Terminos y avisos
 $router->get('/terminos', [PaginasController::class, 'terminos']);
 $router->get('/terms', [PaginasController::class, 'terminos']);
 
 $router->get('/privacidad', [PaginasController::class, 'privacidad']);
 $router->get('/privacy', [PaginasController::class, 'privacidad']);
 
-// Terminos y avisos
-
 
 // Login
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/login', [AuthController::class, 'login']);
+
 $router->post('/logout', [AuthController::class, 'logout']);
 
 // Formulario de olvide mi password
@@ -48,9 +51,18 @@ $router->post('/olvide', [AuthController::class, 'olvide']);
 $router->get('/reestablecer', [AuthController::class, 'reestablecer']);
 $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 
-// Confirmación de Cuenta
-$router->get('/mensaje', [AuthController::class, 'mensaje']);
-$router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
+// APIs
+$router->get('/api/clientes', [APIClientes::class, 'index']);
+$router->get('/api/cliente', [APIClientes::class, 'cliente']);
 
+// ADMIN
+$router->get('/admin/dashboard', [DashboardController::class, 'index']);
+
+$router->get('/admin/clientes', [ClientesController::class, 'index']);
+$router->get('/admin/clientes/crear', [ClientesController::class, 'crear']);
+$router->post('/admin/clientes/crear', [ClientesController::class, 'crear']);
+$router->get('/admin/clientes/editar', [ClientesController::class, 'editar']);
+$router->post('/admin/clientes/editar', [ClientesController::class, 'editar']);
+$router->post('/admin/clientes/eliminar', [ClientesController::class, 'eliminar']);
 
 $router->comprobarRutas();

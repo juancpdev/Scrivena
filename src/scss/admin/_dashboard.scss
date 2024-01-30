@@ -1,0 +1,164 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.dashboard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: v.$gris-claro;
+
+    &__header {
+        background-color: darken(#123c49, 10%);
+        padding: 2rem;
+    }
+
+    &__header-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        @include m.texto-fluido(2rem, 3rem);
+        @include m.logo;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__nav {
+        margin-top: .5rem;
+        padding: 1rem;
+        transition: all .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(161, 1, 1);
+            border-radius: 2rem;
+        }
+    }
+
+    &__submit--logout {
+        all: unset;
+        font-size: 1.3rem;
+        color: v.$blanco;
+        text-transform: uppercase;
+    }
+
+    &__grid {
+        @include m.tablet {
+            display: flex;
+            height: 100vh;
+            overflow-y: auto;
+        }
+    }
+
+    &__sidebar {
+        background-color:#123c49;
+        @include m.tablet {
+            width: 12rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        @include m.tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__enlace {
+        color: #30aeb9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: .2rem;
+        padding: 1rem;
+        gap: .5rem;
+        border-radius: 1rem;
+        transition: all .3s ease;
+
+        @include m.tablet {
+            margin: 1rem;
+            padding: 2rem 1rem;
+        }
+
+        &:hover {
+            background-color: lighten(v.$gris-oscuro, 10);
+            color: v.$blanco;
+        }
+
+        &--actual {
+            background-color: lighten(v.$gris-oscuro, 15);
+            color: v.$blanco;
+
+            &:hover {
+                background-color: lighten(v.$gris-oscuro, 15);
+            }
+        }
+    }
+
+    &__icono {
+        font-size: 1.5rem;
+        @include m.tablet {
+            font-size: 2rem;
+        }
+    }
+    
+    &__menu-texto {
+        font-size: 1rem;
+        text-transform: uppercase;
+        @include m.tablet {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__contenido {
+        padding: 1rem 2rem;
+        width: 100%;
+        @include m.tablet {
+            overflow-y: scroll;
+            padding: 1rem 8rem 3rem 8rem;
+        }
+    }
+
+    &__contenedor--boton {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 3rem;
+        @include m.tablet {
+            padding: 0;
+        }
+    }
+
+    &__boton {
+        @include m.boton(v.$principal, v.$blanco);
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        width: 100%;
+        @include m.tablet {
+            width: auto;
+        }
+    }
+
+    &__contenedor {
+        @include m.shadow;
+        background-color: v.$blanco;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    &__formulario {
+        @extend .dashboard__contenedor;
+        @include m.contenedor-sm;
+        margin: 5rem auto;
+    }
+}

@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script>
-    (function(d, w, c) {
-        w.BrevoConversationsID = '65aad6e5e1f72d4bfd439584';
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        var s = d.createElement('script');
-        s.async = true;
-        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'BrevoConversations');
-</script>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,24 +49,21 @@
     </script>
 </head>
 
-<body>
+<body class="dashboard">
     <?php
-    $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : 'es';
-
-    $headerPath = __DIR__ . "/templates/header{$idioma}.php";
-    $footerPath = __DIR__ . "/templates/footer{$idioma}.php";
-
-    if (file_exists($headerPath)) {
-        include_once $headerPath;
-    }
-
-    echo $contenido;
-
-    if (file_exists($footerPath)) {
-        include_once $footerPath;
-    }
-
+    include_once __DIR__ . '/templates/admin-header.php';
     ?>
+    <div class="dashboard__grid">
+        <?php
+        include_once __DIR__ . '/templates/admin-sidebar.php';
+        ?>
+
+        <main class="dashboard__contenido">
+            <?php
+            echo $contenido;
+            ?>
+        </main>
+    </div>
     <script src="/build/js/bundle.js?v=1.6" defer></script>
 </body>
 
