@@ -51,10 +51,6 @@ $router->post('/olvide', [AuthController::class, 'olvide']);
 $router->get('/reestablecer', [AuthController::class, 'reestablecer']);
 $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 
-// APIs
-$router->get('/api/clientes', [APIClientes::class, 'index']);
-$router->get('/api/cliente', [APIClientes::class, 'cliente']);
-
 // ADMIN
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);
 

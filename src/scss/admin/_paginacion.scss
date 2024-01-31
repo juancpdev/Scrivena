@@ -2,46 +2,43 @@
 @use 'base/variables' as v;
 
 .paginacion {
-    margin-top: 5rem;
-    margin-bottom: 3rem;
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    @include m.tablet {
-        justify-content: flex-end;
-    }
+    gap: 2rem;
 
     &__enlace {
-        color: v.$principal;
-        font-size: 1.6rem;
 
         &--texto {
-            padding: 1rem;
-            border-radius: .5rem;
             border: 1px solid v.$principal;
-
+            border-radius: 1rem;
+            transition: all .3s ease;
+            padding: .7rem;
+            font-size: 1.3rem;
+            @include m.tablet {
+                padding: 1rem;
+                font-size: 1.6rem;
+            }
             &:hover {
                 background-color: v.$principal;
                 color: v.$blanco;
             }
         }
+
         &--numero {
-            font-weight: v.$bold;
             display: none;
+            font-weight: bold;
+            color: v.$principal;
             @include m.tablet {
                 display: inline;
             }
-        }
-        &--actual {
-            color: v.$gris;
-            font-weight: v.$bold;
-            display: none;
-            @include m.tablet {
-                display: inline;
+
+            &-actual {
+                color: v.$gris-oscuro;
+                border-bottom: 2px solid v.$gris-oscuro;
             }
         }
     }
+
+    
 }

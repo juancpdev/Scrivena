@@ -12,7 +12,7 @@
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
-                    <th scope="col" class="table__th">Nombre</th>
+                    <th scope="col" class="table__th">Nombre y Apellido</th>
                     <th scope="col" class="table__th">E-mail</th>
                     <th scope="col" class="table__th"></th>
                 </tr> 

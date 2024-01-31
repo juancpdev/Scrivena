@@ -2,9 +2,9 @@
     <div class="dashboard__header-grid">
     <a title="Logo" href="/?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">
             <picture>
-                <source srcset="../build/img/LOGOSCRIVENA.avif" type="image/avif">
-                <source srcset="../build/img/LOGOSCRIVENA.webp" type="image/webp">
-                <img class="logo" loading="lazy" src="../build/img/LOGOSCRIVENA.png">
+                <source srcset="/../build/img/LOGOSCRIVENA.avif" type="image/avif">
+                <source srcset="/../build/img/LOGOSCRIVENA.webp" type="image/webp">
+                <img class="logo" loading="lazy" src="/../build/img/LOGOSCRIVENA.png">
             </picture>
         </a>
         <nav class="dashboard__nav">

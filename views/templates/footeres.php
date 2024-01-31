@@ -35,6 +35,9 @@
         <a target="_blank" href="https://www.instagram.com/scrivenatrust">
             <i class="iconos iconos__footer fa-brands fa-instagram"></i>
         </a>
+        <a target="_blank" href="https://www.linkedin.com/company/scrivena/">
+            <i class="iconos iconos__footer fa-brands fa-linkedin"></i>
+        </a>
     </div>
     <div class="email">
         <p>contacto@scrivena.com</p>

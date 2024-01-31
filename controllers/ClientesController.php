@@ -14,10 +14,10 @@ class ClientesController {
             header('Location: /');
         }
 
-        $pagina_actual = $_GET["page"];
+        // Verificar si la clave "page" está definida
+        $pagina_actual = isset($_GET["page"]) ? $_GET["page"] : 1;
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
-
-        
+            
         $registros_por_pagina = 4;
        
         $total = Usuario::total();
@@ -54,33 +54,29 @@ class ClientesController {
             $cliente->sincronizar($_POST);
 
             // validar
-            $alertas = $cliente->validar();
+            $alertas = $cliente->validarNuevoCliente();
 
-            // Guardar el registro
             if(empty($alertas)) {
 
-                // Guardar en la BD
-                $cliente->guardar();
+                // Revisar que el email no este registrado
+                $existeUsuario = Usuario::where('email', $cliente->email);
+               
+                if($existeUsuario) {
+                    Usuario::setAlerta('error', 'El Email ya está registrado por otro usuario');
+                    $alertas = Usuario::getAlertas();
+                } else {
+                    // Guardar en la BD
+                    $resultado = $cliente->guardar();
 
-                $respuesta = [
-                    'tipo' => 'exito',
-                    'datos' => $cliente
-                ];
-                echo json_encode($respuesta);
-                return;
-            } else {
-                $respuesta = [
-                    'tipo' => 'error',
-                    'alertas' => $alertas
-                ];
-                echo json_encode($respuesta);
-                return;
+                    if($resultado) {
+                        header('Location: /admin/clientes');
+                    }
+                }
             }
-
-            debuguear($alertas);
         }
+
         $router->render('admin/clientes/crear', [
-            'titulo' => 'Registrar Ponente',
+            'titulo' => 'Registrar Cliente',
             'cliente' => $cliente,
             'alertas' => $alertas
         ]);
@@ -100,6 +96,7 @@ class ClientesController {
         }
 
         $cliente = Usuario::find($id);
+        
 
         if(!$cliente) {
             header('Location: /admin/clientes');
@@ -110,28 +107,30 @@ class ClientesController {
                 header('Location: /');
             }
 
+            $cliente->sincronizar($_POST);
+
             // validar
             $alertas = $cliente->validar();
 
             // Guardar el registro
             if(empty($alertas)) {
 
-                // Guardar en la BD
-                $cliente->guardar();
-                
-                $respuesta = [
-                    'tipo' => 'exito',
-                    'datos' => $cliente,
-                ];
-                echo json_encode($respuesta);
-                return;
-            } else {
-                $respuesta = [
-                    'tipo' => 'error',
-                    'alertas' => $alertas
-                ];
-                echo json_encode($respuesta);
-                return;
+                // Revisar que el email no esté registrado por otro usuario
+                $existeUsuario = Usuario::where2('email', $cliente->email, "AND id <> {$cliente->id}");
+
+                if ($existeUsuario) {
+                    Usuario::setAlerta('error', 'El Email ya está registrado por otro usuario');
+                    $alertas = Usuario::getAlertas();
+                } else {
+                    // Guardar en la BD
+                    $resultado = $cliente->guardar();
+
+                    if ($resultado) {
+                        header('Location: /admin/clientes');
+                    }
+                }
+
+
             }
             
         }

@@ -49,6 +49,24 @@ class Usuario extends ActiveRecord {
 
     }
 
+    // Validar el Login de Usuarios
+    public function validarNuevoCliente() {
+        if(!$this->nombre) {
+            self::$alertas['error'][] = 'El Nombre del Cliente es Obligatorio';
+        }
+        if(!$this->apellido) {
+            self::$alertas['error'][] = 'El Apellido del Cliente es Obligatorio';
+        }
+        if(!$this->email) {
+            self::$alertas['error'][] = 'El Email es Obligatorio';
+        }
+        if(!$this->password) {
+            self::$alertas['error'][] = 'El Password no puede ir vacio';
+        }
+        return self::$alertas;
+
+    }
+
     // Valida un email
     public function validarEmail() {
         if(!$this->email) {

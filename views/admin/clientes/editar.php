@@ -7,14 +7,17 @@
     </a>
 </div>
 
-<div class="dashboard__formulario">
-    <?php 
-        include_once __DIR__ . './../../templates/alertas.php';
-    ?>
+<div class="caja-contenedor-formulario">
+    <div class="contenedor-formulario contenedor-formulario--cliente">
+        <?php
+        require_once __DIR__ . '/../../templates/alertas.php';
+        ?>
 
-    <form method="POST" class="formulario">
-        <?php include_once __DIR__ . '/formulario.php'; ?>
+        <form method="POST" class="formulario formulario--cliente">
+            <?php include_once __DIR__ . '/formulario.php'; ?>
 
-        <input class="formulario__submit formulario__submit--registrar" type="submit" value="Actualizar Cliente">
-    </form>
-</div>
+            <div class="contenedor-boton">
+                <input class="boton boton--login" type="submit" value="Actualizar Cliente">
+            </div>
+        </form>
+    </div>

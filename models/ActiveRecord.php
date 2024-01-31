@@ -150,6 +150,13 @@ class ActiveRecord {
         return array_shift( $resultado ) ;
     }
 
+    // Busqueda Where con Condicion 
+    public static function where2($columna, $valor, $condicion = '') {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE {$columna} = '{$valor}' {$condicion}";
+        $resultado = self::consultarSQL($query);
+        return array_shift($resultado);
+    }
+
     // Busqueda Where con multiples opciones 
     public static function whereArray($array = []) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE ";
