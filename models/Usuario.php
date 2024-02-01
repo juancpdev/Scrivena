@@ -4,7 +4,7 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'token', 'admin', 'cambiopass'];
+    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'telefono', 'pais', 'vencimiento', 'token', 'cambiopass', 'admin'];
 
     public $id;
     public $nombre;
@@ -14,9 +14,12 @@ class Usuario extends ActiveRecord {
     public $password2;
     public $password_actual;
     public $password_nuevo;
+    public $telefono;
+    public $pais;
+    public $vencimiento;
     public $token;
-    public $admin;
     public $cambiopass;
+    public $admin;
 
     
     public function __construct($args = [])
@@ -29,9 +32,12 @@ class Usuario extends ActiveRecord {
         $this->password2 = $args['password2'] ?? '';
         $this->password_actual = $args['password_actual'] ?? '';
         $this->password_nuevo = $args['password_nuevo'] ?? '';
+        $this->telefono = $args['telefono'] ?? '';
+        $this->pais = $args['pais'] ?? '';
+        $this->contrato = $args['vencimiento'] ?? '';
         $this->token = $args['token'] ?? '';
-        $this->admin = $args['admin'] ?? 0;
         $this->cambiopass = $args['cambiopass'] ?? 0;
+        $this->admin = $args['admin'] ?? 0;
     }
 
     // Validar el Login de Usuarios
@@ -63,8 +69,17 @@ class Usuario extends ActiveRecord {
         if(!$this->password) {
             self::$alertas['error'][] = 'El Password no puede ir vacio';
         }
-        return self::$alertas;
+        if(!$this->telefono) {
+            self::$alertas['error'][] = 'El Telefono es Obligatorio';
+        }
+        if(!$this->pais) {
+            self::$alertas['error'][] = 'El País es Obligatorio';
+        }
+        if(!$this->contrato) {
+            self::$alertas['error'][] = 'La fecha de finalización del contrato es Obligatoria';
+        }
 
+        return self::$alertas;
     }
 
     // Valida un email

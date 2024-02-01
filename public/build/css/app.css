@@ -1984,6 +1984,15 @@ footer {
   color: rgb(0, 120, 0);
 }
 
+.swal2-popup {
+  font-size: 1.2rem !important;
+}
+@media (min-width: 768px) {
+  .swal2-popup {
+    font-size: 1.5rem !important;
+  }
+}
+
 .dashboard {
   height: 100%;
   display: flex;

@@ -12,14 +12,18 @@
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
-                    <th scope="col" class="table__th">Nombre y Apellido</th>
+                    <th scope="col" class="table__th">Nombre</th>
                     <th scope="col" class="table__th">E-mail</th>
+                    <th scope="col" class="table__th">Teléfono</th>
+                    <th scope="col" class="table__th">País</th>
+                    <th scope="col" class="table__th">Vencimiento</th>
                     <th scope="col" class="table__th"></th>
                 </tr> 
             </thead>
 
             <tbody class="table__tbody">
                 <?php foreach($clientes as $cliente) { ?>
+                    <?php if($cliente->admin === "0") { ?>
                     <tr class="table__tr table__tr--body">
                         <td class="table__td">
                             <?php echo $cliente->nombre . " " . $cliente->apellido; ?>
@@ -27,11 +31,20 @@
                         <td class="table__td">
                             <?php echo $cliente->email ?>
                         </td>
+                        <td class="table__td">
+                            <?php echo $cliente->telefono ?>
+                        </td>
+                        <td class="table__td">
+                            <?php echo $cliente->pais ?>
+                        </td>
+                        <td class="table__td">
+                            <?php echo $cliente->vencimiento ?>
+                        </td>
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/clientes/editar?id=<?php echo $cliente->id; ?>">
                                 <i class="fa-solid fa-user-pen table__accion--icono"></i>Editar
                             </a>
-                            <form class="table__formulario" method="POST" action="/admin/clientes/eliminar" id="formEliminarPonente-<?php echo $cliente->id; ?>" >
+                            <form class="table__formulario" method="POST" action="/admin/clientes/eliminar" id="formEliminarCliente-<?php echo $cliente->id; ?>" >
                                 <input type="hidden" name="id" value="<?php echo $cliente->id; ?>">
                                 <button 
                                     class="table__accion table__accion--eliminar" 
@@ -43,6 +56,7 @@
                             </form>
                         </td>
                     </tr>
+                    <?php } ?>
                 <?php } ?>
             </tbody>
         </table>

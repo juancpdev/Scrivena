@@ -69,3 +69,57 @@
         </div>
     </div>
 </div>
+
+<div class="campo-contenedor">
+    <div class="campo_contenedor-arriba">
+        <span class="campo-orden">5.</span>
+        <p class="campo-titulo">Teléfono</p>
+    </div>
+    <div class="campo_contenedor-abajo">
+        <div class="campo">
+            <input 
+                class="formulario__input input-telefono" 
+                type="number"
+                name="telefono" 
+                id="telefono" 
+                placeholder="Teléfono"
+                value="<?php echo $cliente->telefono ?? ''; ?>">
+        </div>
+    </div>
+</div>
+
+<div class="campo-contenedor">
+    <div class="campo_contenedor-arriba">
+        <span class="campo-orden">6.</span>
+        <p class="campo-titulo">País</p>
+    </div>
+    <div class="campo_contenedor-abajo">
+        <div class="campo">
+            <input 
+                class="formulario__input input-pais" 
+                type="text"
+                name="pais" 
+                id="pais" 
+                placeholder="País"
+                value="<?php echo $cliente->pais ?? ''; ?>">
+        </div>
+    </div>
+</div>
+
+<div class="campo-contenedor">
+    <div class="campo_contenedor-arriba">
+        <span class="campo-orden">7.</span>
+        <p class="campo-titulo">Vencimiento Contrato</p>
+    </div>
+    <div class="campo_contenedor-abajo">
+        <div class="campo">
+            <input 
+                class="formulario__input input-contrato" 
+                type="date"
+                name="contrato" 
+                id="contrato" 
+                placeholder="Fecha de finalización de contrato"
+                value="<?php echo $cliente->vencimiento ?? ''; ?>">
+        </div>
+    </div>
+</div>
