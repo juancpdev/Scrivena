@@ -114,10 +114,10 @@
     <div class="campo_contenedor-abajo">
         <div class="campo">
             <input 
-                class="formulario__input input-contrato" 
+                class="formulario__input input-vencimiento" 
                 type="date"
-                name="contrato" 
-                id="contrato" 
+                name="vencimiento" 
+                id="vencimiento" 
                 placeholder="Fecha de finalización de contrato"
                 value="<?php echo $cliente->vencimiento ?? ''; ?>">
         </div>

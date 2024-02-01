@@ -56,7 +56,7 @@ class Usuario extends ActiveRecord {
     }
 
     // Validar el Login de Usuarios
-    public function validarNuevoCliente() {
+    public function validarCliente() {
         if(!$this->nombre) {
             self::$alertas['error'][] = 'El Nombre del Cliente es Obligatorio';
         }
@@ -75,7 +75,7 @@ class Usuario extends ActiveRecord {
         if(!$this->pais) {
             self::$alertas['error'][] = 'El País es Obligatorio';
         }
-        if(!$this->contrato) {
+        if(!$this->vencimiento) {
             self::$alertas['error'][] = 'La fecha de finalización del contrato es Obligatoria';
         }
 

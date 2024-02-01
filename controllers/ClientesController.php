@@ -54,7 +54,7 @@ class ClientesController {
             $cliente->sincronizar($_POST);
 
             // validar
-            $alertas = $cliente->validarNuevoCliente();
+            $alertas = $cliente->validarCliente();
 
             if(empty($alertas)) {
 
@@ -110,7 +110,7 @@ class ClientesController {
             $cliente->sincronizar($_POST);
 
             // validar
-            $alertas = $cliente->validar();
+            $alertas = $cliente->validarCliente();
 
             // Guardar el registro
             if(empty($alertas)) {
@@ -129,8 +129,6 @@ class ClientesController {
                         header('Location: /admin/clientes');
                     }
                 }
-
-
             }
             
         }
