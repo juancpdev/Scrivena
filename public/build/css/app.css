@@ -1546,8 +1546,10 @@ h3 {
   position: relative;
 }
 .caja-contenedor-formulario .campo_contenedor-abajo .campo:hover input,
-.caja-contenedor-formulario .campo_contenedor-abajo .campo:hover textarea, .caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within input,
-.caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within textarea {
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:hover textarea,
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:hover select, .caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within input,
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within textarea,
+.caja-contenedor-formulario .campo_contenedor-abajo .campo:focus-within select {
   transition: all 0.3s ease;
   border-color: #fece75;
 }
@@ -1560,6 +1562,26 @@ h3 {
   background: #FFFFFF;
 }
 .caja-contenedor-formulario .campo_contenedor-abajo .campo input:focus {
+  border: 2px solid rgb(216, 141, 2);
+  outline: none;
+}
+.caja-contenedor-formulario .campo_contenedor-abajo .campo select {
+  width: 100%;
+  border: 0.2rem solid rgb(230, 226, 226);
+  border-radius: 0.5rem;
+  padding: 1.3rem;
+  font-size: 1.6rem;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* Oculta la flecha predeterminada en navegadores WebKit (Chrome, Safari) */
+  background-image: url("/build/img/flecha-select.svg"); /* Agrega tu propia imagen de flecha */
+  background-size: 1.5rem; /* Ajusta el tamaño de la imagen de la flecha */
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+}
+.caja-contenedor-formulario .campo_contenedor-abajo .campo select:focus {
   border: 2px solid rgb(216, 141, 2);
   outline: none;
 }

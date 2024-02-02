@@ -8,7 +8,7 @@
 </div>
 
 <div class="dashboard__contenedor--clientes">
-    <?php if(!empty($clientes)) { ?>
+    <?php if (count($clientes) > 1) { ?>
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">

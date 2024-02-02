@@ -16,7 +16,7 @@ class Contrato extends ActiveRecord {
     public function __construct($args = [])
     {
         $this->id = $args['id'] ?? null;
-        $this->inversionista_id = $args['inversionista_id'] ?? 1;
+        $this->inversionista_id = $args['inversionista_id'] ?? null;
         $this->inversion = $args['inversion'] ?? '';
         $this->tipo = $args['tipo'] ?? '';
         $this->fecha_inicio = date("Y/m/d");

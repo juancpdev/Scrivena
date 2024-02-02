@@ -19,16 +19,17 @@ class ClientesController {
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
             
         $registros_por_pagina = 7;
-       
         $total = Usuario::total();
         
+        
+       // Verificar si hay registros antes de crear la paginación
+       if ($total > 0) {
         $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
-        
-        if(!$pagina_actual || $pagina_actual < 1 || $paginacion->total_paginas() < $pagina_actual) {
+        if (!$pagina_actual || $pagina_actual < 1 || $paginacion->total_paginas() < $pagina_actual) {
             header("Location: /admin/clientes?page=1");
         }
-        
+
         $clientes = Usuario::paginar($registros_por_pagina, $paginacion->offset());
 
         $router->render('admin/clientes/index', [
@@ -36,7 +37,15 @@ class ClientesController {
             'clientes' => $clientes,
             'paginacion' => $paginacion->paginacion()
         ]);
+    } else {
+        // No hay registros, renderiza la página con un mensaje adecuado
+        $router->render('admin/clientes/index', [
+            'titulo' => 'Clientes',
+            'clientes' => [],
+            'paginacion' => ''
+        ]);
     }
+}
     
     public static function crear(Router $router) {
         if(!is_admin()) {

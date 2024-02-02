@@ -1,3 +1,4 @@
+
 <h2 class="dashboard__heading"> <?php echo $titulo; ?> </h2>
 
 <div class="dashboard__contenedor--boton">
@@ -14,7 +15,7 @@
                 <tr class="table__tr">
                     <th scope="col" class="table__th">ID</th>
                     <th scope="col" class="table__th">Inversor</th>
-                    <th scope="col" class="table__th">Monto</th>
+                    <th scope="col" class="table__th">Monto $</th>
                     <th scope="col" class="table__th">Tipo</th>
                     <th scope="col" class="table__th">Inicio</th>
                     <th scope="col" class="table__th">Finalización</th>

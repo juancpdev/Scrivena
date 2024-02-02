@@ -56,7 +56,8 @@
             &:hover,
             &:focus-within {
                 input,
-                textarea {
+                textarea,
+                select {
                     transition: all .3s ease;
                     border-color: lighten(v.$naranja, 30);
                 }
@@ -69,6 +70,27 @@
                 padding: 1.3rem;
                 font-size: 1.6rem;
                 background: v.$blanco;
+
+                &:focus {
+                    border: 2px solid v.$naranja;
+                    outline: none;
+                }
+            }
+
+            select {
+                width: 100%;
+                border: .2rem solid rgb(230, 226, 226);
+                border-radius: .5rem;
+                padding: 1.3rem;
+                font-size: 1.6rem;
+                background: v.$blanco;
+                cursor: pointer;
+
+                appearance: none; /* Oculta la flecha predeterminada en navegadores WebKit (Chrome, Safari) */
+                background-image: url('/build/img/flecha-select.svg'); /* Agrega tu propia imagen de flecha */
+                background-size: 1.5rem; /* Ajusta el tamaño de la imagen de la flecha */
+                background-repeat: no-repeat;
+                background-position: right 1.5rem center;
 
                 &:focus {
                     border: 2px solid v.$naranja;
