@@ -15,7 +15,7 @@ class ClientesController {
         }
 
         // Verificar si la clave "page" está definida
-        $pagina_actual = isset($_GET["page"]) ? $_GET["page"] : 1;
+        $pagina_actual = $_GET['page'];
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
             
         $registros_por_pagina = 7;

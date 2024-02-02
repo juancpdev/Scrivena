@@ -14,5 +14,12 @@
             </span>    
         </a>
 
+        <a href="/admin/contratos" class="dashboard__enlace <?php echo pagina_actual('/contratos') ? 'dashboard__enlace--actual' : '';  ?>">
+        <i class="fa-solid fa-file-contract dashboard__icono"></i>
+            <span class="dashboard__menu-texto">
+                Contratos
+            </span>    
+        </a>
+
     </nav>
 </aside>

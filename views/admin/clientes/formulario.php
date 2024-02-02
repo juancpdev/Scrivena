@@ -109,17 +109,17 @@
 <div class="campo-contenedor">
     <div class="campo_contenedor-arriba">
         <span class="campo-orden">7.</span>
-        <p class="campo-titulo">Vencimiento Contrato</p>
+        <p class="campo-titulo">Documento</p>
     </div>
     <div class="campo_contenedor-abajo">
         <div class="campo">
             <input 
-                class="formulario__input input-vencimiento" 
-                type="date"
-                name="vencimiento" 
-                id="vencimiento" 
-                placeholder="Fecha de finalización de contrato"
-                value="<?php echo $cliente->vencimiento ?? ''; ?>">
+                class="formulario__input input-documento" 
+                type="number"
+                name="documento" 
+                id="documento" 
+                placeholder="Documento"
+                value="<?php echo $cliente->documento ?? ''; ?>">
         </div>
     </div>
 </div>

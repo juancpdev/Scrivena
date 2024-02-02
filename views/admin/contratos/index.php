@@ -1,71 +1,73 @@
 <h2 class="dashboard__heading"> <?php echo $titulo; ?> </h2>
 
 <div class="dashboard__contenedor--boton">
-    <a class="dashboard__boton" href="/admin/clientes/crear">
+    <a class="dashboard__boton" href="/admin/contratos/crear">
         <i class="fa-solid fa-circle-plus"></i>
-        Añadir Cliente
+        Añadir Contrato
     </a>
 </div>
 
-<div class="dashboard__contenedor--clientes">
-    <?php if(!empty($clientes)) { ?>
+<div class="dashboard__contenedor--contratos">
+    <?php if(!empty($contratos)) { ?>
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
                     <th scope="col" class="table__th">ID</th>
-                    <th scope="col" class="table__th">Nombre</th>
-                    <th scope="col" class="table__th">E-mail</th>
-                    <th scope="col" class="table__th">Teléfono</th>
-                    <th scope="col" class="table__th">País</th>
-                    <th scope="col" class="table__th">Documento</th>
+                    <th scope="col" class="table__th">Inversor</th>
+                    <th scope="col" class="table__th">Monto</th>
+                    <th scope="col" class="table__th">Tipo</th>
+                    <th scope="col" class="table__th">Inicio</th>
+                    <th scope="col" class="table__th">Finalización</th>
+                    <th scope="col" class="table__th">Contrato</th>
                     <th scope="col" class="table__th"></th>
                 </tr> 
             </thead>
 
             <tbody class="table__tbody">
-                <?php foreach($clientes as $cliente) { ?>
-                    <?php if($cliente->admin === "0") { ?>
+                <?php foreach($contratos as $contrato) { ?>
                     <tr class="table__tr table__tr--body">
                         <td class="table__td">
-                            <?php echo $cliente->id; ?>
+                            <?php echo $contrato->id; ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $cliente->nombre . " " . $cliente->apellido; ?>
+                            <?php echo $contrato->inversionista->nombre . " " . $contrato->inversionista->apellido ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $cliente->email ?>
+                            <?php echo $contrato->inversion ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $cliente->telefono ?>
+                            <?php echo $contrato->tipo ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $cliente->pais ?>
+                            <?php echo $contrato->fecha_inicio ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $cliente->documento ?>
+                            <?php echo $contrato->fecha_fin ?>
+                        </td>
+                        <td class="table__td">
+                            <?php echo "contrato PDF" ?>
                         </td>
                         <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="/admin/clientes/editar?id=<?php echo $cliente->id; ?>">
+                            <a class="table__accion table__accion--editar" href="/admin/contratos/editar?id=<?php echo $contrato->id; ?>">
                                 <i class="fa-solid fa-user-pen table__accion--icono"></i>Editar
                             </a>
-                            <form class="table__formulario" method="POST" action="/admin/clientes/eliminar" id="formEliminarCliente-<?php echo $cliente->id; ?>" >
-                                <input type="hidden" name="id" value="<?php echo $cliente->id; ?>">
+                            <form class="table__formulario" method="POST" action="/admin/contratos/eliminar" id="formEliminarContrato-<?php echo $contrato->id; ?>" >
+                                <input type="hidden" name="id" value="<?php echo $contrato->id; ?>">
                                 <button 
                                     class="table__accion table__accion--eliminar" 
                                     type="submit" 
-                                    onclick="confirmDelete(event,'formEliminarCliente-<?php echo $cliente->id; ?>')"
+                                    onclick="confirmDelete(event,'formEliminarContrato-<?php echo $contrato->id; ?>')"
                                     >
                                         <i class="fa-solid fa-circle-xmark table__accion--icono"></i>Eliminar
                                 </button>
                             </form>
                         </td>
                     </tr>
-                    <?php } ?>
                 <?php } ?>
             </tbody>
         </table>
     <?php } else { ?>
-        <p class="text-center">No Hay Clientes Aún</p>
+        <p class="text-center">No Hay Contratos Aún</p>
     <?php } ?>
 </div>
 

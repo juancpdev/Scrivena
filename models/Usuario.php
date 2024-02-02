@@ -4,7 +4,7 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
-    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'telefono', 'pais', 'vencimiento', 'token', 'cambiopass', 'admin'];
+    protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'telefono', 'pais', 'documento', 'token', 'cambiopass', 'admin'];
 
     public $id;
     public $nombre;
@@ -16,7 +16,7 @@ class Usuario extends ActiveRecord {
     public $password_nuevo;
     public $telefono;
     public $pais;
-    public $vencimiento;
+    public $documento;
     public $token;
     public $cambiopass;
     public $admin;
@@ -34,7 +34,7 @@ class Usuario extends ActiveRecord {
         $this->password_nuevo = $args['password_nuevo'] ?? '';
         $this->telefono = $args['telefono'] ?? '';
         $this->pais = $args['pais'] ?? '';
-        $this->contrato = $args['vencimiento'] ?? '';
+        $this->documento = $args['documento'] ?? '';
         $this->token = $args['token'] ?? '';
         $this->cambiopass = $args['cambiopass'] ?? 0;
         $this->admin = $args['admin'] ?? 0;
@@ -75,8 +75,8 @@ class Usuario extends ActiveRecord {
         if(!$this->pais) {
             self::$alertas['error'][] = 'El País es Obligatorio';
         }
-        if(!$this->vencimiento) {
-            self::$alertas['error'][] = 'La fecha de finalización del contrato es Obligatoria';
+        if(!$this->documento) {
+            self::$alertas['error'][] = 'La documento es Obligatorio';
         }
 
         return self::$alertas;

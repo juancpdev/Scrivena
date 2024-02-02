@@ -3,9 +3,9 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
-use Controllers\APIClientes;
 use Controllers\ClientesController;
 use Controllers\AuthController;
+use Controllers\ContratosController;
 use Controllers\PaginasController;
 use Controllers\DashboardController;
 
@@ -60,5 +60,12 @@ $router->post('/admin/clientes/crear', [ClientesController::class, 'crear']);
 $router->get('/admin/clientes/editar', [ClientesController::class, 'editar']);
 $router->post('/admin/clientes/editar', [ClientesController::class, 'editar']);
 $router->post('/admin/clientes/eliminar', [ClientesController::class, 'eliminar']);
+
+$router->get('/admin/contratos', [ContratosController::class, 'index']);
+$router->get('/admin/contratos/crear', [ContratosController::class, 'crear']);
+$router->post('/admin/contratos/crear', [ContratosController::class, 'crear']);
+$router->get('/admin/contratos/editar', [ContratosController::class, 'editar']);
+$router->post('/admin/contratos/editar', [ContratosController::class, 'editar']);
+$router->post('/admin/contratos/eliminar', [ContratosController::class, 'eliminar']);
 
 $router->comprobarRutas();
