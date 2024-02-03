@@ -1,0 +1,47 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.listado-clientes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+
+    &__cliente {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        color: v.$principal;
+        border: .1rem solid v.$principal;
+        border-radius: 1rem;
+        height: 4rem;
+        transition: all .3s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten(v.$principal, 55%);
+        }
+
+        &--con-margen {
+            margin: 1rem 0;
+        }
+
+        &--seleccionado {
+            color: v.$blanco;
+            background-color: v.$principal;
+
+            &:hover {
+                cursor: pointer;
+                background-color: v.$principal;
+            }
+        }
+    }
+
+    &__no-resultado {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}

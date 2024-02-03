@@ -5,14 +5,14 @@
     </div>
     <div class="campo_contenedor-abajo">
         <div class="campo">
-            <select name="inversionista_id">
-                <option selected value="" disabled>-- Seleccione --</option>
-                <?php foreach($clientes as $cliente) { ?>
-                    <option <?php echo $contrato->inversionista_id === $cliente->id ? 'selected' : '';  ?> value="<?php echo s($cliente->id) ?>">
-                        <?php echo s($cliente->nombre) . ' ' . s($cliente->apellido) ?>
-                    </option>
-                <?php } ?>
-            </select>
+            <input 
+                type="text"
+                class="formulario__input input-inversor"
+                id="clienteContrato"
+                placeholder=""
+            >
+            <ul id="listado-clientes" class="listado-clientes"></ul>
+            <input type="hidden" name="inversionista_id" value="<?php echo $contrato->inversionista_id; ?>">
         </div>
     </div>
 </div>

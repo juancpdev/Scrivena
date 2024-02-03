@@ -15,7 +15,7 @@
                 <tr class="table__tr">
                     <th scope="col" class="table__th">ID</th>
                     <th scope="col" class="table__th">Inversor</th>
-                    <th scope="col" class="table__th">Monto $</th>
+                    <th scope="col" class="table__th">Monto</th>
                     <th scope="col" class="table__th">Tipo</th>
                     <th scope="col" class="table__th">Inicio</th>
                     <th scope="col" class="table__th">Finalización</th>
@@ -34,7 +34,7 @@
                             <?php echo $contrato->inversionista->nombre . " " . $contrato->inversionista->apellido ?>
                         </td>
                         <td class="table__td">
-                            <?php echo $contrato->inversion ?>
+                            $ <?php echo $contrato->inversion ?>
                         </td>
                         <td class="table__td">
                             <?php echo $contrato->tipo ?>

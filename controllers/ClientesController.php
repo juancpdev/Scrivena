@@ -18,7 +18,7 @@ class ClientesController {
         $pagina_actual = $_GET['page'];
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
             
-        $registros_por_pagina = 7;
+        $registros_por_pagina = 10;
         $total = Usuario::total();
         
         

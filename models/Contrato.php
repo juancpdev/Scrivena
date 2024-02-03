@@ -19,8 +19,8 @@ class Contrato extends ActiveRecord {
         $this->inversionista_id = $args['inversionista_id'] ?? null;
         $this->inversion = $args['inversion'] ?? '';
         $this->tipo = $args['tipo'] ?? '';
-        $this->fecha_inicio = date("Y/m/d");
-        $this->fecha_fin = date("Y/m/d");
+        $this->fecha_inicio = $args['fecha_inicio'] ?? null;
+        $this->fecha_fin = $args['fecha_fin'] ?? null;
     }
 
     public function validarContrato() {
