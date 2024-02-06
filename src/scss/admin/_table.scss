@@ -80,5 +80,9 @@
         }
     }
     
-    
+    .fecha-pasada {
+        background-color: rgba(175, 102, 102, 0.466);
+        color: rgb(146, 146, 146);
+        cursor: not-allowed;
+    }
 }

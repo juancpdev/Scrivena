@@ -2325,6 +2325,11 @@ footer {
 .table__accion:hover {
   cursor: pointer;
 }
+.table .fecha-pasada {
+  background-color: rgba(175, 102, 102, 0.466);
+  color: rgb(146, 146, 146);
+  cursor: not-allowed;
+}
 
 .listado-clientes {
   display: flex;
@@ -2363,5 +2368,88 @@ footer {
 .listado-clientes__no-resultado {
   text-align: center;
   font-size: 1.6rem;
+}
+
+.bloques {
+  width: min(95%, 120rem);
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .bloques {
+    margin-top: 10rem;
+  }
+}
+.bloques__grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 1024px) {
+  .bloques__grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bloque {
+  padding: 3rem;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.bloque:nth-child(1) {
+  background-image: linear-gradient(to left top, #1C626E, #2c98ab);
+}
+.bloque:nth-child(2) {
+  background-image: linear-gradient(to left top, #1C6E6A, #2caba5);
+}
+.bloque:nth-child(3) {
+  background-image: linear-gradient(to left top, #1C6E6A, #2caba5);
+}
+.bloque:nth-child(4) {
+  background-image: linear-gradient(to left top, #1C626E, #2c98ab);
+}
+.bloque__contenido {
+  margin-top: 3rem;
+}
+.bloque__heading {
+  margin: 1rem 0 0 0;
+  font-size: 3.6rem;
+  text-shadow: 2px 2px 2px #1c626e;
+}
+.bloque__heading2 {
+  text-shadow: 2px 2px 2px #1c626e;
+  font-size: 2.3rem;
+  margin: 0;
+}
+.bloque__texto {
+  margin: 1rem 0;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 2px #1c626e;
+}
+.bloque__texto2 {
+  text-shadow: 2px 2px 2px #1c626e;
+  font-size: 2.3rem;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.bloque__flex {
+  display: flex;
+  justify-content: space-around;
+}
+.bloque__flex--contenedor {
+  display: flex;
+  align-items: center;
+}
+.bloque__abajo {
+  margin-top: 4rem;
+}
+.bloque__abajo .bloque__contenido, .bloque__abajo .bloque__texto2 {
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=app.css.map */
