@@ -19,9 +19,9 @@ class ClientesController {
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
             
         $registros_por_pagina = 10;
-        $total = Usuario::total();
-        
-        
+        $total = Usuario::whereArray(['admin' => 0]);
+        $total = count($total);
+
        // Verificar si hay registros antes de crear la paginación
        if ($total > 0) {
         $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);

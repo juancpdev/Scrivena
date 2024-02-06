@@ -13,7 +13,7 @@
         require_once __DIR__ . '/../../templates/alertas.php';
         ?>
 
-        <form method="POST" action="/admin/contratos/crear" class="formulario formulario--contrato">
+        <form method="POST" action="/admin/contratos/crear" class="formulario formulario--contrato" enctype="multipart/form-data">
             <?php include_once __DIR__ . '/formulario.php'; ?>
 
             <div class="contenedor-boton">

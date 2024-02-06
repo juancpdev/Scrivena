@@ -46,7 +46,11 @@
                             <?php echo $contrato->fecha_fin ?>
                         </td>
                         <td class="table__td">
-                            <?php echo "contrato PDF" ?>
+                            
+                            <a class="contrato--actual" href="/contratos/<?php echo $contrato->contrato ?>" target="_blank">
+                                <i class="fa-solid fa-file-contract"></i>
+                                Ver Contrato
+                            </a>
                         </td>
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/contratos/editar?id=<?php echo $contrato->id; ?>">

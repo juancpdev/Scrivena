@@ -77,6 +77,15 @@
                 }
             }
 
+            .input-contrato {
+                &:hover, 
+                &:focus-within {
+                    transition: none;
+                    border: 0.2rem solid rgb(230, 226, 226);
+                    cursor: pointer;
+                }
+            }
+
             select {
                 width: 100%;
                 border: .2rem solid rgb(230, 226, 226);
@@ -136,7 +145,7 @@
             
         }
     }
-    
+  
     .campo_contenedor-nombre {
         @include m.tablet {
             flex-direction: row;
@@ -157,4 +166,16 @@
     }
 
 
+}
+
+.contrato--actual-contenedor {
+    margin: 2rem 0 3rem 0;
+}
+
+.contrato--actual {
+    color: lighten(v.$principal, 15);
+    transition: all .3s ease;
+    &:hover {
+        color: lighten(v.$principal, 0);
+    }
 }

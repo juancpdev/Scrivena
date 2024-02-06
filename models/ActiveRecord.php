@@ -222,6 +222,31 @@ class ActiveRecord {
     public function eliminar() {
         $query = "DELETE FROM "  . static::$tabla . " WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
         $resultado = self::$db->query($query);
-        return $resultado;
+
+        if($resultado){
+            $this->borrarContrato();
+        }
+    }
+
+    // Subida de archivos
+    public function setContrato($contrato) {
+    // Elimina el contrato previo
+
+        if( !is_null($this->id) ) {
+            $this->borrarContrato();
+        }
+        // Asignar al atributo de contrato el nombre del contrato
+        if($contrato) {
+            $this->contrato = $contrato;
+        }
+    }
+
+    // Eliminar el archivo
+    public function borrarContrato() { 
+        // Comprobar si existe el archivo
+        $existeArchivo = file_exists(CARPETA_CONTRATOS . $this->contrato);
+        if($existeArchivo) {
+            unlink(CARPETA_CONTRATOS . $this->contrato);
+        }  
     }
 }

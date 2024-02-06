@@ -1,5 +1,7 @@
 <?php
 
+define('CARPETA_CONTRATOS', $_SERVER["DOCUMENT_ROOT"] . '/contratos/');
+
 function debuguear($variable) : string {
     echo "<pre>";
     var_dump($variable);

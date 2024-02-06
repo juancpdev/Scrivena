@@ -1565,6 +1565,11 @@ h3 {
   border: 2px solid rgb(216, 141, 2);
   outline: none;
 }
+.caja-contenedor-formulario .campo_contenedor-abajo .campo .input-contrato:hover, .caja-contenedor-formulario .campo_contenedor-abajo .campo .input-contrato:focus-within {
+  transition: none;
+  border: 0.2rem solid rgb(230, 226, 226);
+  cursor: pointer;
+}
 .caja-contenedor-formulario .campo_contenedor-abajo .campo select {
   width: 100%;
   border: 0.2rem solid rgb(230, 226, 226);
@@ -1646,6 +1651,18 @@ h3 {
 }
 .caja-contenedor-formulario .contenedor-boton .boton--login {
   width: 100%;
+}
+
+.contrato--actual-contenedor {
+  margin: 2rem 0 3rem 0;
+}
+
+.contrato--actual {
+  color: #2c98ab;
+  transition: all 0.3s ease;
+}
+.contrato--actual:hover {
+  color: #1c626e;
 }
 
 .acciones {
