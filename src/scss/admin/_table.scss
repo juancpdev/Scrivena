@@ -17,11 +17,30 @@
     }
 
     &__th {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         text-align: left;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         @include m.tablet {
+            font-size: 1.3rem;
+            padding: 1rem 2rem;
+        }
+
+        @include m.desktopXXL {
             font-size: 2rem;
+        }
+
+        &--email, &--telefono, &--documento, &--tipo, &--inicio, &--finalizacion, &--contrato {
+            display: none;
+
+            @include m.desktopXL {
+                display: table-cell;
+            }
+        }
+
+        &--telefono, &--documento, &--inicio, &--finalizacion{
+            @include m.tablet {
+                display: table-cell;
+            }
         }
     }
     
@@ -32,11 +51,30 @@
     }
 
     &__td {
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1rem;
         font-size: 1.2rem;
 
         @include m.tablet {
+            font-size: 1.3rem;
+            padding: 1rem 2rem;
+        }
+
+        @include m.desktopXXL {
             font-size: 1.6rem;
+        }
+
+        &--email, &--telefono, &--documento, &--tipo, &--inicio, &--finalizacion, &--contrato {
+            display: none;
+
+            @include m.desktopXL {
+                display: table-cell;
+            }
+        }
+
+        &--telefono, &--documento, &--inicio, &--finalizacion{
+            @include m.tablet {
+                display: table-cell;
+            }
         }
 
         &--acciones {

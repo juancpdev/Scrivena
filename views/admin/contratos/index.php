@@ -12,14 +12,14 @@
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
-                    <th scope="col" class="table__th">ID</th>
-                    <th scope="col" class="table__th">Inversor</th>
-                    <th scope="col" class="table__th">Monto</th>
-                    <th scope="col" class="table__th">Tipo</th>
-                    <th scope="col" class="table__th">Inicio</th>
-                    <th scope="col" class="table__th">Finalización</th>
-                    <th scope="col" class="table__th">Contrato</th>
-                    <th scope="col" class="table__th"></th>
+                    <th scope="col" class="table__th table__th--id">ID</th>
+                    <th scope="col" class="table__th table__th--inversor">Inversor</th>
+                    <th scope="col" class="table__th table__th--monto">Monto</th>
+                    <th scope="col" class="table__th table__th--tipo">Tipo</th>
+                    <th scope="col" class="table__th table__th--inicio">Inicio</th>
+                    <th scope="col" class="table__th table__th--finalizacion">Finalización</th>
+                    <th scope="col" class="table__th table__th--contrato">Contrato</th>
+                    <th scope="col" class="table__th table__th"></th>
                 </tr>
             </thead>
 
@@ -36,25 +36,25 @@
                     $clase_fecha_pasada = $fecha_fin_pasada ? 'fecha-pasada' : '';
                 ?>
                     <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
-                        <td class="table__td">
+                        <td class="table__td table__td--id">
                             <?php echo $contrato->id; ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--inversor">
                             <?php echo $contrato->inversionista->nombre . " " . $contrato->inversionista->apellido ?>
                         </td>
-                        <td class="table__td">
-                            $ <?php echo $contrato->inversion ?>
+                        <td class="table__td table__td--monto">
+                            $<?php echo $contrato->inversion ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--tipo">
                             <?php echo $contrato->tipo ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--inicio">
                             <?php echo $contrato->fecha_inicio ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--finalizacion">
                             <?php echo $contrato->fecha_fin ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--contrato">
 
                             <a class="contrato--actual" href="/contratos/<?php echo $contrato->contrato ?>" target="_blank">
                                 <i class="fa-solid fa-file-contract"></i>

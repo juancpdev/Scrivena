@@ -12,12 +12,12 @@
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
-                    <th scope="col" class="table__th">ID</th>
-                    <th scope="col" class="table__th">Nombre</th>
-                    <th scope="col" class="table__th">E-mail</th>
-                    <th scope="col" class="table__th">Teléfono</th>
-                    <th scope="col" class="table__th">País</th>
-                    <th scope="col" class="table__th">Documento</th>
+                    <th scope="col" class="table__th table__th--id">ID</th>
+                    <th scope="col" class="table__th table__th--nombre">Nombre</th>
+                    <th scope="col" class="table__th table__th--email">E-mail</th>
+                    <th scope="col" class="table__th table__th--telefono">Teléfono</th>
+                    <th scope="col" class="table__th table__th--pais">País</th>
+                    <th scope="col" class="table__th table__th--documento">Documento</th>
                     <th scope="col" class="table__th"></th>
                 </tr> 
             </thead>
@@ -26,22 +26,22 @@
                 <?php foreach($clientes as $cliente) { ?>
                     <?php if($cliente->admin === "0") { ?>
                     <tr class="table__tr table__tr--body">
-                        <td class="table__td">
+                        <td class="table__td table__td--id">
                             <?php echo $cliente->id; ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--nombre">
                             <?php echo $cliente->nombre . " " . $cliente->apellido; ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--email">
                             <?php echo $cliente->email ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--telefono">
                             <?php echo $cliente->telefono ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--pais">
                             <?php echo $cliente->pais ?>
                         </td>
-                        <td class="table__td">
+                        <td class="table__td table__td--documento">
                             <?php echo $cliente->documento ?>
                         </td>
                         <td class="table__td--acciones">
