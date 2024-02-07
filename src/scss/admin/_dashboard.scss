@@ -128,6 +128,9 @@
             overflow-y: scroll;
             padding: 1rem 8rem 3rem 8rem;
         }
+        @include m.desktop {
+            padding: 0;
+        }
     }
 
     &__contenedor--boton {

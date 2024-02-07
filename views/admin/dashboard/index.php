@@ -12,13 +12,13 @@
             <div class="bloque__abajo">
                 <h3 class="bloque__heading2">Ultimos Registros:</h3>
                 <div class="bloque__contenido">
-                    <p class="bloque__texto">
+                    <div class="bloque__registros">
                         <?php foreach($registros as $registro) { ?>
                             <?php if($registro->admin === "0") { ?>
                                 <p><?php echo $registro->nombre . " " . $registro->apellido; ?></p>
                             <?php } ?>
                         <?php } ?>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
