@@ -6,6 +6,7 @@ use Controllers\APIClientes;
 use MVC\Router;
 use Controllers\ClientesController;
 use Controllers\AuthController;
+use Controllers\ClienteController;
 use Controllers\ContratosController;
 use Controllers\PaginasController;
 use Controllers\DashboardController;
@@ -41,7 +42,6 @@ $router->get('/privacy', [PaginasController::class, 'privacidad']);
 // Login
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/login', [AuthController::class, 'login']);
-
 $router->post('/logout', [AuthController::class, 'logout']);
 
 // Formulario de olvide mi password
@@ -72,5 +72,11 @@ $router->post('/admin/contratos/crear', [ContratosController::class, 'crear']);
 $router->get('/admin/contratos/editar', [ContratosController::class, 'editar']);
 $router->post('/admin/contratos/editar', [ContratosController::class, 'editar']);
 $router->post('/admin/contratos/eliminar', [ContratosController::class, 'eliminar']);
+
+// Cliente
+$router->get('/cliente/dashboard', [ClienteController::class, 'index']);
+$router->get('/cliente/contratos', [ClienteController::class, 'contratos']);
+$router->get('/cliente/informacion', [ClienteController::class, 'informacion']);
+$router->get('/cliente/perfil', [ClienteController::class, 'perfil']);
 
 $router->comprobarRutas();

@@ -16,7 +16,7 @@ if (is_admin()) {
 // Verifica si ya ha iniciado sesión
 if (is_auth()) {
     // Si ya ha iniciado sesión, redirige a otra página (puedes elegir la que desees)
-    header("Location: /dashboard?lang=$langParam");
+    header("Location: /cliente/dashboard?lang=$langParam");
     exit(); // Asegura que el script no continúe después de la redirección
 }
 

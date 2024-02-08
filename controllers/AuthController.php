@@ -35,12 +35,12 @@ class AuthController {
                             $_SESSION['apellido'] = $usuario->apellido;
                             $_SESSION['email'] = $usuario->email;
                             $_SESSION['admin'] = $usuario->admin ?? null;
-    
-                            // Redirección 
-                            if($usuario->admin) {
+
+                            // Redirección
+                            if($usuario->admin === "1") {
                                 header('Location: /admin/dashboard');
                             } else {
-                                header('Location: /dashboard');
+                                header('Location: /cliente/dashboard');
                             }
                             
                         } else {
@@ -58,10 +58,10 @@ class AuthController {
                             $_SESSION['admin'] = $usuario->admin ?? null;
     
                             // Redirección 
-                            if($usuario->admin) {
+                            if($usuario->admin === "1") {
                                 header('Location: /admin/dashboard');
                             } else {
-                                header('Location: /');
+                                header('Location: /cliente/dashboard');
                             }
                             
                         } else {

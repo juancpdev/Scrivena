@@ -44,7 +44,6 @@
     <meta name="twitter:description" content="Invierte en el futuro con nuestro fondo de inversión líder, ofreciendo estrategias personalizadas y rendimientos sostenibles.">
     <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/8ae9a36d-be4d-4d4f-8a26-aaa8bbcb386c.png?token=I74xyBWSOW3jtZ-rwojdXXcBjz-FKf7pVhMVxDx9fQM&height=630&width=1200&expires=33241576709">
 
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="" defer></script>
     <script src="https://kit.fontawesome.com/477cb6ab4e.js" crossorigin="anonymous"></script>

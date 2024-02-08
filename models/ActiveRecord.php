@@ -80,7 +80,11 @@ class ActiveRecord {
         $atributos = $this->atributos();
         $sanitizado = [];
         foreach($atributos as $key => $value ) {
-            $sanitizado[$key] = self::$db->escape_string($value);
+            if ($value !== null) {
+                $sanitizado[$key] = self::$db->escape_string($value);
+            } else {
+                $sanitizado[$key] = null; // O puedes elegir un valor predeterminado, según tus necesidades
+            }
         }
         return $sanitizado;
     }

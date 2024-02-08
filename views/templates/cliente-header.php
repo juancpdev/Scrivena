@@ -1,4 +1,4 @@
-<header class="dashboard__header dashboard__header--admin">
+<header class="dashboard__header dashboard__header--cliente">
     <div class="dashboard__header-grid">
     <a title="Logo" href="/?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">
             <picture>

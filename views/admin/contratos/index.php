@@ -49,10 +49,10 @@
                             <?php echo $contrato->tipo ?>
                         </td>
                         <td class="table__td table__td--inicio">
-                            <?php echo $contrato->fecha_inicio ?>
+                            <?php echo date("d/m/Y", strtotime($contrato->fecha_inicio)); ?>
                         </td>
                         <td class="table__td table__td--finalizacion">
-                            <?php echo $contrato->fecha_fin ?>
+                            <?php echo date("d/m/Y", strtotime($contrato->fecha_fin)); ?>
                         </td>
                         <td class="table__td table__td--contrato">
 
