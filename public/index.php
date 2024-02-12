@@ -38,6 +38,8 @@ $router->get('/terms', [PaginasController::class, 'terminos']);
 $router->get('/privacidad', [PaginasController::class, 'privacidad']);
 $router->get('/privacy', [PaginasController::class, 'privacidad']);
 
+$router->get('/preguntas', [PaginasController::class, 'preguntas']);
+$router->get('/questions', [PaginasController::class, 'preguntas']);
 
 // Login
 $router->get('/login', [AuthController::class, 'login']);
@@ -78,5 +80,6 @@ $router->get('/cliente/dashboard', [ClienteController::class, 'index']);
 $router->get('/cliente/contratos', [ClienteController::class, 'contratos']);
 $router->get('/cliente/informacion', [ClienteController::class, 'informacion']);
 $router->get('/cliente/perfil', [ClienteController::class, 'perfil']);
+$router->post('/cliente/perfil', [ClienteController::class, 'perfil']);
 
 $router->comprobarRutas();

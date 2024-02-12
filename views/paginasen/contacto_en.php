@@ -10,15 +10,15 @@
             <p>2525 Ponce de Leon Boulevard, Coral Gables, Miami, FL 33134, USA.</p>
         </div>
 
-        <div class="caja-contenedor-contacto">
-            <div class="contenedor-contacto">
+        <div class="caja-contenedor-formulario">
+            <div class="contenedor-formulario">
                 <?php if ($mensaje) { ?>
                     <div class="contenedor-alerta">
                         <?php
                         // Verificar si la cadena $mensaje contiene la palabra "no"
                         if (strpos($mensaje, 'Failed') !== false) {
                             // La palabra "no" está presente, aplicar la clase de error
-                            echo '<p class="alerta alerta__error">' . $mensaje . '</p>';
+                            echo '<p class="alerta alerta__error desaparecer-alerta">' . $mensaje . '</p>';
                         } else {
                             // La palabra "no" no está presente, aplicar la clase de éxito
                             echo '<p class="alerta alerta__exito">' . $mensaje . '</p>';

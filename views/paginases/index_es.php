@@ -1,5 +1,5 @@
 <main class="scrivena">
-    
+
     <div class="imagen-inicio">
         <div class="caja_superior">
             <h1>Tu éxito financiero comienza con <br>SCRIVENA</h1>
@@ -386,6 +386,68 @@
                     </div>
                 </div>
             </div>
+            <div class="caja_preguntas_frecuentes">
+                <div class="contenedor-acordeon">
+                    <h2>Preguntas frecuentes</h2>
+                    <div class="acordeon-contenedor">
+                        <div class="acordeon">
+                            <input type="radio" name="acordeon" id="btn-acordeon1" class="btn-acordeon">
+                            <label for="btn-acordeon1">
+                                ¿Qué son los fondos de inversión según Scrivena?
+                            </label>
+                            <div class="contenido-acordeon">
+                                <p>En Scrivena, los fondos de inversión son vehículos financieros que reúnen los recursos de múltiples inversionistas para ser gestionados de manera conjunta en una cartera diversificada de instrumentos financieros.</p>
+                            </div>
+                        </div>
+                        <div class="acordeon">
+                            <input type="radio" name="acordeon" id="btn-acordeon2" class="btn-acordeon">
+                            <label for="btn-acordeon2">
+                                ¿Cuál es el propósito de los fondos de inversión en Scrivena?
+                            </label>
+                            <div class="contenido-acordeon">
+                                <p>En Scrivena, los fondos de inversión tienen como objetivo proporcionar a los inversionistas acceso a carteras diversificadas sin la necesidad de gestionar directamente sus inversiones.</p>
+                            </div>
+                        </div>
+                        <div class="acordeon">
+                            <input type="radio" name="acordeon" id="btn-acordeon3" class="btn-acordeon">
+                            <label for="btn-acordeon3">
+                                ¿Cuáles son las ventajas de invertir en fondos según Scrivena en comparación con los bancos?
+                            </label>
+                            <div class="contenido-acordeon">
+                                <p>Diversificación Eficiente: Scrivena ofrece diversificación profesional para reducir riesgos.<br><br>
+
+                                    Gestión Especializada: Nuestro equipo de expertos gestiona activamente los fondos basándose en análisis de mercado.<br><br>
+
+                                    Accesibilidad Financiera: Facilitamos el acceso a diversas inversiones, incluso con montos más pequeños.<br><br>
+
+                                    Liquidez Gestionada: La liquidez de los fondos Scrivena permite transacciones fáciles para los inversionistas.</p>
+                            </div>
+                        </div>
+                        <div class="acordeon">
+                            <input type="radio" name="acordeon" id="btn-acordeon4" class="btn-acordeon">
+                            <label for="btn-acordeon4">
+                                ¿Qué tipos de fondos de inversión ofrece Scrivena?
+                            </label>
+                            <div class="contenido-acordeon">
+                                <p>En Scrivena, ofrecemos fondos de renta variable, renta fija, mixtos y sectoriales, cada uno adaptado a diferentes perfiles de riesgo y objetivos de inversión.</p>
+                            </div>
+                        </div>
+                        <div class="acordeon">
+                            <input type="radio" name="acordeon" id="btn-acordeon5" class="btn-acordeon">
+                            <label for="btn-acordeon5">
+                                ¿Cómo generan ganancias los inversionistas en los fondos de inversión de Scrivena?
+                            </label>
+                            <div class="contenido-acordeon">
+                                <p>Los inversionistas obtienen ganancias a través de dividendos, intereses y la apreciación del valor de los activos que componen nuestros fondos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caja_boton_portafolio">
+                    <a class="boton_portafolio" href="/preguntas?lang=es">Ver más</a>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 </main>

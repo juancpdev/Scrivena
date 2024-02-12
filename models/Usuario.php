@@ -76,7 +76,28 @@ class Usuario extends ActiveRecord {
             self::$alertas['error'][] = 'El País es Obligatorio';
         }
         if(!$this->documento) {
-            self::$alertas['error'][] = 'La documento es Obligatorio';
+            self::$alertas['error'][] = 'El documento es Obligatorio';
+        }
+
+        return self::$alertas;
+    }
+
+    // Actualizar Perfil Cliente
+    public function actualizarPerfil() {
+        if(!$this->nombre) {
+            self::$alertas['error'][] = 'El Nombre del Cliente es Obligatorio';
+        }
+        if(!$this->apellido) {
+            self::$alertas['error'][] = 'El Apellido del Cliente es Obligatorio';
+        }
+        if(!$this->telefono) {
+            self::$alertas['error'][] = 'El Telefono es Obligatorio';
+        }
+        if(!$this->pais) {
+            self::$alertas['error'][] = 'El País es Obligatorio';
+        }
+        if(!$this->documento) {
+            self::$alertas['error'][] = 'El documento es Obligatorio';
         }
 
         return self::$alertas;

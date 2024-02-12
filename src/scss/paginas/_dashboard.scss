@@ -162,7 +162,7 @@
     &__contenido {
         padding: 1rem 2rem;
         width: 100%;
-        @include m.desktopXXL {
+        @include m.desktop {
             overflow-y: scroll;
             padding: 1rem 8rem 3rem 8rem;
         }

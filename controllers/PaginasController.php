@@ -197,6 +197,13 @@ class PaginasController {
             'mensaje' => $mensaje
         ]);
     }
+
+    public static function preguntas(Router $router) {
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+        $router->render("paginas{$idioma}/preguntas_{$idioma}", [
+            'titulo' => $idioma === 'es' ? 'Preguntas Frecuentes' : 'Frequent Questions'
+        ]);
+    }
     
     public static function terminos(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();

@@ -75,8 +75,13 @@
                     border: 2px solid v.$naranja;
                     outline: none;
                 }
-            }
 
+                
+            }
+            .input-desactivado {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
             .input-contrato {
                 &:hover, 
                 &:focus-within {
