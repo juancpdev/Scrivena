@@ -30,7 +30,6 @@
                 id="apellido" 
                 placeholder="Apellido"
                 value="<?php echo $usuario->apellido ?? ''; ?>">
-                <?php echo s($usuario->apellido); ?>
         </div>
     </div>
 </div>
