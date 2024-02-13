@@ -31,7 +31,7 @@
                     <div class="campo-contenedor">
                         <div class="campo_contenedor-arriba">
                             <span class="campo-orden">1.</span>
-                            <p class="campo-nombre">Name and Last name</p>
+                            <p class="campo-titulo">Name and Last name</p>
                         </div>
                         <div class="campo_contenedor-abajo campo_contenedor-nombre">
                             <div class="campo">
@@ -46,7 +46,7 @@
                     <div class="campo-contenedor">
                         <div class="campo_contenedor-arriba">
                             <span class="campo-orden">2.</span>
-                            <p class="campo-email">Email</p>
+                            <p class="campo-titulo">Email</p>
                         </div>
                         <div class="campo_contenedor-abajo">
                             <div class="campo">
@@ -58,7 +58,7 @@
                     <div class="campo-contenedor">
                         <div class="campo_contenedor-arriba">
                             <span class="campo-orden">3.</span>
-                            <p class="campo-email">Phone number</p>
+                            <p class="campo-titulo">Phone number</p>
                         </div>
                         <div class="campo_contenedor-abajo">
                             <div class="campo">
@@ -70,7 +70,7 @@
                     <div class="campo-contenedor">
                         <div class="campo_contenedor-arriba">
                             <span class="campo-orden">4.</span>
-                            <p class="campo-email">Message</p>
+                            <p class="campo-titulo">Message</p>
                         </div>
                         <div class="campo_contenedor-abajo">
                             <div class="campo">

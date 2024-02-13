@@ -72,7 +72,7 @@ if (!isset($_SESSION)) {
                         <a href="/contacto?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Contacto</a>
                     </li>
                     <li>
-                        <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Iniciar Sesión</a>
+                        <a href="/acceder?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Acceder</a>
                     </li>
                 </ul>
 
@@ -125,15 +125,13 @@ if (!isset($_SESSION)) {
                         <a href="/contacto?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Contacto</a>
                     </li>
                     <li>
-                        <a href="/login?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Iniciar Sesión</a>
+                        <a href="/acceder?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Acceder</a>
                     </li>
                 </ul>
 
             <?php } ?>
         </nav>
     </div>
-
-
 
     <?php include_once __DIR__ . "/btn-idioma.php" ?>
 </header>

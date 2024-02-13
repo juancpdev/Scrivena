@@ -24,29 +24,23 @@ if (is_auth()) {
 
 <main class="auth">
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-    <p class="auth__texto">Coloca tu nuevo password</p> 
+    <p class="auth__texto">Ingreso Clientes en Scrivena</p>
 
     <div class="caja-contenedor-formulario">
-        <div class="contenedor-formulario contenedor-formulario--reestablecer">
-        <?php
-        require_once __DIR__ . '/../templates/alertas.php';
-        ?>
-        
-        <?php if($token_valido) { ?>
-            <form method="POST" class="formulario formulario--olvide" novalidate>
+        <div class="contenedor-formulario contenedor-formulario--login">
+            <?php
+            require_once __DIR__ . '/../../templates/alertas.php';
+            ?>
+            <form method="POST" action="/acceder?lang=es" class="formulario formulario--login">
+
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">1.</span>
-                        <p class="campo-titulo">Password</p>
+                        <p class="campo-titulo">Email</p>
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input 
-                                class="formulario__input input-password" 
-                                type="password" 
-                                name="password" 
-                                id="password" 
-                                placeholder="Nuevo Password">
+                            <input class="formulario__input input-email" type="email" name="email" id="email" placeholder="Ingrese su Email">
                         </div>
                     </div>
                 </div>
@@ -54,29 +48,23 @@ if (is_auth()) {
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">2.</span>
-                        <p class="campo-titulo">Repetir Password</p>
+                        <p class="campo-titulo">Contraseña</p>
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input 
-                                class="formulario__input input-password" 
-                                type="password" 
-                                name="password2" 
-                                id="password2" 
-                                placeholder="Confirmar Password">
+                            <input class="formulario__input input-password" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
                         </div>
                     </div>
                 </div>
 
                 <div class="contenedor-boton">
-                    <input class="boton boton--login" type="submit" value="Guardar Password">
+                    <input class="boton boton--login" type="submit" value="Iniciar Sesión">
                 </div>
-        <?php } ?>
+            
                 <div class="acciones">
-                    <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>
+                    <a href="/olvide?lang=es" class="acciones__enlace">¿Olvidaste tu Contraseña?</a>
                 </div>
             </form>
+        </div>
+    </div>
 </main>
-
-
-

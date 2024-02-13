@@ -42,6 +42,9 @@ $router->get('/preguntas', [PaginasController::class, 'preguntas']);
 $router->get('/questions', [PaginasController::class, 'preguntas']);
 
 // Login
+$router->get('/acceder', [AuthController::class, 'login']);
+$router->post('/acceder', [AuthController::class, 'login']);
+$router->post('/logout', [AuthController::class, 'logout']);
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/login', [AuthController::class, 'login']);
 $router->post('/logout', [AuthController::class, 'logout']);
@@ -49,10 +52,14 @@ $router->post('/logout', [AuthController::class, 'logout']);
 // Formulario de olvide mi password
 $router->get('/olvide', [AuthController::class, 'olvide']);
 $router->post('/olvide', [AuthController::class, 'olvide']);
+$router->get('/forget', [AuthController::class, 'olvide']);
+$router->post('/forget', [AuthController::class, 'olvide']);
 
 // Colocar el nuevo password
 $router->get('/reestablecer', [AuthController::class, 'reestablecer']);
 $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
+$router->get('/reset', [AuthController::class, 'reestablecer']);
+$router->post('/reset', [AuthController::class, 'reestablecer']);
 
 // APIs
 $router->get('/api/clientes', [APIClientes::class, 'index']);

@@ -41,21 +41,37 @@ class Usuario extends ActiveRecord {
     }
 
     // Validar el Login de Usuarios
-    public function validarLogin() {
-        if(!$this->email) {
-            self::$alertas['error'][] = 'El Email del Usuario es Obligatorio';
-        }
-        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            self::$alertas['error'][] = 'Email no válido';
-        }
-        if(!$this->password) {
-            self::$alertas['error'][] = 'El Password no puede ir vacio';
-        }
-        return self::$alertas;
+    public function validarLogin($lang) {
+        $alertas = [];
 
+        if(!$this->email) {
+            if ($lang === 'es') {
+                self::$alertas['error'][] = 'El Email del Usuario es Obligatorio';
+            } else {
+                self::$alertas['error'][] = 'User email is required';
+            }
+        }
+
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            if ($lang === 'es') {
+                self::$alertas['error'][] = 'Email no válido';
+            } else {
+                self::$alertas['error'][] = 'Invalid email';
+            }
+        }
+
+        if(!$this->password) {
+            if ($lang === 'es') {
+                self::$alertas['error'][] = 'La contraseña no puede ir vacio';
+            } else {
+                self::$alertas['error'][] = 'Password cannot be empty';
+            }
+        }
+
+        return self::$alertas;
     }
 
-    // Validar el Login de Usuarios
+    // Creacion de clientes
     public function validarCliente() {
         if(!$this->nombre) {
             self::$alertas['error'][] = 'El Nombre del Cliente es Obligatorio';
@@ -67,7 +83,7 @@ class Usuario extends ActiveRecord {
             self::$alertas['error'][] = 'El Email es Obligatorio';
         }
         if(!$this->password) {
-            self::$alertas['error'][] = 'El Password no puede ir vacio';
+            self::$alertas['error'][] = 'La contraseña no puede ir vacio';
         }
         if(!$this->telefono) {
             self::$alertas['error'][] = 'El Telefono es Obligatorio';
@@ -104,37 +120,44 @@ class Usuario extends ActiveRecord {
     }
 
     // Valida un email
-    public function validarEmail() {
+    public function validarEmail($lang) {
+
         if(!$this->email) {
-            self::$alertas['error'][] = 'El Email es Obligatorio';
+            if ($lang === 'es') {
+                self::$alertas['error'][] = 'El Email es Obligatorio';
+            } else {
+                self::$alertas['error'][] = 'User email is required';
+            }
         }
+
         if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            self::$alertas['error'][] = 'Email no válido';
+            if ($lang === 'es') {
+                self::$alertas['error'][] = 'Email no válido';
+            } else {
+                self::$alertas['error'][] = 'Invalid email';
+            }
         }
+
         return self::$alertas;
     }
 
     // Valida el Password 
-    public function validarPassword() {
-        if((!($this->password) || !($this->password2))) {
-            self::$alertas['error'][] = "El password es Obligatorio";
-        }
-        if(strlen($this->password) < 6 || strlen($this->password2) < 6 ) {
-            self::$alertas['error'][] = "El password debe contener al menos 6 caracteres";
-        }
-        if($this->password !== $this->password2) {
-            self::$alertas['error'][] = "Los passwords no coinciden";
-        }
+    public function validarPassword($lang) {
         
-        return self::$alertas;
-    }
-
-    public function nuevo_password() : array {
-        if((!($this->password_actual) || !($this->password_nuevo))) {
-            self::$alertas['error'][] = "Los passwords son Obligatorio";
+        if((!($this->password) || !($this->password2))) {
+            if ($lang === 'es') {
+                self::$alertas['error'][] = 'La contraseña es Obligatoria';
+            } else {
+                self::$alertas['error'][] = 'Password is Required';
+            }
         }
-        if(strlen($this->password_actual) < 6 || strlen($this->password_nuevo) < 6 ) {
-            self::$alertas['error'][] = "El password debe contener al menos 6 caracteres";
+
+        if(strlen($this->password) < 6 || strlen($this->password2) < 6 ) {
+            if ($lang === 'es') {
+                self::$alertas['error'][] = "La contraseña debe contener al menos 6 caracteres";
+            } else {
+                self::$alertas['error'][] = 'Password must contain at least 6 characters';
+            }
         }
         
         return self::$alertas;

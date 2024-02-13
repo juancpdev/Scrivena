@@ -24,14 +24,14 @@ if (is_auth()) {
 
 <main class="auth">
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-    <p class="auth__texto">Recupera tu acceso a Scrivena</p> 
+    <p class="auth__texto">Recover your access to Scrivena</p> 
 
     <div class="caja-contenedor-formulario">
         <div class="contenedor-formulario contenedor-formulario--olvide">
             <?php
-            require_once __DIR__ . '/../templates/alertas.php';
+            require_once __DIR__ . '/../../templates/alertas.php';
             ?>
-            <form method="POST" action="/olvide" class="formulario formulario--olvide">
+            <form method="POST" action="/olvide?lang=en" class="formulario formulario--olvide">
 
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
@@ -51,11 +51,11 @@ if (is_auth()) {
                 </div>
 
                 <div class="contenedor-boton">
-                    <input class="boton boton--login" type="submit" value="Enviar Instrucciones">
+                    <input class="boton boton--login" type="submit" value="Send Instructions">
                 </div>
             
                 <div class="acciones">
-                    <a href="/login" class="acciones__enlace">¿Ya tienes cuenta? Iniciar Sesión</a>
+                    <a href="/login?lang=en" class="acciones__enlace">Do you already have an account? Log in</a>
                 </div>
             </form>
         </div>
