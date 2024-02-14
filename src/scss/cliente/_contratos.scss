@@ -1,0 +1,55 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+/* Estilos básicos */
+.titulo-contrato {
+    margin: 6rem 0;
+}
+
+.contratos-container {
+    padding-bottom: 6rem;
+    @include m.contenedor;
+
+    @include m.grid(1, 5rem);
+
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+
+    .contrato {
+        background: linear-gradient(45deg,  rgb(241, 243, 249), rgb(241, 243, 239));
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        padding: 20px;
+        border: none;
+        box-shadow: 0 0 3px 0 rgb(126, 125, 125);
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    
+        p {
+            margin: 10px 0;
+            color: rgb(51, 42, 42);
+            span {
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+            }
+        }
+    
+        .dashboard__contenedor--boton {
+            margin-top: 3rem;
+           padding: 0;
+           a {
+            background-color: rgb(34, 34, 34);
+            &:hover {
+                background-color: rgb(51, 51, 51);
+            }
+           }
+        }
+    }
+    .Vencido {
+        background: linear-gradient(90deg,rgba(255, 0, 0, 0.397), rgb(255, 163, 163));
+    }
+}

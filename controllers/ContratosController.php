@@ -79,7 +79,6 @@ class ContratosController {
             $alertas = $contrato->validarContrato();
             
             if(empty($alertas)) {
-
                 // Crear la carpeta para subir los contratos
                 if(!is_dir(CARPETA_CONTRATOS)) {
                     mkdir(CARPETA_CONTRATOS);
@@ -130,8 +129,10 @@ class ContratosController {
             header('Location: /admin/contratos');
         }
 
+        $contratoActual = $contrato->contrato;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
             if(!is_admin()) {
                 header('Location: /');
             }
@@ -141,22 +142,38 @@ class ContratosController {
             // validar
             $alertas = $contrato->validarContrato();
 
-            // Generar nombre unico
-            $nombreContrato = md5( uniqid( rand(), true) ) . ".pdf";
+            if($contratoActual !== $_FILES["contrato"]["name"] && $_FILES["contrato"]["name"] !== "") {
+                // Generar nombre unico
+                $nuevoContrato = md5( uniqid( rand(), true) ) . ".pdf";
 
-            // Setear el contrato
-            if($_FILES['contrato']['tmp_name']) {
-                $contrato->setContrato($nombreContrato);
+                // Setear el contrato
+                if($_FILES['contrato']['tmp_name']) {
+                    $contrato->setContrato($nuevoContrato);
+                }
+
+            } else {
+                // Setear el contrato
+                if($_FILES['contrato']['tmp_name']) {
+                    $contrato->setContrato($contratoActual);
+                }
             }
 
             // Guardar el registro
             if(empty($alertas)) {
 
-                // Mover el PDF a la carpeta de contratos
-                move_uploaded_file($_FILES['contrato']['tmp_name'], CARPETA_CONTRATOS . $nombreContrato);
+                if($contratoActual !== $_FILES["contrato"]["name"] && $_FILES["contrato"]["name"] !== "") {
+                    // Mover el PDF a la carpeta de contratos
+                    move_uploaded_file($_FILES['contrato']['tmp_name'], CARPETA_CONTRATOS . $nuevoContrato);
 
-                // Guardar la ruta del PDF en el contrato
-                $contrato->contrato = $nombreContrato;
+                    // Guardar la ruta del PDF en el contrato
+                    $contrato->contrato = $nuevoContrato;
+                } else {
+                    // Mover el PDF a la carpeta de contratos
+                    move_uploaded_file($_FILES['contrato']['tmp_name'], CARPETA_CONTRATOS . $contratoActual);
+
+                    // Guardar la ruta del PDF en el contrato
+                    $contrato->contrato = $contratoActual;
+                }
 
                 // Guardar en la BD
                 $resultado = $contrato->guardar();

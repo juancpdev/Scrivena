@@ -18,6 +18,7 @@
                     <th scope="col" class="table__th table__th--tipo">Tipo</th>
                     <th scope="col" class="table__th table__th--inicio">Inicio</th>
                     <th scope="col" class="table__th table__th--finalizacion">Finalización</th>
+                    <th scope="col" class="table__th table__th--contrato">Rendimiento</th>
                     <th scope="col" class="table__th table__th--contrato">Contrato</th>
                     <th scope="col" class="table__th table__th"></th>
                 </tr>
@@ -53,6 +54,9 @@
                         </td>
                         <td class="table__td table__td--finalizacion">
                             <?php echo date("d/m/Y", strtotime($contrato->fecha_fin)); ?>
+                        </td>
+                        <td class="table__td table__td--tipo">
+                            <?php echo $contrato->rendimiento ?>%
                         </td>
                         <td class="table__td table__td--contrato">
 

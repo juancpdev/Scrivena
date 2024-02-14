@@ -4,7 +4,7 @@ namespace Model;
 
 class Contrato extends ActiveRecord {
     protected static $tabla = 'contratos';
-    protected static $columnasDB = ['id', 'inversionista_id', 'inversion', 'tipo', 'fecha_inicio', 'fecha_fin', 'contrato'];
+    protected static $columnasDB = ['id', 'inversionista_id', 'inversion', 'tipo', 'fecha_inicio', 'fecha_fin', 'contrato', 'rendimiento'];
 
     public $id;
     public $inversionista_id;
@@ -13,6 +13,7 @@ class Contrato extends ActiveRecord {
     public $fecha_inicio;
     public $fecha_fin;
     public $contrato;
+    public $rendimiento;
 
     public function __construct($args = [])
     {
@@ -23,6 +24,7 @@ class Contrato extends ActiveRecord {
         $this->fecha_inicio = $args['fecha_inicio'] ?? null;
         $this->fecha_fin = $args['fecha_fin'] ?? null;
         $this->contrato = $args['contrato'] ?? null;
+        $this->rendimiento = $args['rendimiento'] ?? null;
     }
 
     public function validarContrato() {
@@ -34,6 +36,9 @@ class Contrato extends ActiveRecord {
         }
         if(!$this->tipo) {
             self::$alertas['error'][] = 'El tipo de inversión es Obligatorio';
+        }
+        if(!$this->rendimiento) {
+            self::$alertas['error'][] = 'El rendimiento es Obligatorio';
         }
         if(!$this->fecha_inicio) {
             self::$alertas['error'][] = 'La fecha de inicio es Obligatoria';

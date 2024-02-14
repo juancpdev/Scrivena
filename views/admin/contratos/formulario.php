@@ -43,10 +43,21 @@
     </div>
 </div>
 
-
 <div class="campo-contenedor">
     <div class="campo_contenedor-arriba">
         <span class="campo-orden">4.</span>
+        <p class="campo-titulo">Rendimiento</p>
+    </div>
+    <div class="campo_contenedor-abajo">
+        <div class="campo">
+            <input class="formulario__input input-rendimiento" type="text" name="rendimiento" id="rendimiento" placeholder="Rendimiento de la inversion" value="<?php echo $contrato->rendimiento ?? ''; ?>">
+        </div>
+    </div>
+</div>
+
+<div class="campo-contenedor">
+    <div class="campo_contenedor-arriba">
+        <span class="campo-orden">5.</span>
         <p class="campo-titulo">Fecha de inicio</p>
     </div>
     <div class="campo_contenedor-abajo">
@@ -58,7 +69,7 @@
 
 <div class="campo-contenedor">
     <div class="campo_contenedor-arriba">
-        <span class="campo-orden">5.</span>
+        <span class="campo-orden">6.</span>
         <p class="campo-titulo">Fecha de Finalización</p>
     </div>
     <div class="campo_contenedor-abajo">
@@ -70,7 +81,7 @@
 
 <div class="campo-contenedor">
     <div class="campo_contenedor-arriba">
-        <span class="campo-orden">6.</span>
+        <span class="campo-orden">7.</span>
         <p class="campo-titulo">Contrato</p>
     </div>
     <div class="campo_contenedor-abajo">
