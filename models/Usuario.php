@@ -142,7 +142,7 @@ class Usuario extends ActiveRecord {
     }
 
     // Valida el Password 
-    public function validarPassword($lang) {
+    public function validarPassword($lang = "es") {
         
         if((!($this->password) || !($this->password2))) {
             if ($lang === 'es') {
@@ -157,6 +157,14 @@ class Usuario extends ActiveRecord {
                 self::$alertas['error'][] = "La contraseña debe contener al menos 6 caracteres";
             } else {
                 self::$alertas['error'][] = 'Password must contain at least 6 characters';
+            }
+        }
+
+        if($this->password !== $this->password2) {
+            if ($lang === 'es') {
+                self::$alertas['error'][] = "Las contraseñas no coinciden";
+            } else {
+                self::$alertas['error'][] = 'Passwords do not match';
             }
         }
         

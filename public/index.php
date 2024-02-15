@@ -88,5 +88,7 @@ $router->get('/cliente/contratos', [ClienteController::class, 'contratos']);
 $router->get('/cliente/informacion', [ClienteController::class, 'informacion']);
 $router->get('/cliente/perfil', [ClienteController::class, 'perfil']);
 $router->post('/cliente/perfil', [ClienteController::class, 'perfil']);
+$router->get('/cliente/cambiar-password', [ClienteController::class, 'cambiar_password']);
+$router->post('/cliente/cambiar-password', [ClienteController::class, 'cambiar_password']);
 
 $router->comprobarRutas();

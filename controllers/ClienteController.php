@@ -86,4 +86,46 @@ class ClienteController {
         ]);
     }
 
+    public static function cambiar_password(Router $router) { 
+
+        // Ingreso solo usuarios logeados
+        if(!is_auth()) {
+            header('Location: /');
+        }
+
+        $alertas = [];
+
+        if($_SERVER["REQUEST_METHOD"] === "POST") { 
+            $usuario = Usuario::find($_SESSION["id"]);
+
+            // Sincronizar con los datos del usuario
+            $usuario->sincronizar($_POST);
+
+            // Verificamos si no hay errores al cambiar los password
+            $alertas = $usuario->validarPassword();
+
+            if(empty($alertas)){ 
+                // Eliminamos propiedades no necesarias
+                unset($usuario->password_actual);
+                unset($usuario->password_nuevo);
+                // Hash pass
+                $usuario->hashPassword();
+                
+                $usuario->cambiopass = '1';
+
+                // Actualizamos el pass
+                $resultado = $usuario->guardar();
+
+                // Redireccionar
+                if($resultado) {
+                    header('Location: /cliente/dashboard');
+                }
+            }
+        }
+        
+        $router->render("cliente/perfil/cambiar-password", [ 
+            "titulo" => "Cambiar Password",
+            "alertas" => $alertas
+        ]);
+    }
 }

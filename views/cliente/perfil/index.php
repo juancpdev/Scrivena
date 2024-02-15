@@ -17,6 +17,13 @@ if (isset($perfilActualizado) && $perfilActualizado) {
 
 <h2 class="dashboard__heading"> <?php echo $titulo ?> </h2>
 
+<div class="dashboard__contenedor--boton">
+    <a class="dashboard__boton" href="/cliente/cambiar-password">
+    <i class="fa-solid fa-rotate-left"></i> 
+        Cambiar Contraseña
+    </a>
+</div>
+
 <div class="caja-contenedor-formulario">
     <div class="contenedor-formulario contenedor-formulario--cliente">
         <?php
