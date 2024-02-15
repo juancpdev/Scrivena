@@ -17,7 +17,7 @@ class DashboardController {
         $contratos = Contrato::all();
         $contratos_vencidos = 0;
         $ingresos = 0;
-        $rendimientos = 0;
+        $interes = 0;
 
         // Obtener ultimos registros
         $registros = Usuario::get(3);
@@ -29,7 +29,7 @@ class DashboardController {
         }
 
         foreach($contratos as $contrato) {
-            $rendimientos += $contrato->rendimiento;
+            $interes += $contrato->interes;
         }
 
         // Contratos Vencidos
@@ -57,7 +57,7 @@ class DashboardController {
             'contratos_activos' => $contratos_activos,
             'registros' => $registros,
             'ingresos' => $ingresos,
-            'rendimientos' => $rendimientos
+            'interes' => $interes
         ]);
     }
 }

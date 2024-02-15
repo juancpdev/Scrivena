@@ -1663,7 +1663,7 @@ h3 {
   justify-content: flex-end;
   padding: 0 3rem;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .dashboard__contenedor--boton {
     padding: 0;
   }
@@ -2384,7 +2384,7 @@ footer {
 @media (min-width: 768px) {
   .table__th {
     font-size: 1.3rem;
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 1370px) {
@@ -2392,16 +2392,16 @@ footer {
     font-size: 2rem;
   }
 }
-.table__th--email, .table__th--telefono, .table__th--documento, .table__th--tipo, .table__th--inicio, .table__th--finalizacion, .table__th--contrato {
+.table__th--email, .table__th--telefono, .table__th--documento, .table__th--tipo, .table__th--inicio, .table__th--finalizacion, .table__th--contrato, .table__th--interes {
   display: none;
 }
 @media (min-width: 1200px) {
-  .table__th--email, .table__th--telefono, .table__th--documento, .table__th--tipo, .table__th--inicio, .table__th--finalizacion, .table__th--contrato {
+  .table__th--email, .table__th--telefono, .table__th--documento, .table__th--tipo, .table__th--inicio, .table__th--finalizacion, .table__th--contrato, .table__th--interes {
     display: table-cell;
   }
 }
 @media (min-width: 768px) {
-  .table__th--telefono, .table__th--documento, .table__th--inicio, .table__th--finalizacion {
+  .table__th--telefono, .table__th--documento, .table__th--inicio, .table__th--finalizacion, .table__th--interes, .table__th--contrato {
     display: table-cell;
   }
 }
@@ -2415,7 +2415,7 @@ footer {
 @media (min-width: 768px) {
   .table__td, .table__td--acciones {
     font-size: 1.3rem;
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 1370px) {
@@ -2423,16 +2423,16 @@ footer {
     font-size: 1.6rem;
   }
 }
-.table__td--email, .table__td--telefono, .table__td--documento, .table__td--tipo, .table__td--inicio, .table__td--finalizacion, .table__td--contrato {
+.table__td--email, .table__td--telefono, .table__td--documento, .table__td--tipo, .table__td--inicio, .table__td--finalizacion, .table__td--contrato, .table__td--interes {
   display: none;
 }
 @media (min-width: 1200px) {
-  .table__td--email, .table__td--telefono, .table__td--documento, .table__td--tipo, .table__td--inicio, .table__td--finalizacion, .table__td--contrato {
+  .table__td--email, .table__td--telefono, .table__td--documento, .table__td--tipo, .table__td--inicio, .table__td--finalizacion, .table__td--contrato, .table__td--interes {
     display: table-cell;
   }
 }
 @media (min-width: 768px) {
-  .table__td--telefono, .table__td--documento, .table__td--inicio, .table__td--finalizacion {
+  .table__td--telefono, .table__td--documento, .table__td--inicio, .table__td--finalizacion, .table__td--interes, .table__td--contrato {
     display: table-cell;
   }
 }
@@ -2559,9 +2559,6 @@ footer {
 .bloque:nth-child(4) {
   background-image: linear-gradient(to left top, #1C626E, #2c98ab);
 }
-.bloque__contenido {
-  margin-top: 3rem;
-}
 .bloque__heading {
   margin: 1rem 0 0 0;
   text-shadow: 2px 2px 2px #1c626e;
@@ -2633,6 +2630,11 @@ footer {
 }
 .bloque__abajo {
   margin-top: 4rem;
+}
+.bloque__abajo--contratos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .bloque__abajo .bloque__contenido, .bloque__abajo .bloque__texto2 {
   margin: 0;

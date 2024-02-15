@@ -33,8 +33,8 @@ class ContratosController {
             foreach($contratos as $contrato) {
                 $contrato->inversionista = Usuario::find($contrato->inversionista_id);
     
-                // Calcular rendimiento acumulado hasta la fecha actual
-                $contrato->rendimiento = self::calcularRendimientoAcumulado($contrato);
+                // Calcular interes acumulado hasta la fecha actual
+                $contrato->interes = self::calcularInteresAcumulado($contrato);
                 
                 $contrato->guardar();
             }
@@ -54,11 +54,11 @@ class ContratosController {
         }
     }
     
-    private static function calcularRendimientoAcumulado($contrato) {
+    private static function calcularInteresAcumulado($contrato) {
         $fechaInicio = new \DateTime($contrato->fecha_inicio);
         $fechaFin = new \DateTime($contrato->fecha_fin);
         $fechaActual = new \DateTime();
-        $rendimientoAcumulado = 0;
+        $interesAcumulado = 0;
     
         // Verificar si la fecha actual es posterior a la fecha de inicio
         if ($fechaActual >= $fechaInicio) {
@@ -73,12 +73,12 @@ class ContratosController {
     
             // Iterar sobre los meses transcurridos
             for ($i = 0; $i < $mesesTranscurridos; $i++) {
-                // Calcular el rendimiento acumulado mes a mes
-                $rendimientoAcumulado += ($contrato->porcentaje / 100) * $contrato->inversion;
+                // Calcular el interes acumulado mes a mes
+                $interesAcumulado += ($contrato->porcentaje / 100) * $contrato->inversion;
             }
         }
     
-        return $rendimientoAcumulado;
+        return $interesAcumulado;
     }
     
     

@@ -47,7 +47,7 @@
                         
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/clientes/editar?id=<?php echo $cliente->id; ?>">
-                                <i class="fa-solid fa-user-pen table__accion--icono"></i>Editar
+                                <i class="fa-solid fa-user-pen table__accion--icono"></i>
                             </a>
                             <form class="table__formulario" method="POST" action="/admin/clientes/eliminar" id="formEliminarCliente-<?php echo $cliente->id; ?>" >
                                 <input type="hidden" name="id" value="<?php echo $cliente->id; ?>">
@@ -56,7 +56,7 @@
                                     type="submit" 
                                     onclick="confirmDelete(event,'formEliminarCliente-<?php echo $cliente->id; ?>')"
                                     >
-                                        <i class="fa-solid fa-circle-xmark table__accion--icono"></i>Eliminar
+                                    <i class="fa-solid fa-trash table__accion--icono"></i>
                                 </button>
                             </form>
                         </td>

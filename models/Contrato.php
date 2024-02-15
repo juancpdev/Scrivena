@@ -4,7 +4,7 @@ namespace Model;
 
 class Contrato extends ActiveRecord {
     protected static $tabla = 'contratos';
-    protected static $columnasDB = ['id', 'inversionista_id', 'inversion', 'tipo', 'fecha_inicio', 'fecha_fin', 'contrato', 'rendimiento', 'porcentaje'];
+    protected static $columnasDB = ['id', 'inversionista_id', 'inversion', 'tipo', 'fecha_inicio', 'fecha_fin', 'contrato', 'interes', 'porcentaje'];
 
     public $id;
     public $inversionista_id;
@@ -13,7 +13,7 @@ class Contrato extends ActiveRecord {
     public $fecha_inicio;
     public $fecha_fin;
     public $contrato;
-    public $rendimiento;
+    public $interes;
     public $porcentaje;
 
     public function __construct($args = [])
@@ -25,7 +25,7 @@ class Contrato extends ActiveRecord {
         $this->fecha_inicio = $args['fecha_inicio'] ?? null;
         $this->fecha_fin = $args['fecha_fin'] ?? null;
         $this->contrato = $args['contrato'] ?? null;
-        $this->rendimiento = $args['rendimiento'] ?? 0;
+        $this->interes = $args['interes'] ?? 0;
         $this->porcentaje = $args['porcentaje'] ?? null;
     }
 

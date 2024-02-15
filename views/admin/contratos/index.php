@@ -15,17 +15,17 @@
                     <th scope="col" class="table__th table__th--id">ID</th>
                     <th scope="col" class="table__th table__th--inversor">Inversor</th>
                     <th scope="col" class="table__th table__th--monto">Monto</th>
-                    <th scope="col" class="table__th table__th--contrato">%</th>
+                    <th scope="col" class="table__th table__th--porcentaje">%</th>
                     <th scope="col" class="table__th table__th--tipo">Tipo</th>
                     <th scope="col" class="table__th table__th--inicio">Inicio</th>
                     <th scope="col" class="table__th table__th--finalizacion">Fin</th>
-                    <th scope="col" class="table__th table__th--contrato">Rendimiento</th>
-                    <th scope="col" class="table__th table__th--contrato">Contrato</th>
+                    <th scope="col" class="table__th table__th--interes">Interés</th>
+                    <th scope="col" class="table__th table__th--contrato">PDF</th>
                     <th scope="col" class="table__th table__th"></th>
                 </tr>
             </thead>
 
-            <tbody class="table__tbody">
+            <tbody class="table__tbody table__tbody">
                 <?php
                 foreach ($contratos as $contrato) {
                     // Convertir la fecha de finalización del contrato a timestamp
@@ -47,7 +47,7 @@
                         <td class="table__td table__td--monto">
                             $<?php echo $contrato->inversion ?>
                         </td>
-                        <td class="table__td table__td--tipo">
+                        <td class="table__td table__td--porcentaje">
                             <?php echo $contrato->porcentaje ?>%
                         </td>
                         <td class="table__td table__td--tipo">
@@ -59,14 +59,14 @@
                         <td class="table__td table__td--finalizacion">
                             <?php echo date("d/m/Y", strtotime($contrato->fecha_fin)); ?>
                         </td>
-                        <td class="table__td table__td--tipo">
-                            $<?php echo $contrato->rendimiento ?>
+                        <td class="table__td table__td--interes">
+                            $<?php echo $contrato->interes ?>
                         </td>
                         <td class="table__td table__td--contrato">
 
                             <a class="contrato--actual" href="/contratos/<?php echo $contrato->contrato ?>" target="_blank">
                                 <i class="fa-solid fa-file-contract"></i>
-                                PDF
+                                Ver
                             </a>
                         </td>
                         <td class="table__td--acciones">
