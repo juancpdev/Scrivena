@@ -29,6 +29,14 @@ class AuthController {
 
         // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /acceder?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /login?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
             header("Location: /?lang={$idioma}");
             exit;
         }
@@ -68,7 +76,12 @@ class AuthController {
                             if($usuario->admin === "1") {
                                 header('Location: /admin/dashboard');
                             } else {
-                                header('Location: /cliente/dashboard');
+                                if ($idioma === 'es') {
+                                    header('Location: /cliente/panel?lang=es');
+                                } else {
+                                    header('Location: /client/dashboard?lang=en');
+                                }
+                                
                             }
                             
                         } else {
@@ -93,7 +106,11 @@ class AuthController {
                             if($usuario->admin === "1") {
                                 header('Location: /admin/dashboard');
                             } else {
-                                header('Location: /cliente/dashboard');
+                                if ($idioma === 'es') {
+                                    header('Location: /cliente/panel?lang=es');
+                                } else {
+                                    header('Location: /client/dashboard?lang=en');
+                                }
                             }
                             
                         } else {
@@ -130,6 +147,14 @@ class AuthController {
 
         // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /olvide?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /forget?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
             header("Location: /?lang={$idioma}");
             exit;
         }
@@ -187,6 +212,14 @@ class AuthController {
 
         // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /reestablecer?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /reset?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
             header("Location: /?lang={$idioma}");
             exit;
         }

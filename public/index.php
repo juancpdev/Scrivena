@@ -45,6 +45,7 @@ $router->get('/questions', [PaginasController::class, 'preguntas']);
 $router->get('/acceder', [AuthController::class, 'login']);
 $router->post('/acceder', [AuthController::class, 'login']);
 $router->post('/logout', [AuthController::class, 'logout']);
+
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/login', [AuthController::class, 'login']);
 $router->post('/logout', [AuthController::class, 'logout']);
@@ -83,12 +84,18 @@ $router->post('/admin/contratos/editar', [ContratosController::class, 'editar'])
 $router->post('/admin/contratos/eliminar', [ContratosController::class, 'eliminar']);
 
 // Cliente
-$router->get('/cliente/dashboard', [ClienteController::class, 'index']);
+$router->get('/cliente/panel', [ClienteController::class, 'index']);
 $router->get('/cliente/contratos', [ClienteController::class, 'contratos']);
-$router->get('/cliente/informacion', [ClienteController::class, 'informacion']);
 $router->get('/cliente/perfil', [ClienteController::class, 'perfil']);
 $router->post('/cliente/perfil', [ClienteController::class, 'perfil']);
 $router->get('/cliente/cambiar-password', [ClienteController::class, 'cambiar_password']);
 $router->post('/cliente/cambiar-password', [ClienteController::class, 'cambiar_password']);
+
+$router->get('/client/dashboard', [ClienteController::class, 'index']);
+$router->get('/client/contracts', [ClienteController::class, 'contratos']);
+$router->get('/client/profile', [ClienteController::class, 'perfil']);
+$router->post('/client/profile', [ClienteController::class, 'perfil']);
+$router->get('/client/change-password', [ClienteController::class, 'cambiar_password']);
+$router->post('/client/change-password', [ClienteController::class, 'cambiar_password']);
 
 $router->comprobarRutas();

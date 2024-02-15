@@ -44,7 +44,7 @@ if (!isset($_SESSION)) {
                         <a href="/contacto?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Contacto</a>
                     </li>
                     <li>
-                        <a href="<?php echo is_admin() ? '/admin/dashboard?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') : '/cliente/dashboard?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') ?>" class="header__enlaces">
+                        <a href="<?php echo is_admin() ? '/admin/dashboard?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') : '/cliente/panel?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') ?>" class="header__enlaces">
                             <?php echo is_admin() ? "Administrar" : "Perfil" ?>
                         </a>
                     </li>

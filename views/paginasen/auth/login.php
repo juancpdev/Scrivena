@@ -31,7 +31,7 @@ if (is_auth()) {
             <?php
             require_once __DIR__ . '/../../templates/alertas.php';
             ?>
-            <form method="POST" action="/login?lang=en" class="formulario formulario--login">
+            <form method="POST" action="/login?lang=en" class="formulario formulario--login" novalidate>
 
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">

@@ -18,7 +18,7 @@ if (isset($perfilActualizado) && $perfilActualizado) {
 <h2 class="dashboard__heading"> <?php echo $titulo ?> </h2>
 
 <div class="dashboard__contenedor--boton">
-    <a class="dashboard__boton" href="/cliente/cambiar-password">
+    <a class="dashboard__boton" href="/cliente/cambiar-password?lang=es">
     <i class="fa-solid fa-rotate-left"></i> 
         Cambiar Contraseña
     </a>
@@ -27,10 +27,10 @@ if (isset($perfilActualizado) && $perfilActualizado) {
 <div class="caja-contenedor-formulario">
     <div class="contenedor-formulario contenedor-formulario--cliente">
         <?php
-        require_once __DIR__ . '/../../templates/alertas.php';
+        require_once __DIR__ . '/../../../templates/alertas.php';
         ?>
 
-        <form method="POST" action="/cliente/perfil" class="formulario formulario--cliente">
+        <form method="POST" action="/cliente/perfil?lang=es" class="formulario formulario--cliente">
             <?php include_once __DIR__ . '/formulario.php'; ?>
 
             <div class="contenedor-boton">

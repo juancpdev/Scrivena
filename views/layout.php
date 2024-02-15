@@ -66,8 +66,8 @@
     <?php
     $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : 'es';
 
-    $headerPath = __DIR__ . "/templates/header{$idioma}.php";
-    $footerPath = __DIR__ . "/templates/footer{$idioma}.php";
+    $headerPath = __DIR__ . "/templates/header-{$idioma}.php";
+    $footerPath = __DIR__ . "/templates/footer-{$idioma}.php";
 
     if (file_exists($headerPath)) {
         include_once $headerPath;

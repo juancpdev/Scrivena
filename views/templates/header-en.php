@@ -34,16 +34,12 @@ if (!isset($_SESSION)) {
                     <li>
                         <a href="/about-us?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">About Us</a>
                     </li>
-
-                    <hr>
                     <li>
                         <a href="/services?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Services</a>
                     </li>
-                    <hr>
                     <li>
                         <a href="/portfolio?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Portfolio</a>
                     </li>
-                    <hr>
                     <li>
                         <a href="/contact?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'en' ?>">Contact</a>
                     </li>

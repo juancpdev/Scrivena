@@ -3,7 +3,7 @@
     
     <p class="auth__texto">Coloca tu nueva contraseña</p>
     <div class="dashboard__contenedor--boton">
-    <a class="dashboard__boton" href="/cliente/perfil">
+    <a class="dashboard__boton" href="/cliente/perfil?lang=es">
         <i class="fa-solid fa-angles-left"></i>
         Volver
     </a>
@@ -11,7 +11,7 @@
     <div class="caja-contenedor-formulario">
         <div class="contenedor-formulario contenedor-formulario--reestablecer">
             <?php
-            require_once __DIR__ . '/../../templates/alertas.php';
+            require_once __DIR__ . '/../../../templates/alertas.php';
             ?>
 
             <form method="POST" class="formulario formulario--olvide" novalidate>

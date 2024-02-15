@@ -15,9 +15,13 @@ if (is_admin()) {
 
 // Verifica si ya ha iniciado sesión
 if (is_auth()) {
-    // Si ya ha iniciado sesión, redirige a otra página (puedes elegir la que desees)
-    header("Location: /cliente/dashboard?lang=$langParam");
-    exit(); // Asegura que el script no continúe después de la redirección
+    if ($langParam === 'es') {
+        header('Location: /cliente/panel?lang=es');
+        exit();
+    } else {
+        header('Location: /client/dashboard?lang=en');
+        exit();
+    }
 }
 
 ?>
@@ -31,7 +35,7 @@ if (is_auth()) {
             <?php
             require_once __DIR__ . '/../../templates/alertas.php';
             ?>
-            <form method="POST" action="/acceder?lang=es" class="formulario formulario--login">
+            <form method="POST" action="/acceder?lang=es" class="formulario formulario--login" novalidate>
 
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">

@@ -40,6 +40,21 @@ class PaginasController {
 
     public static function servicios(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         $router->render("paginas{$idioma}/servicios_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Servicios' : 'Services',
             'subtitulo' => $idioma === 'es' ? "Potenciando el Futuro: Inversión Estratégica y Financiamiento Sostenible" : "Empowering the Future: Strategic Investment and Sustainable Financing",
@@ -49,6 +64,21 @@ class PaginasController {
 
     public static function nosotros(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         $router->render("paginas{$idioma}/nosotros_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Nosotros' : 'About Us',
             'subtitulo' => $idioma === 'es' ? "Expertos en Inversiones y Financiamiento" : "Investment and Financing Experts",
@@ -58,6 +88,21 @@ class PaginasController {
 
     public static function portafolio(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         $router->render("paginas{$idioma}/portafolio_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Portafolio' : 'Portfolio',
             'subtitulo' => $idioma === 'es' ? "Rendimientos Sólidos - Conoce Nuestro Portafolio" : "Solid Returns - Learn About Our Portfolio",
@@ -67,6 +112,20 @@ class PaginasController {
     
     public static function contacto(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
     
         $mensaje = null;
     
@@ -200,6 +259,21 @@ class PaginasController {
 
     public static function preguntas(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         $router->render("paginas{$idioma}/preguntas_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Preguntas Frecuentes' : 'Frequent Questions'
         ]);
@@ -207,6 +281,21 @@ class PaginasController {
     
     public static function terminos(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         $router->render("paginas{$idioma}/terminos_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Términos y Condiciones' : 'Terms and Conditions'
         ]);
@@ -214,6 +303,21 @@ class PaginasController {
 
     public static function privacidad(Router $router) {
         $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+        
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+        
         $router->render("paginas{$idioma}/privacidad_{$idioma}", [
             'titulo' => $idioma === 'es' ? 'Aviso de Privacidad' : 'Notice of Privacy'
         ]);

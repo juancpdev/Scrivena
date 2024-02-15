@@ -8,40 +8,70 @@ use Model\Usuario;
 
 class ClienteController { 
 
+    public static function obtenerIdiomaNavegador() {
+        // Obtiene la lista de idiomas desde la cabecera "Accept-Language" del navegador
+        $idiomas = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+        
+        // Extrae el idioma principal de la lista
+        $idiomaNavegador = strtolower(substr($idiomas[0], 0, 2));
+
+        // Verifica si el idioma es compatible con tu aplicación
+        if (in_array($idiomaNavegador, ['es', 'en'])) {
+            return $idiomaNavegador;
+        }
+
+        // Si no es compatible, devuelve el idioma por defecto de tu aplicación
+        return 'es';
+    }
+
     public static function index(Router $router) { 
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         if(!is_auth()) {
             header('Location: /');
         }
 
-        $router->render('cliente/dashboard/index', [
+        $router->render("paginas{$idioma}/cliente/dashboard/index", [
             'titulo' => 'Área Cliente',
         ]);
     }
 
     public static function contratos(Router $router) { 
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
         if(!is_auth()) {
             header('Location: /');
         }
 
         $contratos = Contrato::whereArray(["inversionista_id" => $_SESSION['id']]);
         
-        $router->render('cliente/contratos/index', [
+        $router->render("paginas{$idioma}/cliente/contratos/index", [
             'titulo' => 'Mis Contratos',
             'contratos' => $contratos
         ]);
     }
 
-    public static function informacion(Router $router) { 
-        if(!is_auth()) {
-            header('Location: /');
+    public static function perfil(Router $router) {
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            header("Location: /?lang={$idioma}");
+            exit;
         }
 
-        $router->render('cliente/informacion/index', [
-            'titulo' => 'Información',
-        ]);
-    }
-
-    public static function perfil(Router $router) {
         // Ingreso solo usuarios logeados
         if(!is_auth()) {
             header('Location: /');
@@ -78,7 +108,7 @@ class ClienteController {
             }
         }
 
-        $router->render("cliente/perfil/index", [ 
+        $router->render("paginas{$idioma}/cliente/perfil/index", [
             "titulo" => "Mi Perfil",
             "alertas" => $alertas,
             "usuario" => $usuario,
@@ -87,6 +117,13 @@ class ClienteController {
     }
 
     public static function cambiar_password(Router $router) { 
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
 
         // Ingreso solo usuarios logeados
         if(!is_auth()) {
@@ -123,7 +160,7 @@ class ClienteController {
             }
         }
         
-        $router->render("cliente/perfil/cambiar-password", [ 
+        $router->render("paginas{$idioma}/cliente/perfil/cambiar-password", [
             "titulo" => "Cambiar Password",
             "alertas" => $alertas
         ]);
