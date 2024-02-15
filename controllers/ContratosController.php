@@ -19,7 +19,7 @@ class ContratosController {
     
         $registros_por_pagina = 10;
         $total = Contrato::total();
-        
+    
         // Verificar si hay registros antes de crear la paginación
         if ($total > 0) {
             $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
@@ -32,8 +32,13 @@ class ContratosController {
     
             foreach($contratos as $contrato) {
                 $contrato->inversionista = Usuario::find($contrato->inversionista_id);
+    
+                // Calcular rendimiento acumulado hasta la fecha actual
+                $contrato->rendimiento = self::calcularRendimientoAcumulado($contrato);
+                
+                $contrato->guardar();
             }
-
+    
             $router->render('admin/contratos/index', [
                 'titulo' => 'Contratos',
                 'contratos' => $contratos,
@@ -49,6 +54,37 @@ class ContratosController {
         }
     }
     
+    private static function calcularRendimientoAcumulado($contrato) {
+        $fechaInicio = new \DateTime($contrato->fecha_inicio);
+        $fechaFin = new \DateTime($contrato->fecha_fin);
+        $fechaActual = new \DateTime();
+        $rendimientoAcumulado = 0;
+    
+        // Verificar si la fecha actual es posterior a la fecha de inicio
+        if ($fechaActual >= $fechaInicio) {
+            // Si la fecha actual está después de la fecha de finalización, establece la fecha actual en la fecha de finalización
+            if ($fechaActual > $fechaFin) {
+                $fechaActual = $fechaFin;
+            }
+    
+            // Calcular el número de meses transcurridos desde la fecha de inicio hasta la fecha actual
+            $intervalo = $fechaInicio->diff($fechaActual);
+            $mesesTranscurridos = $intervalo->y * 12 + $intervalo->m;
+    
+            // Iterar sobre los meses transcurridos
+            for ($i = 0; $i < $mesesTranscurridos; $i++) {
+                // Calcular el rendimiento acumulado mes a mes
+                $rendimientoAcumulado += ($contrato->porcentaje / 100) * $contrato->inversion;
+            }
+        }
+    
+        return $rendimientoAcumulado;
+    }
+    
+    
+    
+
+    
     
     public static function crear(Router $router) {
         if(!is_admin()) {
@@ -58,7 +94,7 @@ class ContratosController {
         $clientes = Usuario::whereArray(['admin' => 0]);
         $alertas = [];
         $contrato = new Contrato;
-        $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión de Estados Unidos', 'Remates Inmobiliarios'];
+        $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(!is_admin()) {
@@ -117,7 +153,7 @@ class ContratosController {
         $alertas = [];
         $id = $_GET['id'];
         $id = filter_var($id, FILTER_VALIDATE_INT);
-        $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión de Estados Unidos', 'Remates Inmobiliarios'];
+        $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
         
         if(!$id) {
             header('Location: /admin/contratos');

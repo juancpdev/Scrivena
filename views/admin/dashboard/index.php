@@ -50,7 +50,13 @@
             <div class="bloque__abajo">
                 <h3 class="bloque__heading2">Inversión total de contratos:</h3>
                 <div class="bloque__contenido">
-                    <p class="bloque__texto2">$ <?php echo $ingresos . ".00"; ?></p>
+                    <p class="bloque__texto2">$ <?php echo number_format($ingresos, 2); ?></p>
+                </div>
+            </div>
+            <div class="bloque__abajo">
+                <h3 class="bloque__heading2">Rendimiento total en contratos:</h3>
+                <div class="bloque__contenido">
+                    <p class="bloque__texto2">$ <?php echo number_format($rendimientos, 2); ?></p>
                 </div>
             </div>
         </div>

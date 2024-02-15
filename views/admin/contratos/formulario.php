@@ -19,7 +19,7 @@
     </div>
     <div class="campo_contenedor-abajo">
         <div class="campo">
-            <input class="formulario__input input-inversion" type="number" name="inversion" id="inversion" placeholder="Monto de Inversión" value="<?php echo $contrato->inversion ?? ''; ?>">
+            <input class="formulario__input input-inversion" type="text" name="inversion" id="inversion" placeholder="Monto de Inversión" value="<?php echo $contrato->inversion ?? ''; ?>">
         </div>
     </div>
 </div>
@@ -46,11 +46,11 @@
 <div class="campo-contenedor">
     <div class="campo_contenedor-arriba">
         <span class="campo-orden">4.</span>
-        <p class="campo-titulo">Rendimiento</p>
+        <p class="campo-titulo">Porcentaje</p>
     </div>
     <div class="campo_contenedor-abajo">
         <div class="campo">
-            <input class="formulario__input input-rendimiento" type="text" name="rendimiento" id="rendimiento" placeholder="Rendimiento de la inversion" value="<?php echo $contrato->rendimiento ?? ''; ?>">
+            <input class="formulario__input input-porcentaje" type="text" name="porcentaje" id="porcentaje" placeholder="Porcentaje mensual" value="<?php echo $contrato->porcentaje ?? ''; ?>">
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\APIClientes;
+use Controllers\APIContratos;
 use MVC\Router;
 use Controllers\ClientesController;
 use Controllers\AuthController;
@@ -65,6 +66,7 @@ $router->post('/reset', [AuthController::class, 'reestablecer']);
 // APIs
 $router->get('/api/clientes', [APIClientes::class, 'index']);
 $router->get('/api/cliente', [APIClientes::class, 'cliente']);
+$router->get('/api/contratos', [APIContratos::class, 'index']);
 
 // ADMIN
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);

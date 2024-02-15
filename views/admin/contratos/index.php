@@ -15,9 +15,10 @@
                     <th scope="col" class="table__th table__th--id">ID</th>
                     <th scope="col" class="table__th table__th--inversor">Inversor</th>
                     <th scope="col" class="table__th table__th--monto">Monto</th>
+                    <th scope="col" class="table__th table__th--contrato">%</th>
                     <th scope="col" class="table__th table__th--tipo">Tipo</th>
                     <th scope="col" class="table__th table__th--inicio">Inicio</th>
-                    <th scope="col" class="table__th table__th--finalizacion">Finalización</th>
+                    <th scope="col" class="table__th table__th--finalizacion">Fin</th>
                     <th scope="col" class="table__th table__th--contrato">Rendimiento</th>
                     <th scope="col" class="table__th table__th--contrato">Contrato</th>
                     <th scope="col" class="table__th table__th"></th>
@@ -47,6 +48,9 @@
                             $<?php echo $contrato->inversion ?>
                         </td>
                         <td class="table__td table__td--tipo">
+                            <?php echo $contrato->porcentaje ?>%
+                        </td>
+                        <td class="table__td table__td--tipo">
                             <?php echo $contrato->tipo ?>
                         </td>
                         <td class="table__td table__td--inicio">
@@ -56,23 +60,23 @@
                             <?php echo date("d/m/Y", strtotime($contrato->fecha_fin)); ?>
                         </td>
                         <td class="table__td table__td--tipo">
-                            <?php echo $contrato->rendimiento ?>%
+                            $<?php echo $contrato->rendimiento ?>
                         </td>
                         <td class="table__td table__td--contrato">
 
                             <a class="contrato--actual" href="/contratos/<?php echo $contrato->contrato ?>" target="_blank">
                                 <i class="fa-solid fa-file-contract"></i>
-                                Ver Contrato
+                                PDF
                             </a>
                         </td>
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/contratos/editar?id=<?php echo $contrato->id; ?>">
-                                <i class="fa-solid fa-user-pen table__accion--icono"></i>Editar
+                                <i class="fa-solid fa-user-pen table__accion--icono"></i>
                             </a>
                             <form class="table__formulario" method="POST" action="/admin/contratos/eliminar" id="formEliminarContrato-<?php echo $contrato->id; ?>">
                                 <input type="hidden" name="id" value="<?php echo $contrato->id; ?>">
                                 <button class="table__accion table__accion--eliminar" type="submit" onclick="confirmDelete(event,'formEliminarContrato-<?php echo $contrato->id; ?>')">
-                                    <i class="fa-solid fa-circle-xmark table__accion--icono"></i>Eliminar
+                                    <i class="fa-solid fa-trash table__accion--icono"></i>
                                 </button>
                             </form>
                         </td>
