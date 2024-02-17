@@ -1,5 +1,6 @@
 (function() {
     const grafica = document.querySelector('#inversion-grafica');
+    const balanceTotal = document.querySelector('#balance-total');
     if(grafica) {
         obtenerDatos();
 
@@ -9,37 +10,20 @@
             const contratos = await respuesta.json();
 
             const inversiones = contratos.reduce((total, contrato) => total + parseFloat(contrato.inversion), 0);
-            let rendimientoTotal = 0;
+            const intereses = contratos.reduce((total, contrato) => total + parseFloat(contrato.interes), 0);
 
-            contratos.forEach(contrato => {
-                const fechaInicio = new Date(contrato.fecha_inicio);
-                const fechaFin = new Date(contrato.fecha_fin);
-                const rendimiento = parseFloat(contrato.rendimiento);
-
-                // Calcular el primer mes completo después de la fecha de inicio
-                const primerMesCompleto = new Date(fechaInicio);
-                primerMesCompleto.setMonth(primerMesCompleto.getMonth() + 1);
-                primerMesCompleto.setDate(10); // Primer día de pago del siguiente mes
-
-                const fechaActual = new Date();
-                while (primerMesCompleto <= fechaFin && primerMesCompleto <= fechaActual) {
-                    rendimientoTotal += rendimiento;
-
-                    // Ir al siguiente mes completo
-                    primerMesCompleto.setMonth(primerMesCompleto.getMonth() + 1);
-                }
-            });
+            balanceTotal.textContent = `$${inversiones + intereses}`;
 
             const ctx = document.getElementById('inversion-grafica').getContext('2d');
             const myChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Inversiones', 'Rendimiento'],
+                    labels: ['Inversiones', 'Interés'],
                     datasets: [{
-                        data: [inversiones, rendimientoTotal],
+                        data: [inversiones, intereses],
                         backgroundColor: [
-                            '#ea580c',
-                            '#84cc16'
+                            '#123c49',
+                            '#30aeb9'
                         ]
                     }]
                 },
@@ -60,6 +44,7 @@
                             }
                         }
                     }
+                    
                 }
                 
             });

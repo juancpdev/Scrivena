@@ -59,7 +59,7 @@ class ContratosController {
         $fechaFin = new \DateTime($contrato->fecha_fin);
         $fechaActual = new \DateTime();
         $interesAcumulado = 0;
-    
+
         // Verificar si la fecha actual es posterior a la fecha de inicio
         if ($fechaActual >= $fechaInicio) {
             // Si la fecha actual está después de la fecha de finalización, establece la fecha actual en la fecha de finalización
@@ -80,11 +80,6 @@ class ContratosController {
     
         return $interesAcumulado;
     }
-    
-    
-    
-
-    
     
     public static function crear(Router $router) {
         if(!is_admin()) {

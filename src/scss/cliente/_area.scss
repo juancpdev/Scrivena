@@ -1,0 +1,12 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+/* Estilos básicos */
+.titulo-area {
+
+    @include m.tablet {
+        margin: 6rem 0;
+    }
+}
+
+

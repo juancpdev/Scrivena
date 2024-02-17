@@ -1704,8 +1704,37 @@ h3 {
   margin: 5rem auto;
 }
 .dashboard__grafica {
-  width: min(95%, 60rem);
   margin: 0 auto;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+}
+@media (min-width: 768px) {
+  .dashboard__grafica {
+    width: 35rem;
+    height: 35rem;
+  }
+}
+.dashboard__grafica--balance {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  text-align: center;
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  .dashboard__grafica--balance {
+    transform: translate(-50%, 0%);
+    font-size: 1.8rem;
+  }
+}
+.dashboard__grafica--balance .titulo {
+  font-weight: bold;
+  margin: 0;
+}
+.dashboard__grafica--balance .balance {
+  margin: 0;
 }
 
 .preguntas {
@@ -2693,6 +2722,13 @@ footer {
   background-color: rgb(51, 51, 51);
 }
 .contratos-container .Vencido {
-  background: linear-gradient(90deg, rgba(255, 0, 0, 0.397), rgb(255, 163, 163));
+  background: linear-gradient(90deg, rgba(252, 106, 106, 0.397), rgb(255, 183, 183));
+}
+
+/* Estilos básicos */
+@media (min-width: 768px) {
+  .titulo-area {
+    margin: 6rem 0;
+  }
 }
 /*# sourceMappingURL=app.css.map */

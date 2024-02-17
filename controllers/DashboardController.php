@@ -23,17 +23,18 @@ class DashboardController {
         $registros = Usuario::get(3);
 
 
-        // Calcular los ingresos
-        foreach($contratos as $contrato) {
+        foreach ($contratos as $contrato) {
+
+            // Agregar al modelo contrato el inversor
+            $contrato->inversionista = Usuario::find($contrato->inversionista_id);
+
+            // Calcular los ingresos
             $ingresos += $contrato->inversion;
-        }
 
-        foreach($contratos as $contrato) {
+            // Calcular los intereses
             $interes += $contrato->interes;
-        }
 
-        // Contratos Vencidos
-        foreach($contratos as $contrato) {
+            // Contratos vencidos
             $fecha_fin_timestamp = strtotime($contrato->fecha_fin);
             // Obtener el tiempo actual en timestamp
             $tiempo_actual_timestamp = time();
@@ -43,6 +44,36 @@ class DashboardController {
             if($fecha_fin_pasada) {
                 $contratos_vencidos += 1;
             }
+
+            // Calcular la fecha del próximo pago
+            $fechaActual = new \DateTime();
+            $fechaInicio = new \DateTime($contrato->fecha_inicio);
+            $proximaFechaPago = clone $fechaInicio;
+
+            // Si la fecha de inicio es posterior a hoy, el próximo pago es la fecha de inicio
+            if ($fechaInicio > $fechaActual) {
+                $proximaFechaPagoString = $fechaInicio->format('Y-m-d');
+            } else {
+                // Calcular el próximo pago después de la fecha de inicio
+                while ($proximaFechaPago <= new \DateTime($contrato->fecha_fin)) {
+                    if ($proximaFechaPago > $fechaActual) {
+                        break;
+                    }
+                    $proximaFechaPago->modify('next month');
+                }
+                $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
+            }
+
+            // Actualizar la columna proximo_pago en la base de datos
+            $contrato->proximo_pago = $proximaFechaPagoString;
+            $contrato->guardar();
+
+        }
+        
+        $proximo_pagos = Contrato::ordenarLimite('proximo_pago', 'ASC', 10);
+
+        foreach($proximo_pagos as $proximo_pago) {
+            $proximo_pago->inversionista = Usuario::find($proximo_pago->inversionista_id);
         }
 
         // Contratos Activos
@@ -57,7 +88,8 @@ class DashboardController {
             'contratos_activos' => $contratos_activos,
             'registros' => $registros,
             'ingresos' => $ingresos,
-            'interes' => $interes
+            'interes' => $interes,
+            'proximo_pagos' => $proximo_pagos
         ]);
     }
 }
