@@ -24,6 +24,12 @@ class DashboardController {
 
 
         foreach ($contratos as $contrato) {
+            // Si contrato estado es 0 poner Activo si es 1 poner Vencido
+            if($contrato->fecha_fin > $contrato->proximo_pago) {
+                $contrato->estado = "Activo";
+            } elseif($contrato->fecha_fin < $contrato->proximo_pago) {
+                $contrato->estado = "Vencido";
+            }
 
             // Agregar al modelo contrato el inversor
             $contrato->inversionista = Usuario::find($contrato->inversionista_id);
@@ -47,6 +53,8 @@ class DashboardController {
 
             // Calcular la fecha del próximo pago
             $fechaActual = new \DateTime();
+            $fechaActual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
+
             $fechaInicio = new \DateTime($contrato->fecha_inicio);
             $proximaFechaPago = clone $fechaInicio;
 
@@ -56,13 +64,15 @@ class DashboardController {
             } else {
                 // Calcular el próximo pago después de la fecha de inicio
                 while ($proximaFechaPago <= new \DateTime($contrato->fecha_fin)) {
-                    if ($proximaFechaPago > $fechaActual) {
-                        break;
+                    if ($proximaFechaPago >= $fechaActual) { // Cambio aquí para incluir igualdad
+                        $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
+
+                        break; // Importante romper el bucle una vez que encuentre el próximo pago
                     }
                     $proximaFechaPago->modify('next month');
                 }
-                $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
             }
+            
 
             // Actualizar la columna proximo_pago en la base de datos
             $contrato->proximo_pago = $proximaFechaPagoString;
@@ -70,7 +80,7 @@ class DashboardController {
 
         }
         
-        $proximo_pagos = Contrato::ordenarLimite('proximo_pago', 'ASC', 10);
+        $proximo_pagos = Contrato::ordenarLimite('proximo_pago', 'ASC', 5);
 
         foreach($proximo_pagos as $proximo_pago) {
             $proximo_pago->inversionista = Usuario::find($proximo_pago->inversionista_id);

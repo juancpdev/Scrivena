@@ -1,47 +1,6 @@
 <h2 class="dashboard__heading"> <?php echo $titulo; ?> </h2>
 
 <main class="bloques">
-<div class="dashboard__contenedor--contratos">
-    <?php if (!empty($contratos)) { ?>
-        <table class="table">
-            <thead class="table__thead">
-                <tr class="table__tr">
-                    <th scope="col" class="table__th table__th--id">ID</th>
-                    <th scope="col" class="table__th table__th--inversor">Inversor</th>
-                    <th scope="col" class="table__th table__th--monto">Proximo Pago</th>
-                </tr>
-            </thead>
-
-            <tbody class="table__tbody table__tbody">
-                <?php
-                foreach ($proximo_pagos as $proximo_pago) {
-                    // Convertir la fecha de finalización del contrato a timestamp
-                    $fecha_fin_timestamp = strtotime($proximo_pago->fecha_fin);
-                    // Obtener el tiempo actual en timestamp
-                    $tiempo_actual_timestamp = time();
-                    // Verificar si la fecha de finalización ha pasado
-                    $fecha_fin_pasada = $fecha_fin_timestamp < $tiempo_actual_timestamp;
-                    // Agregar una clase condicional según si la fecha de finalización ha pasado o no
-                    $clase_fecha_pasada = $fecha_fin_pasada ? 'fecha-pasada' : '';
-                ?>
-                    <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
-                        <td class="table__td table__td--id">
-                            <?php echo $proximo_pago->id; ?>
-                        </td>
-                        <td class="table__td table__td--inversor">
-                            <?php echo $proximo_pago->inversionista->nombre . " " . $proximo_pago->inversionista->apellido ?>
-                        </td>
-                        <td class="table__td table__td--monto">
-                            <?php echo date("d/m/Y", strtotime($proximo_pago->proximo_pago)); ?>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-    <?php } else { ?>
-        <p class="text-center">No Hay Contratos Aún</p>
-    <?php } ?>
-</div>
     <div class="bloques__grid">
         <div class="bloque">
             <h3 class="bloque__heading">Total Clientes</h3>
@@ -103,7 +62,51 @@
                 </div>
             </div>
         </div>
-
     </div>
+    <div class="dashboard__contenedor--contratos">
+    <?php if (!empty($contratos)) { ?>
+        <table class="table">
+            <thead class="table__thead">
+                <tr class="table__tr">
+                    <th scope="col" class="table__th table__th--id">ID</th>
+                    <th scope="col" class="table__th table__th--inversor">Inversor</th>
+                    <th scope="col" class="table__th table__th--monto">Proximo Pago</th>
+                    <th scope="col" class="table__th table__th--monto">Interés</th>
+                </tr>
+            </thead>
+
+            <tbody class="table__tbody table__tbody">
+                <?php
+                foreach ($proximo_pagos as $proximo_pago) {
+                    // Convertir la fecha de finalización del contrato a timestamp
+                    $fecha_fin_timestamp = strtotime($proximo_pago->fecha_fin);
+                    // Obtener el tiempo actual en timestamp
+                    $tiempo_actual_timestamp = time();
+                    // Verificar si la fecha de finalización ha pasado
+                    $fecha_fin_pasada = $fecha_fin_timestamp < $tiempo_actual_timestamp;
+                    // Agregar una clase condicional según si la fecha de finalización ha pasado o no
+                    $clase_fecha_pasada = $fecha_fin_pasada ? 'fecha-pasada' : '';
+                ?>
+                    <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
+                        <td class="table__td table__td--id">
+                            <?php echo $proximo_pago->id; ?>
+                        </td>
+                        <td class="table__td table__td--inversor">
+                            <?php echo $proximo_pago->inversionista->nombre . " " . $proximo_pago->inversionista->apellido ?>
+                        </td>
+                        <td class="table__td table__td--monto">
+                            <?php echo date("d/m/Y", strtotime($proximo_pago->proximo_pago)); ?>
+                        </td>
+                        <td class="table__td table__td--id">
+                            <?php echo $proximo_pago->interes; ?>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    <?php } else { ?>
+        <p class="text-center">No Hay Contratos Aún</p>
+    <?php } ?>
+</div>
     
 </main>
