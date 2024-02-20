@@ -86,6 +86,7 @@ class ContratosController {
             header('Location: /');
         }
 
+        $proximaFechaPagoString = '';
         $fechaActual = new \DateTime();
         $fechaActual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
         $fechaActualFormateada = $fechaActual->format('Y-m-d');
@@ -202,6 +203,7 @@ class ContratosController {
             header('Location: /');
         }
         
+        $proximaFechaPagoString = '';
         $fechaActual = new \DateTime();
         $fechaActual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
         $fechaActualFormateada = $fechaActual->format('Y-m-d');

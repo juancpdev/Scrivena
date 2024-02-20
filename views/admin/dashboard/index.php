@@ -64,11 +64,7 @@
         </div>
     </div>
     <div class="dashboard__contenedor--contratos">
-    <?php
-    foreach($proximo_pagos as $proximo_pago) {
-        if ($proximo_pago->estado === "Activo") {
 
-    ?>
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
@@ -78,7 +74,10 @@
                     <th scope="col" class="table__th table__th--monto">Interés</th>
                 </tr>
             </thead>
-
+            <?php
+        foreach($proximo_pagos as $proximo_pago) {
+            if ($proximo_pago->estado === "Activo") {
+        ?>
             <tbody class="table__tbody table__tbody">
                     <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
                         <td class="table__td table__td--id">
@@ -91,14 +90,12 @@
                             <?php echo date("d/m/Y", strtotime($proximo_pago->proximo_pago)); ?>
                         </td>
                         <td class="table__td table__td--id">
-                            <?php echo $proximo_pago->interes; ?>
+                            $<?php echo $proximo_pago->inversion * ($proximo_pago->porcentaje / 100); ?>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
+            <?php } ?>
         </table>
-    <?php } ?>
 </div>
-
-    
 </main>

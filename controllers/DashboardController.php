@@ -46,7 +46,6 @@ class DashboardController {
             $contrato->guardar();
 
         }
-        
         $proximo_pagos = Contrato::ordenarLimite('proximo_pago', 'ASC', 5);
 
         foreach($proximo_pagos as $proximo_pago) {
