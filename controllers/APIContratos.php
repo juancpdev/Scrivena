@@ -20,6 +20,16 @@ class APIContratos {
 
         echo json_encode($contratos);
         return;
-        
+    }
+
+    public static function contratos() {
+
+        if(!is_admin()) {
+            header('Location: /');
+        }
+
+        $contratos = Contrato::all();
+        echo json_encode($contratos);
+        return;
     }
 }

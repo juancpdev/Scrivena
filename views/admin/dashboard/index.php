@@ -2,6 +2,19 @@
 
 <main class="bloques">
     <div class="bloques__grid">
+
+        <div class="bloque">
+            <div class="dashboard__grafica">
+                <canvas id="paises-grafica" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <div class="bloque">
+            <div class="dashboard__grafica">
+                <canvas id="tipos-grafica" width="400" height="400"></canvas>
+            </div>
+        </div>
+
         <div class="bloque">
             <h3 class="bloque__heading">Total Clientes</h3>
             <div class="bloque__contenido">

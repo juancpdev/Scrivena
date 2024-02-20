@@ -67,6 +67,7 @@ $router->post('/reset', [AuthController::class, 'reestablecer']);
 $router->get('/api/clientes', [APIClientes::class, 'index']);
 $router->get('/api/cliente', [APIClientes::class, 'cliente']);
 $router->get('/api/contratos', [APIContratos::class, 'index']);
+$router->get('/api/contratostotal', [APIContratos::class, 'contratos']);
 
 // ADMIN
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);

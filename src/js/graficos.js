@@ -50,4 +50,38 @@
             });
         }
     }
+
+    const gaficoTipos = document.querySelector('#tipos-grafica');
+    if(gaficoTipos) {
+        obtenerDatos();
+
+        async function obtenerDatos() {
+            const url = '/api/contratostotal';
+            const respuesta = await fetch(url);
+            const contratos = await respuesta.json();
+            const tipos = [];
+            contratos.forEach(contrato => {
+                const tipo = contrato.tipo;
+                tipos.push(tipo);
+
+            });
+            console.log(tipos);
+            
+
+            const ctx = document.getElementById('tipos-grafica').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: tipos,
+                    datasets: [{
+                        data: [tipos],
+                        backgroundColor: [
+                            '#123c49'
+                        ]
+                    }]
+                },
+                
+            });
+        }
+    }
 })();
