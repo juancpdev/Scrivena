@@ -211,7 +211,7 @@ class ContratosController {
         $alertas = [];
         $id = $_GET['id'];
         $id = filter_var($id, FILTER_VALIDATE_INT);
-        $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
+        $tipos_inversion = ['Inversión en Minería', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
 
         if(!$id) {
             header('Location: /admin/contratos');

@@ -25,7 +25,7 @@
             <tbody class="table__tbody">
                 <?php foreach($clientes as $cliente) { ?>
                     <?php if($cliente->admin === "0") { ?>
-                    <tr class="table__tr table__tr--body table__tr--clientes">
+                    <tr class="table__tr table__tr--body table__tr--colores">
                         <td class="table__td table__td--id">
                             <?php echo $cliente->id; ?>
                         </td>

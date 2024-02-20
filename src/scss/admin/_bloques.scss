@@ -22,31 +22,37 @@
     @include m.shadow;
 
     &:nth-child(1) {
-       @include m.bg-gradient(#1C626E);
+       @include m.bg-gradient(#dadada);
     }
     &:nth-child(2) {
-        @include m.bg-gradient(#1C6E6A);
+        @include m.bg-gradient(#dadada);
     }
     &:nth-child(3) {
-        @include m.bg-gradient(#1C6E6A);
+        @include m.bg-gradient(#dadada);
     }
      &:nth-child(4) {
-        @include m.bg-gradient(#1C626E);
+        @include m.bg-gradient(#dadada);
+    }
+
+    &__titulo {
+        text-align: center;
+        color: black;
     }
 
     &__heading {
         margin: 1rem 0 0 0;
-        text-shadow: 2px 2px 2px v.$principal;
         font-size: 2.6rem;
-
+        color: black;
+        text-shadow: 2px 2px 2px rgb(192, 192, 192);
         @include m.tablet {
             font-size: 3.6rem;
         }
     }
     &__heading2 {
-        text-shadow: 2px 2px 2px v.$principal;
+        text-shadow: 2px 2px 2px rgb(192, 192, 192);
         margin: 0;
         font-size: 1.4rem;
+        color: black;
 
         @include m.tablet {
             font-size: 1.6rem;
@@ -59,15 +65,14 @@
     &__texto {
         margin: 1rem 0;
         text-align: center;
-        text-shadow: 2px 2px 2px v.$principal;
+        color: #123C49;
         font-size: 2rem;
-
         @include m.tablet {
             font-size: 3rem;
         }
     }
     &__texto2 {
-        text-shadow: 2px 2px 2px v.$principal;
+        color: #123C49;
         padding-left: .5rem;
         display: flex;
         align-items: center;
@@ -83,6 +88,7 @@
     }
     &__registros {
         font-size: 1.6rem;
+        color: #123C49;
 
         @include m.tablet {
             font-size: 1.7rem;

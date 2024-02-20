@@ -14,6 +14,10 @@
     &__thead {
         background-color: v.$gris-oscuro;
         color: v.$blanco;
+
+        &--pagos {
+            background-color: #3E5055;
+        }
     }
 
     &__th {
@@ -44,7 +48,7 @@
         }
     }
     
-    &__tr--clientes {
+    &__tr--colores {
         &:nth-of-type(even) {
             background-color: darken(v.$gris-claro, 4%);
         }

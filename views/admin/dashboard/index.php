@@ -4,13 +4,23 @@
     <div class="bloques__grid">
 
         <div class="bloque">
+            <h3 class="bloque__titulo">Países</h3>
             <div class="dashboard__grafica">
+                <div class="dashboard__grafica--paises">
+                    <p class="titulo">Total</p>
+                    <p class="grafica-total" id="paises-total"></p>
+                </div>
                 <canvas id="paises-grafica" width="400" height="400"></canvas>
             </div>
         </div>
 
         <div class="bloque">
+            <h3 class="bloque__titulo">Tipos de inversión</h3>
             <div class="dashboard__grafica">
+                <div class="dashboard__grafica--tipos">
+                    <p class="titulo">Total</p>
+                    <p class="grafica-total" id="tipos-total"></p>
+                </div>                
                 <canvas id="tipos-grafica" width="400" height="400"></canvas>
             </div>
         </div>
@@ -77,9 +87,9 @@
         </div>
     </div>
     <div class="dashboard__contenedor--contratos">
-
+        <h3 class="dashboard__heading">Proximos Pagos</h3>
         <table class="table">
-            <thead class="table__thead">
+            <thead class="table__thead table__thead--pagos">
                 <tr class="table__tr">
                     <th scope="col" class="table__th table__th--id">ID</th>
                     <th scope="col" class="table__th table__th--inversor">Inversor</th>
@@ -87,12 +97,12 @@
                     <th scope="col" class="table__th table__th--monto">Interés</th>
                 </tr>
             </thead>
-            <?php
-        foreach($proximo_pagos as $proximo_pago) {
-            if ($proximo_pago->estado === "Activo") {
-        ?>
             <tbody class="table__tbody table__tbody">
-                    <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
+                <?php
+                    foreach($proximo_pagos as $proximo_pago) {
+                        if ($proximo_pago->estado === "Activo") {
+                ?>
+                    <tr class="table__tr table__tr--body table__tr--colores">
                         <td class="table__td table__td--id">
                             <?php echo $proximo_pago->id; ?>
                         </td>
@@ -106,9 +116,8 @@
                             $<?php echo $proximo_pago->inversion * ($proximo_pago->porcentaje / 100); ?>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php } } ?>
             </tbody>
-            <?php } ?>
         </table>
 </div>
 </main>
