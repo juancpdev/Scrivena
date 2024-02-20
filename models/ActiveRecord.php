@@ -222,7 +222,11 @@ class ActiveRecord {
         // Iterar para ir agregando cada campo de la BD
         $valores = [];
         foreach($atributos as $key => $value) {
-            $valores[] = "{$key}='{$value}'";
+            if ($value === null) {
+                $valores[] = "{$key} = NULL"; // Si el valor es null, establecer la columna como NULL
+            } else {
+                $valores[] = "{$key}='{$value}'";
+            }
         }
 
         // Consulta SQL

@@ -29,7 +29,7 @@ class Contrato extends ActiveRecord {
         $this->contrato = $args['contrato'] ?? null;
         $this->interes = $args['interes'] ?? 0;
         $this->porcentaje = $args['porcentaje'] ?? null;
-        $this->proximo_pago = $args['proximo_pago'] ?? date('Y-m-d');
+        $this->proximo_pago = $args['proximo_pago'] ?? null;
         $this->estado = $args['estado'] ?? '';
     }
 

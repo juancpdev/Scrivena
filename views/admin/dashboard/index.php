@@ -64,7 +64,11 @@
         </div>
     </div>
     <div class="dashboard__contenedor--contratos">
-    <?php if (!empty($contratos)) { ?>
+    <?php
+    foreach($proximo_pagos as $proximo_pago) {
+        if ($proximo_pago->estado === "Activo") {
+
+    ?>
         <table class="table">
             <thead class="table__thead">
                 <tr class="table__tr">
@@ -76,17 +80,6 @@
             </thead>
 
             <tbody class="table__tbody table__tbody">
-                <?php
-                foreach ($proximo_pagos as $proximo_pago) {
-                    // Convertir la fecha de finalización del contrato a timestamp
-                    $fecha_fin_timestamp = strtotime($proximo_pago->fecha_fin);
-                    // Obtener el tiempo actual en timestamp
-                    $tiempo_actual_timestamp = time();
-                    // Verificar si la fecha de finalización ha pasado
-                    $fecha_fin_pasada = $fecha_fin_timestamp < $tiempo_actual_timestamp;
-                    // Agregar una clase condicional según si la fecha de finalización ha pasado o no
-                    $clase_fecha_pasada = $fecha_fin_pasada ? 'fecha-pasada' : '';
-                ?>
                     <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
                         <td class="table__td table__td--id">
                             <?php echo $proximo_pago->id; ?>
@@ -104,9 +97,8 @@
                 <?php } ?>
             </tbody>
         </table>
-    <?php } else { ?>
-        <p class="text-center">No Hay Contratos Aún</p>
     <?php } ?>
 </div>
+
     
 </main>

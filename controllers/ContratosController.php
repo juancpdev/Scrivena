@@ -86,16 +86,19 @@ class ContratosController {
             header('Location: /');
         }
 
+        $fechaActual = new \DateTime();
+        $fechaActual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
+        $fechaActualFormateada = $fechaActual->format('Y-m-d');
         $clientes = Usuario::whereArray(['admin' => 0]);
         $alertas = [];
         $contrato = new Contrato;
         $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
-
+        
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(!is_admin()) {
                 header('Location: /');
             }
-
+            
             $contrato->sincronizar($_POST);
     
             // Generar nombre unico
@@ -105,6 +108,61 @@ class ContratosController {
             if($_FILES['contrato']['tmp_name']) {
                 $contrato->setContrato($nombreContrato);
             }
+
+            // Calcular el próximo pago como el mes siguiente a la fecha de inicio
+           $fechaInicio = new \DateTime($_POST['fecha_inicio']);
+           $proximaFechaPago = clone $fechaInicio;
+
+           if ($fechaInicio > $fechaActual) {
+               $proximaFechaPagoString = $fechaInicio->format('Y-m-d');
+           } else {
+               // Calcular el próximo pago después de la fecha de inicio
+               while ($proximaFechaPago <= new \DateTime($contrato->fecha_fin)) {
+                   if ($proximaFechaPago >= $fechaActual) { // Cambio aquí para incluir igualdad
+                       $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
+
+                       break; // Importante romper el bucle una vez que encuentre el próximo pago
+                   }
+                   $proximaFechaPago->modify('next month');
+               }
+           }
+           
+           // Actualizar la columna proximo_pago y estado en la base de datos
+           $contrato->proximo_pago = $proximaFechaPagoString;
+
+           if($contrato->fecha_fin > $fechaActualFormateada) {
+               $contrato->estado = "Activo";
+           } elseif($contrato->fecha_fin < $fechaActualFormateada) {
+               $contrato->estado = "Vencido";
+               $contrato->proximo_pago = null;
+           }
+           // Calcular el próximo pago como el mes siguiente a la fecha de inicio
+           $fechaInicio = new \DateTime($_POST['fecha_inicio']);
+           $proximaFechaPago = clone $fechaInicio;
+
+           if ($fechaInicio > $fechaActual) {
+               $proximaFechaPagoString = $fechaInicio->format('Y-m-d');
+           } else {
+               // Calcular el próximo pago después de la fecha de inicio
+               while ($proximaFechaPago <= new \DateTime($contrato->fecha_fin)) {
+                   if ($proximaFechaPago >= $fechaActual) { // Cambio aquí para incluir igualdad
+                       $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
+
+                       break; // Importante romper el bucle una vez que encuentre el próximo pago
+                   }
+                   $proximaFechaPago->modify('next month');
+               }
+           }
+           
+           // Actualizar la columna proximo_pago y estado en la base de datos
+           $contrato->proximo_pago = $proximaFechaPagoString;
+
+           if($contrato->fecha_fin > $fechaActualFormateada) {
+               $contrato->estado = "Activo";
+           } elseif($contrato->fecha_fin < $fechaActualFormateada) {
+               $contrato->estado = "Vencido";
+               $contrato->proximo_pago = null;
+           }
 
             // validar
             $alertas = $contrato->validarContrato();
@@ -144,12 +202,15 @@ class ContratosController {
             header('Location: /');
         }
         
+        $fechaActual = new \DateTime();
+        $fechaActual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
+        $fechaActualFormateada = $fechaActual->format('Y-m-d');
         $clientes = Usuario::whereArray(['admin' => 0]);
         $alertas = [];
         $id = $_GET['id'];
         $id = filter_var($id, FILTER_VALIDATE_INT);
         $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
-        
+
         if(!$id) {
             header('Location: /admin/contratos');
         }
@@ -169,6 +230,34 @@ class ContratosController {
             }
 
             $contrato->sincronizar($_POST);
+
+           // Calcular el próximo pago como el mes siguiente a la fecha de inicio
+           $fechaInicio = new \DateTime($_POST['fecha_inicio']);
+           $proximaFechaPago = clone $fechaInicio;
+
+           if ($fechaInicio > $fechaActual) {
+               $proximaFechaPagoString = $fechaInicio->format('Y-m-d');
+           } else {
+               // Calcular el próximo pago después de la fecha de inicio
+               while ($proximaFechaPago <= new \DateTime($contrato->fecha_fin)) {
+                   if ($proximaFechaPago >= $fechaActual) { // Cambio aquí para incluir igualdad
+                       $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
+
+                       break; // Importante romper el bucle una vez que encuentre el próximo pago
+                   }
+                   $proximaFechaPago->modify('next month');
+               }
+           }
+           
+           // Actualizar la columna proximo_pago y estado en la base de datos
+           $contrato->proximo_pago = $proximaFechaPagoString;
+
+           if($contrato->fecha_fin > $fechaActualFormateada) {
+               $contrato->estado = "Activo";
+           } elseif($contrato->fecha_fin < $fechaActualFormateada) {
+               $contrato->estado = "Vencido";
+               $contrato->proximo_pago = null;
+           }
 
             // validar
             $alertas = $contrato->validarContrato();

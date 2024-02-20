@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   carrouselInicio();
   idiomas();
   alertaFormulario();
+  seleccionarFecha();
 });
 
 function menu() {
@@ -181,4 +182,54 @@ function alertaFormulario() {
       }, 4000);
     }
   });
+}
+
+function seleccionarFecha() {
+  const fechaInicio = document.getElementById('fechaInicio');
+  const fechaFin = document.getElementById('fechaFin');
+  
+    if (fechaInicio) {
+      fechaInicio.addEventListener('input', function(e) {
+        validarDiaSeleccionado(e.target, ".alerta-fechainicio");
+      });
+    }
+
+    if (fechaFin) {
+      fechaFin.addEventListener('input', function(e) {
+        validarDiaSeleccionado(e.target, ".alerta-fechafin");
+      });
+    }
+  }
+
+  function validarDiaSeleccionado(inputFecha, claseAlerta) {
+    const partesFecha = inputFecha.value.split('-'); // Dividir la cadena de fecha en día, mes y año
+    const diaSeleccionado = parseInt(partesFecha[2], 10); // Obtener el día del mes como un número entero
+  
+    // Verificar si el día seleccionado es mayor que 28
+    if (diaSeleccionado > 28) {
+      mostrarAlerta('Elegir fecha entre el 1 y el 28', 'error', claseAlerta);
+      inputFecha.value = ""; // Limpiar el campo de fecha
+    }
+  }
+
+/* MOSTRAR ALERTA */
+function mostrarAlerta(mensaje, tipo, elemento) {
+  // Previene que se genere mas de 1 alerta
+  const alertaPrevia = document.querySelector(".alerta");
+  if(alertaPrevia) {
+    alertaPrevia.remove();
+  };
+  
+  // Scripting para crear la alerta
+  const alerta = document.createElement("DIV");
+  alerta.classList.add("alerta", `alerta__${tipo}`);
+  alerta.innerHTML = mensaje;
+  
+  const referencia = document.querySelector(elemento);
+  referencia.appendChild(alerta);
+
+  setTimeout(() => {
+      alerta.remove();
+  }, 3000);
+
 }

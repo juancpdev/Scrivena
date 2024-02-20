@@ -25,8 +25,9 @@
                 listadoClientes.appendChild(clienteDOM);
 
                 // Estilos al label
-                labelCliente.classList.add('formulario__label--li');
-                inputCliente.addEventListener('input', verificarElementos);
+                // labelCliente.classList.add('formulario__label--li');
+                // inputCliente.addEventListener('input', verificarElementos);
+
             }
 
             function verificarElementos() {

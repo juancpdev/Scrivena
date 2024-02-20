@@ -60,9 +60,9 @@
         <span class="campo-orden">5.</span>
         <p class="campo-titulo">Fecha de inicio</p>
     </div>
-    <div class="campo_contenedor-abajo">
+    <div class="campo_contenedor-abajo alerta-fechainicio">
         <div class="campo">
-            <input class="formulario__input input-inicio" type="date" name="fecha_inicio" id="fechainicio" placeholder="Fecha de inicio de Inversión" value="<?php echo $contrato->fecha_inicio ?? ''; ?>">
+            <input class="formulario__input input-inicio" type="date" name="fecha_inicio" id="fechaInicio" placeholder="Fecha de inicio de Inversión" value="<?php echo $contrato->fecha_inicio ?? ''; ?>">
         </div>
     </div>
 </div>
@@ -72,9 +72,9 @@
         <span class="campo-orden">6.</span>
         <p class="campo-titulo">Fecha de Finalización</p>
     </div>
-    <div class="campo_contenedor-abajo">
+    <div class="campo_contenedor-abajo alerta-fechafin">
         <div class="campo">
-            <input class="formulario__input input-finalizacion" type="date" name="fecha_fin" id="fechafin" placeholder="Fecha de finalización de Inversión" value="<?php echo $contrato->fecha_fin ?? ''; ?>">
+            <input class="formulario__input input-finalizacion" type="date" name="fecha_fin" id="fechaFin" placeholder="Fecha de finalización de Inversión" value="<?php echo $contrato->fecha_fin ?? ''; ?>">
         </div>
     </div>
 </div>

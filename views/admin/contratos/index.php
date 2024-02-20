@@ -27,15 +27,19 @@
 
             <tbody class="table__tbody table__tbody">
                 <?php
-                foreach ($contratos as $contrato) {
-                    // Convertir la fecha de finalización del contrato a timestamp
-                    $fecha_fin_timestamp = strtotime($contrato->fecha_fin);
-                    // Obtener el tiempo actual en timestamp
-                    $tiempo_actual_timestamp = time();
-                    // Verificar si la fecha de finalización ha pasado
-                    $fecha_fin_pasada = $fecha_fin_timestamp < $tiempo_actual_timestamp;
-                    // Agregar una clase condicional según si la fecha de finalización ha pasado o no
-                    $clase_fecha_pasada = $fecha_fin_pasada ? 'fecha-pasada' : '';
+                    foreach ($contratos as $contrato) {
+                        // Convertir la fecha de finalización del contrato a un objeto DateTime
+                        $fecha_fin_contrato = new DateTime($contrato->fecha_fin);
+                        
+                        // Obtener la fecha actual con precisión hasta el día
+                        $fecha_actual = new DateTime();
+                        $fecha_actual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
+
+                        // Verificar si la fecha de finalización ha pasado
+                        $fecha_fin_pasada = $fecha_fin_contrato < $fecha_actual;
+                        
+                        // Agregar una clase condicional según si la fecha de finalización ha pasado o no
+                        $clase_fecha_pasada = $fecha_fin_pasada ? 'fecha-pasada' : '';
                 ?>
                     <tr class="table__tr table__tr--body <?php echo $clase_fecha_pasada; ?>">
                         <td class="table__td table__td--id">

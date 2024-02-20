@@ -21,16 +21,8 @@ class DashboardController {
 
         // Obtener ultimos registros
         $registros = Usuario::get(3);
-
-
+        
         foreach ($contratos as $contrato) {
-            // Si contrato estado es 0 poner Activo si es 1 poner Vencido
-            if($contrato->fecha_fin > $contrato->proximo_pago) {
-                $contrato->estado = "Activo";
-            } elseif($contrato->fecha_fin < $contrato->proximo_pago) {
-                $contrato->estado = "Vencido";
-            }
-
             // Agregar al modelo contrato el inversor
             $contrato->inversionista = Usuario::find($contrato->inversionista_id);
 
@@ -51,31 +43,6 @@ class DashboardController {
                 $contratos_vencidos += 1;
             }
 
-            // Calcular la fecha del próximo pago
-            $fechaActual = new \DateTime();
-            $fechaActual->setTime(0, 0, 0); // Establecer la hora a 00:00:00
-
-            $fechaInicio = new \DateTime($contrato->fecha_inicio);
-            $proximaFechaPago = clone $fechaInicio;
-
-            // Si la fecha de inicio es posterior a hoy, el próximo pago es la fecha de inicio
-            if ($fechaInicio > $fechaActual) {
-                $proximaFechaPagoString = $fechaInicio->format('Y-m-d');
-            } else {
-                // Calcular el próximo pago después de la fecha de inicio
-                while ($proximaFechaPago <= new \DateTime($contrato->fecha_fin)) {
-                    if ($proximaFechaPago >= $fechaActual) { // Cambio aquí para incluir igualdad
-                        $proximaFechaPagoString = $proximaFechaPago->format('Y-m-d');
-
-                        break; // Importante romper el bucle una vez que encuentre el próximo pago
-                    }
-                    $proximaFechaPago->modify('next month');
-                }
-            }
-            
-
-            // Actualizar la columna proximo_pago en la base de datos
-            $contrato->proximo_pago = $proximaFechaPagoString;
             $contrato->guardar();
 
         }
