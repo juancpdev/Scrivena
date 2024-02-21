@@ -200,37 +200,15 @@
         margin: 5rem auto;
     }
 
-    &__grafica {
+    &__grafica__admin {
         margin: 0 auto;
         position: relative;
         width: 20rem;
         height: 20rem;
 
         @include m.tablet {
-            width: 35rem;
-            height: 35rem;
-        }
-
-        &--balance {
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, 10%); 
-            text-align: center;
-            font-size: 1.3rem;
-
-            @include m.tablet {
-                transform: translate(-50%, 0%); 
-                font-size: 1.8rem;
-            }
-
-            .titulo {
-                font-weight: bold;
-                margin: 0;
-            }
-            .balance {
-                margin: 0;
-            }
+            width: 30rem;
+            height: 30rem;
         }
 
         &--paises, &--tipos {
@@ -252,6 +230,40 @@
                 margin: 0;
             }
             .grafica-total {
+                margin: 0;
+            }
+        }
+    }
+
+    &__grafica__cliente {
+        margin: 0 auto;
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+
+        @include m.tablet {
+            width: 35rem;
+            height: 35rem;
+        }
+
+        &--balance {
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, 10%); 
+            text-align: center;
+            font-size: 1.3rem;
+    
+            @include m.tablet {
+                transform: translate(-50%, 0%); 
+                font-size: 1.8rem;
+            }
+    
+            .titulo {
+                font-weight: bold;
+                margin: 0;
+            }
+            .balance {
                 margin: 0;
             }
         }

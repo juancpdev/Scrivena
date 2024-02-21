@@ -9,4 +9,40 @@
     }
 }
 
+.area_cliente {
+    
+    .cliente__contratos {
+        @include m.contenedor-md;
+        margin-top: 5rem;
+
+        &--activos {
+            @include m.contenedor-sm;
+            border-radius: 1rem;
+            height: 3.5rem;
+            background-image: linear-gradient(to left top, v.$principal, lighten(v.$principal, 15%));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+            color: white;
+            font-size: 1.5rem;
+
+            @include m.tablet {
+                height: 5rem;
+                font-size: 1.8rem;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }    
+    }
+    .cliente__contratos--titulo {
+        text-align: center;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 5rem;
+    }
+    
+}
 

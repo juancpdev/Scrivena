@@ -5,8 +5,8 @@
 
         <div class="bloque">
             <h3 class="bloque__titulo">Países</h3>
-            <div class="dashboard__grafica">
-                <div class="dashboard__grafica--paises">
+            <div class="dashboard__grafica__admin">
+                <div class="dashboard__grafica__admin--paises">
                     <p class="titulo">Total</p>
                     <p class="grafica-total" id="paises-total"></p>
                 </div>
@@ -16,8 +16,8 @@
 
         <div class="bloque">
             <h3 class="bloque__titulo">Tipos de inversión</h3>
-            <div class="dashboard__grafica">
-                <div class="dashboard__grafica--tipos">
+            <div class="dashboard__grafica__admin">
+                <div class="dashboard__grafica__admin--tipos">
                     <p class="titulo">Total</p>
                     <p class="grafica-total" id="tipos-total"></p>
                 </div>                
@@ -93,7 +93,7 @@
                 <tr class="table__tr">
                     <th scope="col" class="table__th table__th--id">ID</th>
                     <th scope="col" class="table__th table__th--inversor">Inversor</th>
-                    <th scope="col" class="table__th table__th--monto">Proximo Pago</th>
+                    <th scope="col" class="table__th table__th--monto">Fecha</th>
                     <th scope="col" class="table__th table__th--monto">Interés</th>
                 </tr>
             </thead>

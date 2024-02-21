@@ -16,6 +16,7 @@
         <div class="contrato <?php echo $estado_contrato ?>">
             <h2>Contrato Nº<?php echo $contador; ?></h2>
             <p><span>Inversión:</span> $<?php echo $contrato->inversion; ?></p>
+            <p><span>Tasa de Interés Mensual:</span> <?php echo $contrato->porcentaje; ?>%</p>
             <p><span>Tipo:</span> <?php echo $contrato->tipo; ?></p>
             <p><span>Fecha de inicio:</span> <?php echo date("d/m/Y", strtotime($contrato->fecha_inicio)); ?></p>
             <p><span>Fecha de fin:</span> <?php echo date("d/m/Y", strtotime($contrato->fecha_fin)); ?></p>

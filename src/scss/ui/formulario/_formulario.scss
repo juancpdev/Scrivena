@@ -4,7 +4,10 @@
 .caja-contenedor-formulario {
     display: flex;
     justify-content: center;
-    margin: 5rem 3rem 10rem 3rem;
+    margin: 5rem 2rem 10rem 2rem;
+    @include m.tablet {
+        margin: 5rem 3rem 10rem 3rem;
+    }
 
     .contenedor-formulario {
         max-width: 100rem;
@@ -16,30 +19,50 @@
     }
 
     .formulario {
-        padding: 3rem;
+        padding: 2rem;
         border-radius: 1rem;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.253);
+        
+        @include m.tablet {
+            padding: 3rem;
+        }
     }
 
     .campo-contenedor {
-        margin-bottom: 20px;
+        margin-bottom: .5rem;
+        @include m.tablet {
+            margin-bottom: 1.5rem;
+        }
     }
 
     .campo_contenedor-arriba {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         font-weight: 500;
+        @include m.tablet {
+            align-items: center;
+        }
 
         .campo-orden {
             margin-right: 1rem;
             font-weight: bold;
             color: v.$naranja;
             margin-top: 1.8rem;
-            margin-bottom: 1rem; 
+            margin-bottom: 0;
+            font-size: 1.6rem;
+            @include m.tablet {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
         }
 
         .campo-titulo {
-            margin-bottom: 1rem; 
+            margin-bottom: 0;
+            font-size: 1.6rem;
+            @include m.tablet {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -67,13 +90,18 @@
                 width: 100%;
                 border: .2rem solid rgb(230, 226, 226);
                 border-radius: .5rem;
-                padding: 1.3rem;
-                font-size: 1.6rem;
+                padding: 1rem;
+                font-size: 1.4rem;
                 background: v.$blanco;
 
                 &:focus {
                     border: 2px solid v.$naranja;
                     outline: none;
+                }
+
+                @include m.tablet {
+                    padding: 1.3rem;
+                    font-size: 1.6rem;
                 }
 
                 
@@ -95,8 +123,8 @@
                 width: 100%;
                 border: .2rem solid rgb(230, 226, 226);
                 border-radius: .5rem;
-                padding: 1.3rem;
-                font-size: 1.6rem;
+                padding: 1rem;
+                font-size: 1.4rem;
                 background: v.$blanco;
                 cursor: pointer;
 
@@ -105,6 +133,11 @@
                 background-size: 1.5rem; /* Ajusta el tamaño de la imagen de la flecha */
                 background-repeat: no-repeat;
                 background-position: right 1.5rem center;
+
+                @include m.tablet {
+                    padding: 1.3rem;
+                    font-size: 1.6rem;
+                }
 
                 &:focus {
                     border: 2px solid v.$naranja;
@@ -115,22 +148,31 @@
             .input-email {
                 padding-left: 4rem;  // Deja espacio para el ícono
                 background: url('/build/img/mail-svg.svg') no-repeat 1rem center;
-                background-size: 2rem; 
                 background-color: v.$blanco;
+                background-size: 1.6rem; 
+                @include m.tablet {
+                    background-size: 2rem;
+                }
             }
 
             .input-telefono {
                 padding-left: 4rem;  // Deja espacio para el ícono
                 background: url('/build/img/telefono-svg.svg') no-repeat 1rem center;
-                background-size: 2rem; 
                 background-color: v.$blanco;
+                background-size: 1.6rem; 
+                @include m.tablet {
+                    background-size: 2rem;
+                }
             }
 
             .input-password {
                 padding-left: 4rem;  // Deja espacio para el ícono
                 background: url('/build/img/password.svg') no-repeat 0.7rem center;
-                background-size: 2.7rem; 
                 background-color: v.$blanco;
+                background-size: 2rem; 
+                @include m.tablet {
+                    background-size: 2.7rem;
+                }
             }
 
             textarea {
@@ -161,6 +203,8 @@
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        margin-top: 2rem;
+
         .boton {
             @include m.boton2(v.$naranja);
 

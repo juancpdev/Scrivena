@@ -37,8 +37,23 @@ class ClienteController {
             header('Location: /');
         }
 
+        $contratos = Contrato::whereArray(["inversionista_id" => $_SESSION["id"] ]);
+        
+        $contratosActivos = 0;
+
+        foreach($contratos as $contrato) {
+            $contrato->inversionista = Usuario::find($contrato->inversionista_id);
+
+            if($contrato->estado === "Activo") {
+                $contratosActivos += 1;
+            }
+        }
+
+
         $router->render("paginas{$idioma}/cliente/dashboard/index", [
             'titulo' => 'Área Cliente',
+            'contratos' => $contratos,
+            'contratosActivos' => $contratosActivos
         ]);
     }
 
