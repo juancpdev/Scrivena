@@ -250,12 +250,12 @@
             position: absolute; 
             top: 50%; 
             left: 50%; 
-            transform: translate(-50%, 10%); 
+            transform: translate(-50%, -50%); 
             text-align: center;
             font-size: 1.3rem;
     
             @include m.tablet {
-                transform: translate(-50%, 0%); 
+                transform: translate(-50%, -50%); 
                 font-size: 1.8rem;
             }
     

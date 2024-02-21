@@ -1,12 +1,32 @@
+<?php 
+if (isset($contraActualizada) && $contraActualizada) {
+    echo "
+    <script>
+        window.onload = function() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Contraseña Actualizada',
+                text: 'La contraseña fue actualizada correctamente!',
+                confirmButtonText: 'OK'
+            }).then(function() {
+                window.location.href = '/cliente/panel?lang=es';
+            });
+        };
+    </script>
+    ";
+}
+?>
 
-    <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-    
-    <p class="auth__texto">Coloca tu nueva contraseña</p>
-    <div class="dashboard__contenedor--boton">
-    <a class="dashboard__boton" href="/cliente/perfil?lang=es">
-        <i class="fa-solid fa-angles-left"></i>
-        Volver
-    </a>
+
+<h2 class="auth__heading"><?php echo $titulo; ?></h2>
+
+<p class="auth__texto">Coloca tu nueva contraseña</p>
+<div class="dashboard__contenedor--boton">
+<a class="dashboard__boton" href="/cliente/perfil?lang=es">
+    <i class="fa-solid fa-angles-left"></i>
+    Volver
+</a>
+
 </div>
     <div class="caja-contenedor-formulario">
         <div class="contenedor-formulario contenedor-formulario--reestablecer">
@@ -18,11 +38,22 @@
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">1.</span>
-                        <p class="campo-titulo">Contraseña</p>
+                        <p class="campo-titulo">Contraseña Actual</p>
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input class="formulario__input input-password" type="password" name="password" id="password" placeholder="Nueva Contraseña">
+                            <input class="formulario__input input-password" type="password" name="password_actual" id="password_actual" placeholder="Contraseña Actual">
+                        </div>
+                    </div>
+                </div>
+                <div class="campo-contenedor">
+                    <div class="campo_contenedor-arriba">
+                        <span class="campo-orden">2.</span>
+                        <p class="campo-titulo">Contraseña Nueva</p>
+                    </div>
+                    <div class="campo_contenedor-abajo">
+                        <div class="campo">
+                            <input class="formulario__input input-password" type="password" name="password_nuevo" id="password_nuevo" placeholder="Nueva Contraseña">
                         </div>
                     </div>
                 </div>
@@ -30,11 +61,11 @@
                 <div class="campo-contenedor">
                     <div class="campo_contenedor-arriba">
                         <span class="campo-orden">2.</span>
-                        <p class="campo-titulo">Repetir Contraseña</p>
+                        <p class="campo-titulo">Repetir Contraseña Nueva</p>
                     </div>
                     <div class="campo_contenedor-abajo">
                         <div class="campo">
-                            <input class="formulario__input input-password" type="password" name="password2" id="password2" placeholder="Confirmar Contraseña">
+                            <input class="formulario__input input-password" type="password" name="password_nuevo2" id="password_nuevo2" placeholder="Confirmar Contraseña">
                         </div>
                     </div>
                 </div>

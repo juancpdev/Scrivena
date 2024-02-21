@@ -1,8 +1,27 @@
+<?php if($cambiopass === "0") { ?>
+    <div class="cambiopass">
+        <p>
+            <i class="fa-solid fa-triangle-exclamation"></i> 
+            Por razones de seguridad es importante que cambies la contraseña proporcionada por el administrador
+            <a href="/cliente/cambiar-password?lang=<?php echo $idioma; ?>">Click Aquí.</a>
+        </p>
+    </div>
+<?php } ?>
+
 <h2 class="titulo-area dashboard__heading"> <?php echo $titulo; ?> </h2>
 
 <main class="main--area_cliente">
     <div class="area_cliente">
-
+        <div class="info-grafico--clientes">
+            <div class="contenedor-datos-gafica">
+                <div class="color-inversion"></div>
+                <p>Inversión</p>
+            </div>
+            <div class="contenedor-datos-gafica">
+                <div class="color-interes"></div>
+                <p>Interés</p>
+            </div>
+        </div>
         <div class="area-cliente">
             <div class="dashboard__grafica__cliente">
                 <canvas id="inversion-grafica" width="400" height="400"></canvas>

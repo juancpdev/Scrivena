@@ -1753,13 +1753,13 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 10%);
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 1.3rem;
 }
 @media (min-width: 768px) {
   .dashboard__grafica__cliente--balance {
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     font-size: 1.8rem;
   }
 }
@@ -2849,6 +2849,31 @@ footer {
   }
 }
 
+.area_cliente .info-grafico--clientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+.area_cliente .info-grafico--clientes .contenedor-datos-gafica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.area_cliente .info-grafico--clientes .contenedor-datos-gafica .color-inversion {
+  border-radius: 1rem;
+  width: 3.5rem;
+  height: 1.5rem;
+  background-color: #123c49;
+}
+.area_cliente .info-grafico--clientes .contenedor-datos-gafica .color-interes {
+  border-radius: 1rem;
+  width: 3.5rem;
+  height: 1.5rem;
+  background-color: #30aeb9;
+}
 .area_cliente .cliente__contratos {
   width: min(95%, 80rem);
   margin: 0 auto;
@@ -2881,5 +2906,21 @@ footer {
   font-weight: 900;
   text-align: center;
   margin-top: 5rem;
+}
+
+.cambiopass {
+  background-color: #f78b8b; /* Color de fondo */
+  color: #000000; /* Color de texto */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ffcccc; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 20px 0; /* Margen superior e inferior */
+  text-align: center; /* Alineación centrada */
+}
+
+.cambiopass a {
+  color: #ca0101; /* Color del enlace */
+  font-weight: bold;
+  text-decoration: underline; /* Subrayado */
 }
 /*# sourceMappingURL=app.css.map */

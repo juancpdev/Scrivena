@@ -10,6 +10,33 @@
 }
 
 .area_cliente {
+
+    .info-grafico--clientes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-size: 1.6rem;
+        .contenedor-datos-gafica {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            .color-inversion {
+                border-radius: 1rem;
+                width: 3.5rem;
+                height: 1.5rem;
+                background-color: #123c49;
+            }
+
+            .color-interes {
+                border-radius: 1rem;
+                width: 3.5rem;
+                height: 1.5rem;
+                background-color: #30aeb9;
+            }
+        }
+    }
     
     .cliente__contratos {
         @include m.contenedor-md;
@@ -44,5 +71,21 @@
         margin-top: 5rem;
     }
     
+}
+
+.cambiopass {
+    background-color: #f78b8b; /* Color de fondo */
+    color: #000000; /* Color de texto */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ffcccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 20px 0; /* Margen superior e inferior */
+    text-align: center; /* Alineación centrada */
+}
+
+.cambiopass a {
+    color: #ca0101; /* Color del enlace */
+    font-weight: bold;
+    text-decoration: underline; /* Subrayado */
 }
 

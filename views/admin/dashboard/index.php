@@ -18,7 +18,7 @@
             <h3 class="bloque__titulo">Tipos de inversión</h3>
             <div class="dashboard__grafica__admin">
                 <div class="dashboard__grafica__admin--tipos">
-                    <p class="titulo">Total</p>
+                    <p class="titulo">Contratos</p>
                     <p class="grafica-total" id="tipos-total"></p>
                 </div>                
                 <canvas id="tipos-grafica" width="400" height="400"></canvas>

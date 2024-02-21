@@ -8,7 +8,9 @@ if (isset($perfilActualizado) && $perfilActualizado) {
                 title: 'Perfil Actualizado',
                 text: 'El perfil fue actualizado correctamente!',
                 confirmButtonText: 'OK'
-            })
+            }).then(function() {
+                window.location.href = '/cliente/panel?lang=es';
+            });
         };
     </script>
     ";

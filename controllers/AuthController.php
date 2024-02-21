@@ -253,6 +253,7 @@ class AuthController {
 
             if(empty($alertas)) {
                 // Hashear el nuevo password
+                debuguear($usuario);
                 $usuario->hashPassword();
 
                 // Eliminar el Token y actualizar BD

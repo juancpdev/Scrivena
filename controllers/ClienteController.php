@@ -49,11 +49,15 @@ class ClienteController {
             }
         }
 
+        $cliente = Usuario::find($_SESSION["id"]);
+        $cambiopass = $cliente->cambiopass;
 
         $router->render("paginas{$idioma}/cliente/dashboard/index", [
             'titulo' => 'Área Cliente',
             'contratos' => $contratos,
-            'contratosActivos' => $contratosActivos
+            'contratosActivos' => $contratosActivos,
+            'cambiopass' => $cambiopass,
+            'idioma' => $idioma
         ]);
     }
 
@@ -149,17 +153,29 @@ class ClienteController {
 
         if($_SERVER["REQUEST_METHOD"] === "POST") { 
             $usuario = Usuario::find($_SESSION["id"]);
-
+            
             // Sincronizar con los datos del usuario
             $usuario->sincronizar($_POST);
 
             // Verificamos si no hay errores al cambiar los password
-            $alertas = $usuario->validarPassword();
-
+            if (intval($usuario->cambiopass) === 0) {
+                $alertas = $usuario->validarPasswordCliente($cambiopass = 0, $idioma);
+                
+            } else if(intval($usuario->cambiopass) === 1) {
+  
+                $alertas = $usuario->validarPasswordCliente($cambiopass = 1, $idioma);
+            }
+            
+           
             if(empty($alertas)){ 
+                // Aplicamos la nueva contraseña
+                $usuario->password = $usuario->password_nuevo;
+
                 // Eliminamos propiedades no necesarias
+                unset($usuario->password2);
                 unset($usuario->password_actual);
                 unset($usuario->password_nuevo);
+                unset($usuario->password_nuevo2);
                 // Hash pass
                 $usuario->hashPassword();
                 
@@ -170,14 +186,17 @@ class ClienteController {
 
                 // Redireccionar
                 if($resultado) {
-                    header('Location: /cliente/panel?lang=es');
+                    $contraActualizada = true;
                 }
             }
         }
         
+        $alertas = Usuario::getAlertas();
+
         $router->render("paginas{$idioma}/cliente/perfil/cambiar-password", [
             "titulo" => "Cambiar Password",
-            "alertas" => $alertas
+            "alertas" => $alertas,
+            "contraActualizada" => $contraActualizada ?? false
         ]);
     }
 }

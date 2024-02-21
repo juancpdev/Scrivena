@@ -12,7 +12,15 @@
             const inversiones = contratos.reduce((total, contrato) => total + parseFloat(contrato.inversion), 0);
             const intereses = contratos.reduce((total, contrato) => total + parseFloat(contrato.interes), 0);
 
-            balanceTotal.textContent = `$${inversiones + intereses}`;
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            
+            var total = inversiones + intereses;
+            var totalFormateado = total.toFixed(2);
+            var totalConComa = formatNumber(totalFormateado);
+            balanceTotal.textContent = "$" + totalConComa;
+            
 
             const ctx = document.getElementById('inversion-grafica').getContext('2d');
             const myChart = new Chart(ctx, {
@@ -29,6 +37,9 @@
                 },
                 options: {
                     plugins: {
+                        legend: {
+                            display: false
+                        },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
@@ -37,6 +48,12 @@
                                         label += ': ';
                                     }
                                     if (context.parsed !== 'undefined') {
+                                        console.log(context.label);
+                                        if (context.label === "Inversiones") {
+                                            label += 'Inversiónes: ';
+                                        } else if (context.label === "Interés"){
+                                            label += 'Interéses: ';
+                                        }
                                         label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed);
                                     }
                                     return label;
@@ -153,26 +170,19 @@
                 // Si el país ya ha sido visto antes, retornar false para filtrarlo
                 return false;
             });
-
-
+            
             // Objeto auxiliar para contar cuántas veces aparece cada país
             const conteoPaises = {};
-
+            
             // Contar cuántas veces aparece cada país en el arreglo original
             paises.forEach(pais => {
                 conteoPaises[pais] = (conteoPaises[pais] || 0) + 1;
             });
-
+            
             // Crear el arreglo final con el número de repeticiones de cada país
             const arregloFinal = Object.values(conteoPaises);
-
-            let totalPaises = 0;
-
-            arregloFinal.forEach(total => {
-                totalPaises += total;
-            })
-
-            paisesTotal.textContent = totalPaises;
+            
+            paisesTotal.textContent = arregloFinal.length;
 
             const ctx = document.getElementById('paises-grafica').getContext('2d');
             const myChart = new Chart(ctx, {

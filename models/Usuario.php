@@ -14,6 +14,7 @@ class Usuario extends ActiveRecord {
     public $password2;
     public $password_actual;
     public $password_nuevo;
+    public $password_nuevo2;
     public $telefono;
     public $pais;
     public $documento;
@@ -32,6 +33,7 @@ class Usuario extends ActiveRecord {
         $this->password2 = $args['password2'] ?? '';
         $this->password_actual = $args['password_actual'] ?? '';
         $this->password_nuevo = $args['password_nuevo'] ?? '';
+        $this->password_nuevo2 = $args['password_nuevo2'] ?? '';
         $this->telefono = $args['telefono'] ?? '';
         $this->pais = $args['pais'] ?? '';
         $this->documento = $args['documento'] ?? '';
@@ -170,6 +172,55 @@ class Usuario extends ActiveRecord {
         
         return self::$alertas;
     }
+
+        // Valida el Password 
+        public function validarPasswordCliente($cambiopass, $lang = "es", ) {
+
+            if((!($this->password_actual) || !($this->password_nuevo) || !($this->password_nuevo2))) {
+                if ($lang === 'es') {
+                    self::$alertas['error'][] = 'La contraseña es Obligatoria';
+                } else {
+                    self::$alertas['error'][] = 'Password is Required';
+                }
+            }
+
+            if(intval($cambiopass) === 0) {
+                if($this->password !== $this->password_actual) {
+                    if ($lang === 'es') {
+                        self::$alertas['error'][] = "Contraseña actual incorrecta";
+                    } else {
+                        self::$alertas['error'][] = 'Incorrect current password';
+                    }
+                }
+            } else if(intval($cambiopass) === 1) {
+
+                if(!password_verify($this->password_actual, $this->password)) {
+                    if ($lang === 'es') {
+                        self::$alertas['error'][] = "Contraseña actual incorrecta";
+                    } else {
+                        self::$alertas['error'][] = 'Incorrect current password';
+                    }
+                }
+            }
+    
+            if(strlen($this->password_nuevo) < 6 || strlen($this->password_nuevo2) < 6 ) {
+                if ($lang === 'es') {
+                    self::$alertas['error'][] = "La contraseña debe contener al menos 6 caracteres";
+                } else {
+                    self::$alertas['error'][] = 'Password must contain at least 6 characters';
+                }
+            }
+    
+            if($this->password_nuevo !== $this->password_nuevo2) {
+                if ($lang === 'es') {
+                    self::$alertas['error'][] = "Las contraseñas no coinciden";
+                } else {
+                    self::$alertas['error'][] = 'Passwords do not match';
+                }
+            }
+            
+            return self::$alertas;
+        }
 
     // Comprobar el password
     public function comprobar_password() : bool {
