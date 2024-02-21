@@ -170,7 +170,7 @@ class ClienteController {
 
                 // Redireccionar
                 if($resultado) {
-                    header('Location: /cliente/dashboard');
+                    header('Location: /cliente/panel?lang=es');
                 }
             }
         }
