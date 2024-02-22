@@ -44,14 +44,14 @@ if (!isset($_SESSION)) {
                         <a href="/contacto?lang=<?= isset($_GET['lang']) ? $_GET['lang'] : 'es' ?>">Contacto</a>
                     </li>
                     <li>
-                        <a href="<?php echo is_admin() ? '/admin/dashboard?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') : '/cliente/panel?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') ?>" class="header__enlaces">
+                        <a href="<?php echo is_admin() ? '/admin/dashboard?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') : '/cliente/panel?lang=' . (isset($_GET['lang']) ? $_GET['lang'] : 'es') ?>">
                             <?php echo is_admin() ? "Administrar" : "Perfil" ?>
                         </a>
                     </li>
                     <li>
-                        <form action="/logout" method="POST" class="dashboard__form">
+                        <form action="/logout" method="POST" >
                             <div class="dashboard__submit--logout">
-                                <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logout">
+                                <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logout header__enlaces--logout">
                             </div>
                         </form>
                     </li>
@@ -102,11 +102,13 @@ if (!isset($_SESSION)) {
                         </a>
                     </li>
                     <li>
-                        <form action="/logout" method="POST" class="dashboard__form">
-                            <div class="dashboard__submit--logout">
-                                <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logout">
-                            </div>
-                        </form>
+                        <a>
+                            <form action="/logout" method="POST" >
+                                <div class="dashboard__submit--logout">
+                                    <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logoutmobile">
+                                </div>
+                            </form>
+                        </a>
                     </li>
                 </ul>
 

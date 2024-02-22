@@ -1556,9 +1556,14 @@ h3 {
 }
 .dashboard__submit--logout {
   all: unset;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #FFFFFF;
-  text-transform: uppercase;
+}
+.dashboard__submit--logoutmobile {
+  all: unset;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  height: 1.9rem;
 }
 @media (min-width: 1200px) {
   .dashboard__grid {
@@ -2109,6 +2114,14 @@ h3 {
   .header {
     justify-content: space-around;
   }
+}
+.header__enlaces--logout {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: 1.9rem;
+}
+.header__enlaces--logout:hover {
+  color: rgb(255, 101, 101);
 }
 
 .logo {

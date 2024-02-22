@@ -49,9 +49,9 @@ if (!isset($_SESSION)) {
                         </a>
                     </li>
                     <li>
-                        <form action="/logout" method="POST" class="dashboard__form">
+                        <form action="/logout" method="POST" >
                             <div class="dashboard__submit--logout">
-                                <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logout">
+                                <input type="submit" value="Logout" class="dashboard__submit--logout header__enlaces--logout">
                             </div>
                         </form>
                     </li>
@@ -101,11 +101,13 @@ if (!isset($_SESSION)) {
                         </a>
                     </li>
                     <li>
-                        <form action="/logout" method="POST" class="dashboard__form">
-                            <div class="dashboard__submit--logout">
-                                <input type="submit" value="Cerrar Sesión" class="dashboard__submit--logout">
-                            </div>
-                        </form>
+                        <a>
+                            <form action="/logout" method="POST" >
+                                <div class="dashboard__submit--logout">
+                                    <input type="submit" value="Logout" class="dashboard__submit--logoutmobile">
+                                </div>
+                            </form>
+                        </a>
                     </li>
                 </ul>
 

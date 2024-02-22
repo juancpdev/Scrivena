@@ -13,6 +13,20 @@
     @include m.desktop {
         justify-content: space-around;
     }
+
+    &__enlaces {
+
+        &--logout {
+            cursor: pointer;
+            transition: all .5s ease;
+            height: 1.9rem;
+            &:hover {
+                color: rgb(255, 101, 101);
+                
+            }
+        }
+
+    }
 }
 
 .logo {
