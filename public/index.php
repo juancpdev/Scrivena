@@ -17,6 +17,7 @@ $router = new Router();
 // Pag Publicas
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/', [PaginasController::class, 'index']);
+$router->get('/404', [PaginasController::class, 'error']);
 
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
 $router->get('/about-us', [PaginasController::class, 'nosotros']);

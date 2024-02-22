@@ -253,7 +253,6 @@ class AuthController {
 
             if(empty($alertas)) {
                 // Hashear el nuevo password
-                debuguear($usuario);
                 $usuario->hashPassword();
 
                 // Eliminar el Token y actualizar BD
@@ -265,11 +264,7 @@ class AuthController {
 
                 // Redireccionar
                 if($resultado) {
-                    if ($idioma === 'es') {
-                        header('Location: /acceder?lang=es');
-                    } else {
-                        header('Location: /login?lang=en');
-                    }
+                    $contraActualizada = true;
                 }
             }
         }
@@ -280,7 +275,8 @@ class AuthController {
         $router->render("paginas{$idioma}/auth/reestablecer", [
             'titulo' => $idioma === 'es' ? 'Reestablecer Contraseña' : 'Restore password',
             'alertas' => $alertas,
-            'token_valido' => $token_valido
+            'token_valido' => $token_valido,
+            "contraActualizada" => $contraActualizada ?? false
         ]);
     }
 

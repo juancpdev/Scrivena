@@ -29,10 +29,20 @@ class Router
             $fn = $this->postRoutes[$url_actual] ?? null;
         }
 
+        // Obtén el valor de la variable 'lang' desde la URL
+        $langParam = isset($_GET['lang']) ? $_GET['lang'] : 'es';
+
         if ( $fn ) {
             call_user_func($fn, $this);
         } else {
-            echo "Página No Encontrada o Ruta no válida";
+            if ($langParam === 'es') {
+                header('Location: /404?lang=es');
+                exit();
+            } else if ($langParam === 'en') {
+                header('Location: /404?lang=en');
+                exit();
+            }
+            
         }
     }
 

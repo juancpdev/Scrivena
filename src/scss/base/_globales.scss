@@ -1,6 +1,10 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
+.hola {
+    background-color: red;
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;

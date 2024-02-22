@@ -18,7 +18,7 @@ if (is_auth()) {
     if ($langParam === 'es') {
         header('Location: /cliente/panel?lang=es');
         exit();
-    } else {
+    } else if ($langParam === 'en') {
         header('Location: /client/dashboard?lang=en');
         exit();
     }

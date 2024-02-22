@@ -64,7 +64,7 @@ class Usuario extends ActiveRecord {
 
         if(!$this->password) {
             if ($lang === 'es') {
-                self::$alertas['error'][] = 'La contraseña no puede ir vacio';
+                self::$alertas['error'][] = 'La contraseña no puede ir vacia';
             } else {
                 self::$alertas['error'][] = 'Password cannot be empty';
             }
@@ -85,7 +85,7 @@ class Usuario extends ActiveRecord {
             self::$alertas['error'][] = 'El Email es Obligatorio';
         }
         if(!$this->password) {
-            self::$alertas['error'][] = 'La contraseña no puede ir vacio';
+            self::$alertas['error'][] = 'La contraseña no puede ir vacia';
         }
         if(!$this->telefono) {
             self::$alertas['error'][] = 'El Telefono es Obligatorio';

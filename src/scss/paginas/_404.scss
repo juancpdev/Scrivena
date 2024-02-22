@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pagina_404 {
+    margin: 20rem 2rem;
+
+    @include m.tablet {
+        margin: 25rem 2rem;
+    }
+
+    &__contenedor {
+        text-align: center;
+    }
+
+    &__enlace {
+        color: blue;
+    }   
+}

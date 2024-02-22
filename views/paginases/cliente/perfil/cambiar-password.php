@@ -1,15 +1,38 @@
 <?php 
 if (isset($contraActualizada) && $contraActualizada) {
+    // Verificar el idioma
+    $lang = isset($_GET['lang']) && $_GET['lang'] === 'es' ? 'es' : 'en';
+
+    // Definir los mensajes y redirecciones en inglés y español
+    $data = array(
+        'es' => array(
+            'title' => 'Contraseña Actualizada',
+            'text' => 'La contraseña fue actualizada correctamente!',
+            'confirmButtonText' => 'OK',
+            'redirectUrl' => '/cliente/panel?lang=es'
+        ),
+        'en' => array(
+            'title' => 'Password Updated',
+            'text' => 'The password was updated successfully!',
+            'confirmButtonText' => 'OK',
+            'redirectUrl' => '/client/dashboard?lang=en'
+        )
+    );
+
+    // Obtener los datos según el idioma
+    $info = $data[$lang];
+
+    // Mostrar el mensaje en el idioma correspondiente
     echo "
     <script>
         window.onload = function() {
             Swal.fire({
                 icon: 'success',
-                title: 'Contraseña Actualizada',
-                text: 'La contraseña fue actualizada correctamente!',
-                confirmButtonText: 'OK'
+                title: '{$info['title']}',
+                text: '{$info['text']}',
+                confirmButtonText: '{$info['confirmButtonText']}'
             }).then(function() {
-                window.location.href = '/cliente/panel?lang=es';
+                window.location.href = '{$info['redirectUrl']}';
             });
         };
     </script>

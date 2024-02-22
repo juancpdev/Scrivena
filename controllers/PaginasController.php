@@ -322,4 +322,26 @@ class PaginasController {
             'titulo' => $idioma === 'es' ? 'Aviso de Privacidad' : 'Notice of Privacy'
         ]);
     }
+
+    public static function error(Router $router) {
+        $idioma = isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es') ? $_GET['lang'] : self::obtenerIdiomaNavegador();
+        
+        // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
+        if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            if($idioma === "es") {
+                header("Location: /servicios?lang={$idioma}");
+                exit;
+            } else if($idioma === "en") {
+                header("Location: /services?lang={$idioma}");
+                exit;
+            }
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
+        }
+
+        $router->render("paginas{$idioma}/error_{$idioma}", [
+            'titulo' => $idioma === 'es' ? 'Página no encontrada' : 'Page not found'
+        ]);
+    }
 }
