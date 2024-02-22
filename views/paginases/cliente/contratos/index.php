@@ -1,5 +1,10 @@
 <h2 class="titulo-contrato dashboard__heading"> <?php echo $titulo; ?> </h2>
 
+
+<?php if(empty($contratos)) { ?>
+    <p class="">No hay contratos Aún</p>
+<?php } ?>
+
 <div class="contratos-container" id="contratos-container">
     <?php
     $contador = 1;
@@ -32,4 +37,3 @@
     endforeach;
     ?>
 </div>
-
