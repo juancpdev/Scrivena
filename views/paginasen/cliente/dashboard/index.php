@@ -2,8 +2,8 @@
     <div class="cambiopass">
         <p>
             <i class="fa-solid fa-triangle-exclamation"></i> 
-            Por razones de seguridad es importante que cambies la contraseña proporcionada por el administrador
-            <a href="/cliente/cambiar-password?lang=<?php echo $idioma; ?>">Click Aquí.</a>
+            For security reasons it is important that you change the password provided by the administrator
+            <a href="/cliente/cambiar-password?lang=<?php echo $idioma; ?>">Click here.</a>
         </p>
     </div>
 <?php } ?>
@@ -15,11 +15,11 @@
         <div class="info-grafico--clientes">
             <div class="contenedor-datos-gafica">
                 <div class="color-inversion"></div>
-                <p>Inversiónes</p>
+                <p>Investments</p>
             </div>
             <div class="contenedor-datos-gafica">
                 <div class="color-interes"></div>
-                <p>Interéses</p>
+                <p>Interests</p>
             </div>
         </div>
         <div class="area-cliente">
@@ -36,19 +36,19 @@
           
             <a class="cliente__contratos--activos" href="/cliente/contratos?lang=es">
                 <div>
-                    <p>Contratos Activos: <span><?php echo $contratosActivos; ?></span></p>
+                    <p>Active Contracts: <span><?php echo $contratosActivos; ?></span></p>
                 </div>
             </a>
            
             <div>
                 <div>
-                    <h4 class="cliente__contratos--titulo">Proximos Pagos</h4>
+                    <h4 class="cliente__contratos--titulo">Next Payments</h4>
                     <table class="table table--clientes">
                         <thead class="table__thead table__thead--pagos">
                             <tr class="table__tr">
                                 <th scope="col" class="table__th table__th--n-cliente">Nº</th>
-                                <th scope="col" class="table__th table__th--fecha-cliente">Fecha</th>
-                                <th scope="col" class="table__th table__th--interes-cliente">Interés</th>
+                                <th scope="col" class="table__th table__th--fecha-cliente">Date</th>
+                                <th scope="col" class="table__th table__th--interes-cliente">Interest</th>
                             </tr>
                         </thead>
                         <tbody class="table__tbody table__tbody">

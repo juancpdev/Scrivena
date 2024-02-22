@@ -20,6 +20,13 @@
             var totalFormateado = total.toFixed(2);
             var totalConComa = formatNumber(totalFormateado);
             balanceTotal.textContent = "$" + totalConComa;
+
+
+            // Obtener la URL actual
+            var urlParams = new URLSearchParams(window.location.search);
+
+            // Obtener el valor del parámetro "lang"
+            var lang = urlParams.get('lang');
             
 
             const ctx = document.getElementById('inversion-grafica').getContext('2d');
@@ -48,11 +55,18 @@
                                         label += ': ';
                                     }
                                     if (context.parsed !== 'undefined') {
-                                        console.log(context.label);
                                         if (context.label === "Inversiones") {
-                                            label += 'Inversiónes: ';
+                                            if(lang === "es") {
+                                                label += 'Inversiónes: ';
+                                            } else if(lang === "en") {
+                                                label += 'Investments: ';
+                                            }
                                         } else if (context.label === "Interés"){
-                                            label += 'Interéses: ';
+                                            if(lang === "es") {
+                                                label += 'Interéses: ';
+                                            } else if(lang === "en") {
+                                                label += 'Interests: ';
+                                            }
                                         }
                                         label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed);
                                     }

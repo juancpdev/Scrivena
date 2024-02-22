@@ -52,7 +52,7 @@ class Router
 
         if(str_contains($url_actual, '/admin')) {
             include_once __DIR__ . '/views/admin-layout.php';
-        } else if(str_contains($url_actual, '/cliente')) {
+        } else if (str_contains($url_actual, '/cliente') || str_contains($url_actual, '/client')) {
             include_once __DIR__ . '/views/cliente-layout.php';
         } else {
             include_once __DIR__ . '/views/layout.php';

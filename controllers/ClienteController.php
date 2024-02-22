@@ -31,6 +31,9 @@ class ClienteController {
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
             header("Location: /?lang={$idioma}");
             exit;
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
         }
 
         if(!is_auth()) {
@@ -53,7 +56,7 @@ class ClienteController {
         $cambiopass = $cliente->cambiopass;
 
         $router->render("paginas{$idioma}/cliente/dashboard/index", [
-            'titulo' => 'Área Cliente',
+            'titulo' => $idioma === 'es' ? 'Área Cliente' : 'Client Area',
             'contratos' => $contratos,
             'contratosActivos' => $contratosActivos,
             'cambiopass' => $cambiopass,
@@ -68,6 +71,9 @@ class ClienteController {
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
             header("Location: /?lang={$idioma}");
             exit;
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
+            header("Location: /?lang={$idioma}");
+            exit;
         }
 
         if(!is_auth()) {
@@ -77,7 +83,7 @@ class ClienteController {
         $contratos = Contrato::whereArray(["inversionista_id" => $_SESSION['id']]);
         
         $router->render("paginas{$idioma}/cliente/contratos/index", [
-            'titulo' => 'Mis Contratos',
+            'titulo' => $idioma === 'es' ? 'Mis Contratos' : 'My Contracts',
             'contratos' => $contratos
         ]);
     }
@@ -87,6 +93,9 @@ class ClienteController {
 
         // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            header("Location: /?lang={$idioma}");
+            exit;
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
             header("Location: /?lang={$idioma}");
             exit;
         }
@@ -128,7 +137,7 @@ class ClienteController {
         }
 
         $router->render("paginas{$idioma}/cliente/perfil/index", [
-            "titulo" => "Mi Perfil",
+            'titulo' => $idioma === 'es' ? 'Mi Perfil' : 'My Profile',
             "alertas" => $alertas,
             "usuario" => $usuario,
             "perfilActualizado" => $perfilActualizado ?? false
@@ -140,6 +149,9 @@ class ClienteController {
 
         // Si la página principal es solicitada sin un idioma específico, redirige a la misma página con el idioma predeterminado
         if (empty($_GET['lang']) && empty($_SERVER['QUERY_STRING'])) {
+            header("Location: /?lang={$idioma}");
+            exit;
+        } else if ($_GET["lang"] !== "es" && $_GET["lang"] !== "en") {
             header("Location: /?lang={$idioma}");
             exit;
         }
@@ -194,7 +206,7 @@ class ClienteController {
         $alertas = Usuario::getAlertas();
 
         $router->render("paginas{$idioma}/cliente/perfil/cambiar-password", [
-            "titulo" => "Cambiar Password",
+            'titulo' => $idioma === 'es' ? 'Cambiar Contraseña' : 'Change Password',
             "alertas" => $alertas,
             "contraActualizada" => $contraActualizada ?? false
         ]);

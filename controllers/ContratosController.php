@@ -93,7 +93,7 @@ class ContratosController {
         $clientes = Usuario::whereArray(['admin' => 0]);
         $alertas = [];
         $contrato = new Contrato;
-        $tipos_inversion = ['Inversión en Mineía', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
+        $tipos_inversion = ['Inversión en Minería', 'Desarrollos Inmobiliarios', 'Fondos de Inversión USA', 'Remates Inmobiliarios'];
         
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(!is_admin()) {
