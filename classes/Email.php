@@ -32,7 +32,7 @@ class Email {
             $mail->SMTPSecure = 'tls';
     
             // Remitente y destinatario
-            $mail->setFrom('contacto@scrivena.com');
+            $mail->setFrom('Scrivena@scrivena.com');
             $mail->addAddress($this->email, $this->nombre);
     
             // Asunto
@@ -71,7 +71,7 @@ class Email {
                 margin-bottom: 30px;
             }
             .header img {
-                max-width: 150px;
+                max-width: 100px;
                 height: auto;
                 margin-bottom: 15px;
             }
