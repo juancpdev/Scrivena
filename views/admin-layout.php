@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/build/css/app.css?v=2.0">
+    <link rel="stylesheet" href="/build/css/app.css?v=2.1">
     <!-- HTML Meta Tags -->
     <title>Scrivena - Líder en Inversiones</title>
     <meta name="description" content="Invierte en el futuro con nuestro fondo de inversión líder, ofreciendo estrategias personalizadas y rendimientos sostenibles.">
@@ -66,7 +66,7 @@
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/build/js/bundle.js?v=2.0" defer></script>
+    <script src="/build/js/bundle.js?v=2.1" defer></script>
     <script src='//cdn.jsdelivr.net/npm/sweetalert2@10'></script>
 </body>
 
