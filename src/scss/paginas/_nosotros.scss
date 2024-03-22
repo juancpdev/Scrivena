@@ -45,6 +45,77 @@
             }
         }
 
+        .caja-mau {
+            margin: 1rem;
+            padding: 2rem;
+            border: 3px solid #123C49;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #E7E7E7, white);
+
+            @include m.desktop {
+                padding: 4rem;
+                flex-direction: row;
+                gap: 8rem;
+            }
+
+            .foto-mau {
+                margin: 0 auto;
+            }
+            
+            .foto-mau img {
+                width: 20rem;
+                border-radius: 50%;
+                box-shadow: 2px 2px 10px 5px rgb(182, 182, 182);
+
+                @include m.tablet {
+                    width: 30rem;
+                }
+            }
+            
+            .info-mau {
+                text-align: center;
+                color: #123C49;
+            }
+            
+            .info-mau p {
+                margin-top: 0;
+                font-size: 1.4rem;
+                @include m.desktop {
+                    font-size: 1.5rem;
+                    margin-bottom: 3.5rem;
+                }
+            }
+            
+            .info-mau h2 {
+                font-size: 3rem;
+                margin-bottom: 0;
+                @include m.tablet {
+                    font-size: 4rem;
+                }
+            }
+            
+            .redes {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                @include m.tablet {
+                    gap: 2rem;
+                }
+            }
+            
+            .redes i {
+                color: rgb(41, 41, 41);
+                font-size: 2.5rem;
+                @include m.desktop {
+                    font-size: 4rem;
+                }
+            }
+        }
+
         .nosotros1 {
             padding: 3rem;
             margin: 5rem 1rem;

@@ -9,6 +9,24 @@
             <h2>Welcome to SCRIVENA</h2>
             <p>We are proud to be leaders in investment management in the mining, stock market, and real estate sectors, as well as in the administration of financing for general projects.</p>
         </div>
+        <div class="caja-mau">
+            <div class="foto-mau">
+                <img src="/build/img/mau.webp" alt="">
+            </div>
+            <div class="info-mau">
+                <h2>Mauricio Trachtman</h2>
+                <p>CFO</p>
+                <p>With vast experience in facing business challenges and a deep passion for investments, especially in the minerals sector, Mauricio is a passionate and visionary leader. His strategic vision and ability to identify opportunities perfectly position him to guide Scrivena's investments to success in the era of global transformation.</p>
+                <div class="redes">
+                    <a href="https://www.instagram.com/soymrstark/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mauricio-trachtman-b058a983/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="nosotros1">
             <div class="nosotros1-hijo">
                 <h3>Experience</h3>

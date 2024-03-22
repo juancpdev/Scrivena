@@ -3,11 +3,29 @@
     <div class="caja_boton_consulta">
         <a class="boton_consulta" target="_blank" href="https://forms.gle/fXpATXWUu17pNrFu7">AGENDA UNA CONSULTA</a>
     </div>
-</div>
+    </div>
     <div class="midseccion">
         <div class="caja_titulo">
             <h2>Bienvenido a SCRIVENA</h2>
             <p>Nos enorgullece ser líderes en la gestión de inversiones en el sector minero, bursátil y bienes raíces, así como en la administración de financiamientos para proyectos en general.</p>
+        </div>
+        <div class="caja-mau">
+            <div class="foto-mau">
+                <img src="/build/img/mau.webp" alt="">
+            </div>
+            <div class="info-mau">
+                <h2>Mauricio Trachtman</h2>
+                <p>Director Financiero</p>
+                <p>Con una vasta experiencia en enfrentar desafíos empresariales y una profunda pasión por las inversiones, especialmente en el sector de minerales, Mauricio es un líder apasionado y visionario. Su visión estratégica y capacidad para identificar oportunidades lo posicionan perfectamente para guiar las inversiones de Scrivena hacia el éxito en la era de la transformación global.</p>
+                <div class="redes">
+                    <a href="https://www.instagram.com/soymrstark/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mauricio-trachtman-b058a983/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="nosotros1">
             <div class="nosotros1-hijo">
