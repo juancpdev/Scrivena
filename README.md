@@ -1,8 +1,7 @@
 ## 🛠️ Tecnologías
-- **Frontend:** React, Tailwind CSS
-- **Backend:** Node.js, Express
-- **Base de datos:** MongoDB + Mongoose
-- **Autenticación:** JWT
+- **Frontend:** HTML, SCSS, SASS, JavaScript
+- **Backend:** PHP
+- **Base de datos:** MySQL
 
 ## 📸 Capturas
 ![6_1](https://github.com/user-attachments/assets/3d194653-b659-45d4-ac8d-2627a1aa1069)
